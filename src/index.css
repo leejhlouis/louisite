@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  *{
+    @apply text-white;
+  }
+
+  .container{
+    @apply max-w-screen-2xl px-24 mx-auto;
+  }
+
+  li,
+  p,
+  i{
+    @apply text-lg;
+  }
+
+  span{
+    font-size: inherit;
+  }
+
+  .bg{
+    background: url(./img/background.png) round;
+    height: 800px;
+    @apply bg-cover bg-no-repeat bg-bottom;
+  }
+
+  .nav-link{
+    @apply list-none;
+  }
+
+  .nav-link > li{
+    @apply inline ml-6;
+  }
+
+  .nav-link > li:first-child{
+    @apply ml-0;
+  }
+}
