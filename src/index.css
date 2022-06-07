@@ -17,6 +17,10 @@
     @apply text-base md:text-lg;
   }
 
+  .p{
+    @apply pb-6 text-gray-400;
+  }
+
 
   .bg{
     background: linear-gradient(180deg, rgba(13, 17, 41, 0) 80%, #0d1129 100%), linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%), linear-gradient(210deg, #491616 18%, #00137A 78%);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
 
 const Navbar = React.lazy(
   () => import('./components/Navbar')
@@ -16,15 +17,41 @@ const Footer = React.lazy(
   () => import('./components/Footer')
 )
 
-export default function App() {
+const About = React.lazy(
+  () => import('./components/About')
+)
+
+export function App() {
   return (
     <main className='bg-primary'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/*" element={<Home />} />
+      </Routes>
+    </main>
+  );
+}
+
+function Home() {
+  return (
+    <>
       <div className="bg">
         <Navbar />
         <Hero />
       </div>
       <Works />
       <Footer />
-    </main>
-  );
+    </>
+  )
+}
+
+function AboutPage() {
+  return (
+    <>
+      <Navbar />
+      <About />
+      <Footer />
+    </>
+  )
 }

@@ -10,7 +10,7 @@ export default function Works() {
                 </div>
                 <div className='pt-8'>
                     <h5 className='text-3xl font-bold pb-3'>{d.title}</h5>
-                    <p className='text-gray-400'>{d.subtitle}</p>
+                    <p className='p pb-0'>{d.subtitle}</p>
                     <a href="" className='btn-details'>
                         <p>Check it out</p>
                         <ArrowRightSLineIcon />
