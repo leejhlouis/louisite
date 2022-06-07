@@ -1,24 +1,16 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
-const Navbar = React.lazy(
-  () => import('./components/Navbar')
-)
-
-const Hero = React.lazy(
-  () => import('./components/Hero')
-)
-
-const Works = React.lazy(
-  () => import('./components/Works')
-)
-
-const Footer = React.lazy(
-  () => import('./components/Footer')
+const Home = React.lazy(
+  () => import('./Home')
 )
 
 const About = React.lazy(
-  () => import('./components/About')
+  () => import('./AboutPage')
+)
+
+const Portfolio = React.lazy(
+  () => import('./PortfolioDetailsPage')
 )
 
 export function App() {
@@ -26,32 +18,10 @@ export function App() {
     <main className='bg-primary'>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio/:id" element={<Portfolio />} />
         <Route path="/*" element={<Home />} />
       </Routes>
     </main>
   );
-}
-
-function Home() {
-  return (
-    <>
-      <div className="bg">
-        <Navbar />
-        <Hero />
-      </div>
-      <Works />
-      <Footer />
-    </>
-  )
-}
-
-function AboutPage() {
-  return (
-    <>
-      <Navbar />
-      <About />
-      <Footer />
-    </>
-  )
 }

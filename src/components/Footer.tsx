@@ -4,7 +4,7 @@ import NavLinks from './NavLinks'
 export default function Footer() {
     return (
         <footer className='container pt-8'>
-            <a href="#" className='flex justify-center gap-2 items-end hover:opacity-80'>
+            <a href="#" className='btn justify-center'>
                 <ArrowUpSLineIcon color="#fff" />
                 <p>Back to top</p>
             </a>
