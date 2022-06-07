@@ -4,17 +4,27 @@ const Navbar = React.lazy(
   () => import('./components/Navbar')
 )
 
-const Home = React.lazy(
-  () => import('./components/Home')
+const Hero = React.lazy(
+  () => import('./components/Hero')
+)
+
+const Works = React.lazy(
+  () => import('./components/Works')
+)
+
+const Footer = React.lazy(
+  () => import('./components/Footer')
 )
 
 export default function App() {
   return (
-    <div className='bg-primary'>
+    <main className='bg-primary'>
       <div className="bg">
         <Navbar />
-        <Home />
+        <Hero />
       </div>
-    </div>
+      <Works />
+      <Footer />
+    </main>
   );
 }
