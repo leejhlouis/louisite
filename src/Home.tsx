@@ -1,12 +1,7 @@
-import React from "react";
-
-const Navbar = React.lazy(() => import("./components/Navbar"));
-
-const Hero = React.lazy(() => import("./components/Hero"));
-
-const Works = React.lazy(() => import("./components/Portfolio"));
-
-const Footer = React.lazy(() => import("./components/Footer"));
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +10,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      <Works />
+      <Portfolio />
       <Footer />
     </>
   );

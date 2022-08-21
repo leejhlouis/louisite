@@ -1,14 +1,8 @@
-import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import portfolio from "./data/portfolio.js";
-
-const Navbar = React.lazy(() => import("./components/Navbar"));
-
-const PortfolioDetails = React.lazy(
-  () => import("./components/PortfolioDetails")
-);
-
-const Footer = React.lazy(() => import("./components/Footer"));
+import Navbar from "./components/Navbar";
+import PortfolioDetails from "./components/PortfolioDetails";
+import Footer from "./components/Footer";
 
 export default function PortfolioDetailPage() {
   const params = useParams();

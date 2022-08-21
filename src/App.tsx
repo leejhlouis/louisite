@@ -1,21 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-
-const Home = React.lazy(
-  () => import('./Home')
-)
-
-const About = React.lazy(
-  () => import('./AboutPage')
-)
-
-const Portfolio = React.lazy(
-  () => import('./PortfolioDetailsPage')
-)
+import Home from "./Home";
+import About from "./AboutPage";
+import Portfolio from "./PortfolioDetailsPage";
 
 export function App() {
   return (
-    <main className='bg-primary'>
+    <main className="bg-primary">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
