@@ -1,15 +1,15 @@
-import NavLinks from './NavLinks'
+import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-    return (
-        <nav className="container flex justify-between items-center py-5 flex-wrap">
-            <Link to="/" className='hover:no-underline'>
-                <p className='font-light text-2xl'>
-                    LOUI<span className='font-bold'>SITE</span>
-                </p>
-            </Link>
-            <NavLinks />
-        </nav>
-    );
+  return (
+    <nav className="container flex flex-wrap items-center justify-between py-5">
+      <Link to="/" className="hover:no-underline">
+        <p className="text-2xl font-light">
+          LOUI<span className="font-bold">SITE</span>
+        </p>
+      </Link>
+      <NavLinks />
+    </nav>
+  );
 }

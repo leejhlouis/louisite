@@ -3,54 +3,60 @@
 @tailwind utilities;
 
 @layer components {
-  *{
+  * {
     @apply text-white;
-  }
-
-  .container{
-    @apply max-w-screen-sm md:max-w-screen-2xl px-4 xs:px-12 md:px-16 lg:px-20 xl:px-24 py-8 xl:py-16 mx-auto;
   }
 
   li,
   p,
-  i{
+  i {
     @apply text-base md:text-lg;
   }
 
-  .p{
+  .p {
     @apply pb-6 text-gray-400;
   }
 
-  a:hover{
+  a:hover {
     @apply underline;
   }
 
-  .bg{
-    background: linear-gradient(180deg, rgba(13, 17, 41, 0) 80%, #0d1129 100%), linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%), linear-gradient(210deg, #491616 18%, #00137A 78%);
-    @apply h-screen;
+  .container {
+    @apply mx-auto max-w-screen-sm px-4 py-8 xs:px-12 md:max-w-screen-2xl md:px-16 lg:px-20 xl:px-24 xl:py-16;
   }
 
-  .btn{
-    @apply flex items-center py-4 font-semibold transition ease-in-out duration-300 gap-1  hover:underline;
+  .bg {
+    background: linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
+      linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
 
-  .btn-details{
-    @apply hover:gap-2;
-  }
-  
-  .link-w-icon{
-    @apply flex items-center gap-2 cursor-pointer hover:opacity-80;
+  .bg-transition {
+    background: linear-gradient(180deg, rgba(13, 17, 41, 0) 80%, #0d1129 100%),
+      linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
+      linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
 
-  .link-w-icon:hover > p{
+  .btn {
+    @apply flex items-center gap-1 py-4 font-semibold transition duration-300 ease-in-out  hover:underline;
+  }
+
+  .link-w-icon {
+    @apply flex cursor-pointer items-center gap-2 hover:opacity-80;
+  }
+
+  .link-w-icon:hover > p {
     @apply underline;
+  }
+
+  .text-highlight {
+    @apply bg-gradient-to-tr from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent;
   }
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-span{
+span {
   font-size: inherit;
 }

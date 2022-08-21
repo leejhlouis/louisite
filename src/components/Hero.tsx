@@ -1,16 +1,49 @@
-import ArrowDownSLineIcon from 'remixicon-react/ArrowDownSLineIcon';
+import MailFillIcon from "remixicon-react/MailFillIcon";
+import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
+import GithubFillIcon from "remixicon-react/GithubFillIcon";
+import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
 
 export default function Hero() {
-    return (
-        <div className='h-[85vh]'>
-            <div className='h-5/6 container flex justify-center items-center flex-col gap-6'>
-                <h1 className='text-6xl md:text-7xl font-bold text-center'>Hi, I'm Louis Gustavo!</h1>
-                <h2 className='text-3xl md:text-4xl font-light text-center'>avid coder | computer science student</h2>
-            </div>
-            <a href="#portfolio" className='h-1/6 btn justify-center'>
-                <ArrowDownSLineIcon color="#fff" />
-                <p>Select works</p>
+  return (
+    <div className="h-[85vh]">
+      <div className="container flex h-5/6 flex-col justify-center gap-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl">I'm Louis Gustavo</h2>
+        <h1 className="break-words text-4xl font-bold sm:text-6xl md:text-7xl">
+          A <span className="text-highlight">fullstack developer</span> and a{" "}
+          <span className="text-highlight">Computer Science</span>{" "}
+          undergraduate.
+        </h1>
+        <div className="mt-3 flex list-none items-center gap-2">
+          <li>
+            <a
+              href="mailto:louis.gustavo@binus.ac.id"
+              className="hover:opacity-80"
+            >
+              <MailFillIcon color="#e5e7eb" size={22} />
             </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/louis-gustavo"
+              className="hover:opacity-80"
+            >
+              <LinkedinFillIcon color="#e5e7eb" size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/itslouisgs"
+              className="hover:opacity-80"
+            >
+              <GithubFillIcon color="#e5e7eb" size={24} />
+            </a>
+          </li>
         </div>
-    );
-  }
+      </div>
+      <a href="#portfolio" className="btn h-1/6 justify-center">
+        <ArrowDownSLineIcon color="#fff" />
+        <p>View portfolio</p>
+      </a>
+    </div>
+  );
+}
