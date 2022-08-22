@@ -1,8 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
-import portfolio from "./data/portfolio.js";
-import Navbar from "./components/Navbar";
-import PortfolioDetails from "./components/PortfolioDetails";
-import Footer from "./components/Footer";
+import portfolio from "../data/portfolio.js";
+import Navbar from "../components/Navbar";
+import PortfolioDetails from "../components/PortfolioDetails";
+import Footer from "../components/Footer";
 
 export default function PortfolioDetailPage() {
   const params = useParams();
@@ -13,10 +13,12 @@ export default function PortfolioDetailPage() {
   }
 
   return (
-    <div className="bg">
-      <Navbar />
-      <PortfolioDetails item={item} />
+    <>
+      <div className="bg">
+        <Navbar />
+        <PortfolioDetails item={item} />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
