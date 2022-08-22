@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function PortfolioDetails(props: any) {
   return (
     <div className="container md:max-w-screen-md">
-      <div className="w-3/5 overflow-hidden mb-8">
+      <div className="mb-8 w-full max-w-md overflow-hidden">
         <img
           src="https://tukang-travel.web.app/static/media/pic.1433055076ae74ba337b.jpg"
           alt="Portfolio"
@@ -13,16 +13,16 @@ export default function PortfolioDetails(props: any) {
         />
       </div>
       <h2 className="pb-3 text-4xl font-bold">{props.item.title}</h2>
-      <div className="flex items-center gap-16">
+      <div className="flex items-center gap-12">
         <div className="link-w-icon">
-          <CodeSSlashFillIcon size={20} color="#9ca3af" />
-          <Link to={props.item.codeLink}>
+          <Link to={props.item.codeLink} className="btn">
+            <CodeSSlashFillIcon size={20} color="#9ca3af" />
             <p className="text-gray-400">code</p>
           </Link>
         </div>
         <div className="link-w-icon">
-          <ExternalLinkFillIcon size={20} color="#9ca3af" />
-          <Link to={props.item.liveDemoLink}>
+          <Link to={props.item.liveDemoLink} className="btn">
+            <ExternalLinkFillIcon size={20} color="#9ca3af" />
             <p className="text-gray-400">live demo</p>
           </Link>
         </div>

@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+
+@layer base {
+  html {
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
   * {
     @apply text-white;
   }
 
+  #root {
+    @apply bg-primary;
+  }
+
   li,
-  p,
   i {
     @apply text-base md:text-lg;
   }
@@ -26,18 +38,13 @@
   }
 
   .bg {
-    background: linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
-      linear-gradient(210deg, #491616 20%, #00137a 80%);
-  }
-
-  .bg-transition {
-    background: linear-gradient(180deg, rgba(13, 17, 41, 0) 80%, #0d1129 100%),
+    background: linear-gradient(180deg, rgba(13, 17, 41, 0) 60%, #0d1129 100%),
       linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
       linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
 
   .btn {
-    @apply flex items-center gap-1 py-4 font-semibold transition duration-300 ease-in-out  hover:underline;
+    @apply flex items-center gap-1 font-semibold transition duration-300 ease-in-out hover:underline;
   }
 
   .link-w-icon {
@@ -54,7 +61,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
 }
 
 span {
