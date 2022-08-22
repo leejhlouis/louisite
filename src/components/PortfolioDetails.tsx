@@ -9,6 +9,8 @@ export default function PortfolioDetails(props: any) {
         <img
           src="https://tukang-travel.web.app/static/media/pic.1433055076ae74ba337b.jpg"
           alt="Portfolio"
+          width={448}
+          height={300}
           className="cursor-pointer transition hover:scale-125 hover:opacity-80"
         />
       </div>

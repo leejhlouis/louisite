@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       <Suspense fallback={<Preloader />}>
-        <div className="bg">
+        <div className="bg h-[100vh]">
           <Navbar />
           <About />
         </div>

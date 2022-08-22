@@ -15,7 +15,7 @@ export default function Works() {
         />
       </div>
       <div className="pt-8">
-        <h5 className="pb-3 text-3xl font-bold">{d.title}</h5>
+        <h3 className="pb-3 text-3xl font-bold">{d.title}</h3>
         <p className="p pb-0">{d.categories}</p>
         <Link to={`/portfolio/${d.id}`} className="btn py-4 hover:gap-2">
           <p>Check it out</p>
