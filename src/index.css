@@ -58,9 +58,10 @@
   .text-highlight {
     @apply bg-gradient-to-tr from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent;
   }
-}
 
-html {
+  .preloader > span {
+    @apply bg-gradient-to-tr from-fuchsia-300 to-indigo-300;
+  }
 }
 
 span {

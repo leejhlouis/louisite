@@ -1,16 +1,20 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import About from "../components/About";
-import Footer from "../components/Footer";
+import React, { Suspense } from "react";
+import Preloader from "../components/Preloader";
+
+const Navbar = React.lazy(() => import("../components/Navbar"));
+const About = React.lazy(() => import("../components/About"));
+const Footer = React.lazy(() => import("../components/Footer"));
 
 export default function AboutPage() {
   return (
     <>
-      <div className="bg">
-        <Navbar />
-        <About />
-      </div>
-      <Footer />
+      <Suspense fallback={<Preloader />}>
+        <div className="bg">
+          <Navbar />
+          <About />
+        </div>
+        <Footer />
+      </Suspense>
     </>
   );
 }
