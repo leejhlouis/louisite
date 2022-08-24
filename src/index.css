@@ -12,25 +12,27 @@
 }
 
 @layer components {
+  html {
+    @apply bg-primary;
+  }
+
   * {
     @apply text-white;
   }
 
-  #root {
-    @apply bg-primary;
-  }
-
   li,
-  i {
+  i,
+  p {
     @apply text-base md:text-lg;
   }
 
   .p {
-    @apply pb-6 text-gray-400;
+    @apply pb-6;
   }
 
-  a:hover {
-    @apply underline;
+  a:hover:not(.active):not(.title),
+  .btn:hover {
+    @apply underline opacity-80;
   }
 
   .container {
@@ -59,8 +61,22 @@
     @apply bg-gradient-to-tr from-fuchsia-300 to-indigo-300 bg-clip-text text-transparent;
   }
 
+  .text-muted {
+    @apply text-gray-400;
+  }
+
   .preloader > span {
     @apply bg-gradient-to-tr from-fuchsia-300 to-indigo-300;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
   }
 }
 

@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <div className="h-[85vh]">
       <div className="container flex h-5/6 flex-col justify-center gap-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl">I'm Louis Gustavo</h2>
-        <h1 className="break-words text-4xl font-bold sm:text-6xl md:text-7xl">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl">I'm Louis Gustavo</h2>
+        <h1 className="break-words text-4xl font-bold sm:text-6xl lg:text-7xl">
           A <span className="text-highlight">fullstack developer</span> and a{" "}
           <span className="text-highlight">Computer Science</span>{" "}
           undergraduate.

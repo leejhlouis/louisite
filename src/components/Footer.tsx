@@ -13,7 +13,7 @@ export default function Footer() {
         <p>Back to top</p>
       </button>
       <div className="py-6">
-        <p className="pb-2 text-3xl font-light">
+        <p className="h3 pb-2 font-light lg:text-3xl">
           LOUI<span className="font-bold">SITE</span>
         </p>
       </div>
