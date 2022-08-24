@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { Helmet } from "react-helmet";
 import { useParams, Navigate } from "react-router-dom";
 import portfolio from "../data/portfolio.js";
 import Preloader from "../components/Preloader";
@@ -19,6 +20,9 @@ export default function PortfolioDetailPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{item.title} | LOUISITE</title>
+      </Helmet>
       <Suspense fallback={<Preloader />}>
         <div className="bg">
           <Navbar />
