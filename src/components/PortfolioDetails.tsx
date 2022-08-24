@@ -12,6 +12,7 @@ export default function PortfolioDetails(props: any) {
           width={448}
           height={300}
           className="cursor-pointer transition hover:scale-125 hover:opacity-80"
+          loading="lazy"
         />
       </div>
       <h2 className="pb-3 text-4xl font-bold">{props.item.title}</h2>

@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="container pt-8">
-      <button onClick={scrollToTop} className="btn mx-auto">
+      <button onClick={scrollToTop} className="btn mx-auto mb-6">
         <ArrowUpSLineIcon color="#fff" />
         <p>Back to top</p>
       </button>

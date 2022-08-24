@@ -12,6 +12,7 @@ export default function Works() {
           width={544}
           height={544}
           className="cursor-pointer transition hover:scale-125 hover:opacity-80"
+          loading="lazy"
         />
       </div>
       <div className="pt-8">
