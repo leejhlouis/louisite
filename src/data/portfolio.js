@@ -1,4 +1,4 @@
-export default [
+const portfolio = [
   {
     id: 1,
     title: "Louisite",
@@ -60,3 +60,5 @@ export default [
     liveDemoLink: ""
   }
 ];
+
+export default portfolio;

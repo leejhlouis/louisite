@@ -1,5 +1,6 @@
 import ArrowUpSLineIcon from "remixicon-react/ArrowUpSLineIcon";
-import NavLinks from "./NavLinks";
+import Button from "../components/Button";
+import NavLinks from "../components/NavLinks";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -7,13 +8,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="container pt-8">
-      <button onClick={scrollToTop} className="btn mx-auto mb-6">
-        <ArrowUpSLineIcon color="#fff" />
-        <p>Back to top</p>
-      </button>
+    <footer className="container py-4 sm:py-6 lg:py-8">
+      <Button
+        onClickEventHandler={scrollToTop}
+        className="mx-auto mb-6"
+        icon={<ArrowUpSLineIcon />}
+        textContent="Back to top"
+      />
       <div className="py-6">
-        <p className="h3 pb-2 font-light lg:text-3xl">
+        <p className="pb-2 text-2xl font-light md:text-3xl">
           LOUI<span className="font-bold">SITE</span>
         </p>
       </div>
