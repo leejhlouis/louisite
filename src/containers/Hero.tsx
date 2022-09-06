@@ -11,6 +11,10 @@ export default function Hero() {
     </li>
   ));
 
+  const scrollDown = () => {
+    window.scrollTo(0, window.innerHeight);
+  };
+
   return (
     <div className="h-[85vh]">
       <div className="container flex h-5/6 flex-col justify-center gap-6">
@@ -22,8 +26,7 @@ export default function Hero() {
         <ul className="mt-3 flex list-none items-center gap-2">{social}</ul>
       </div>
       <Button
-        href="#portfolio"
-        useExternalLink={true}
+        onClickEventHandler={scrollDown}
         className="mx-auto h-1/6"
         icon={<ArrowDownSLineIcon />}
         textContent="Featured works"
