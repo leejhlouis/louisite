@@ -1,21 +1,21 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        'primary' : '#0D1129',
+        muted: colors.neutral["300"],
       },
     },
     container: {
       center: true,
-      padding:{
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-      }
+      padding: {
+        DEFAULT: "1rem",
+        lg: "2rem",
+        xl: "3rem",
+      },
     },
   },
   plugins: [],
-}
+};

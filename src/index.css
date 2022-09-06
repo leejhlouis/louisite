@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    background: theme(colors.primary);
+    background: theme(colors.slate.900);
     font-family: "Nunito Sans", sans-serif;
     scroll-behavior: smooth;
   }
@@ -23,6 +23,10 @@
     line-height: theme(lineHeight.6);
   }
 
+  p {
+    padding-bottom: theme(spacing.6);
+  }
+
   @media screen(md) {
     li,
     i,
@@ -31,20 +35,31 @@
       font-size: theme(fontSize.lg);
       line-height: theme(lineHeight.7);
     }
-  }
 
-  p {
-    padding-bottom: theme(spacing.6);
+    p {
+      padding-bottom: theme(spacing.8);
+    }
   }
 
   span {
+    color: inherit;
     font-size: inherit;
+  }
+
+  i {
+    color: inherit;
   }
 
   a:not(.active):not(.title):hover,
   button:hover {
     text-decoration-line: underline;
-    opacity: theme(opacity.80);
+    color: theme(colors.blue.200);
+    transition-duration: theme(transitionDuration.300);
+  }
+
+  a:hover svg {
+    transition-duration: theme(transitionDuration.300);
+    fill: theme(colors.blue.200);
   }
 
   .container {
@@ -69,26 +84,18 @@
 
 @layer utilities {
   .bg-gradient {
-    background: linear-gradient(
-        180deg,
-        rgba(13, 17, 41, 0) 60%,
-        theme(colors.primary) 100%
-      ),
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 60%, theme(colors.slate.900) 100%),
       linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
       linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
 
   .text-highlight {
-    background: linear-gradient(
-      to top right,
-      theme(colors.fuchsia.300),
-      theme(colors.indigo.300)
-    );
+    background: linear-gradient(to top right, theme(colors.fuchsia.400), theme(colors.blue.200));
     background-clip: text;
     color: transparent;
   }
 
-  .text-muted {
-    color: theme(colors.gray.400);
+  .tags li:not(:last-of-type) {
+    margin-right: theme(spacing.4);
   }
 }

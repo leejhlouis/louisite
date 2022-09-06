@@ -21,7 +21,7 @@ export default function Footer() {
         </p>
       </div>
       <div className="flex items-center justify-between">
-        <p className="font-light">© LOUISITE 2022.</p>
+        <p className="font-light">Made with ❤️ by Louis.</p>
         <NavLinks />
       </div>
     </footer>
