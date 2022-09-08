@@ -4,7 +4,7 @@ import { portfolioList } from "../__data/portfolio";
 
 export default function Works() {
   const portfolioEntry = portfolioList.map((portfolio, index) => (
-    <ListCard {...portfolio} id={index} />
+    <ListCard {...portfolio} key={index} />
   ));
 
   return (

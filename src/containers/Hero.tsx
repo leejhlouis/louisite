@@ -3,8 +3,8 @@ import Button from "../components/Button";
 import socialList from "../__data/social";
 
 export default function Hero() {
-  const social = socialList.map((item) => (
-    <li>
+  const social = socialList.map((item, index) => (
+    <li key={index}>
       <a href={item.url} target="_blank" rel="noreferrer" aria-label={item.name}>
         {item.icon}
       </a>

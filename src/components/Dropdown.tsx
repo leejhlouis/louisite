@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
 import navItems from "../__data/navItems";
 
-export default function NavLinks() {
-  const links = navItems.map((item) => (
+export default function Dropdown() {
+  const links = navItems.map((item, index) => (
     <NavLink
+      key={index}
       className="w-full"
       to={item.href}
       style={({ isActive }) => ({
