@@ -13,7 +13,7 @@ export default function AboutPage() {
         <title>About | LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <div className="bg-gradient h-[100vh]">
+        <div className="bg-gradient-light dark:bg-gradient-dark h-[100vh]">
           <Navbar />
           <About />
         </div>

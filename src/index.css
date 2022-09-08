@@ -6,13 +6,8 @@
 
 @layer base {
   html {
-    background: theme(colors.slate.900);
     font-family: "Nunito Sans", sans-serif;
     scroll-behavior: smooth;
-  }
-
-  * {
-    color: theme(colors.white);
   }
 
   li,
@@ -53,13 +48,22 @@
   a:not(.active):not(.title):hover,
   button:hover {
     text-decoration-line: underline;
-    color: theme(colors.blue.200);
+    color: theme(colors.blue.800);
     transition-duration: theme(transitionDuration.300);
   }
 
   a:hover svg {
     transition-duration: theme(transitionDuration.300);
-    fill: theme(colors.blue.200);
+    fill: theme(colors.blue.800);
+  }
+
+  html.dark a:not(.active):not(.title):hover,
+  html.dark button:hover {
+    color: theme(colors.blue.200) !important;
+  }
+
+  html.dark a:hover svg {
+    fill: theme(colors.blue.200) !important;
   }
 
   .container {
@@ -83,14 +87,26 @@
 }
 
 @layer utilities {
-  .bg-gradient {
+  .bg-gradient-light {
+    background: linear-gradient(180deg, rgba(226, 232, 240, 0) 60%, theme(colors.slate.200) 100%),
+      linear-gradient(60deg, #cdd4f7 33%, rgba(175, 189, 255, 0) 66%),
+      linear-gradient(210deg, #d9a0db 20%, #d1d1d1 80%);
+  }
+
+  .bg-gradient-dark {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0) 60%, theme(colors.slate.900) 100%),
       linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
       linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
 
-  .text-highlight {
+  .text-highlight-light {
     background: linear-gradient(to top right, theme(colors.fuchsia.400), theme(colors.blue.200));
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-highlight-dark {
+    background: linear-gradient(to top right, theme(colors.fuchsia.700), theme(colors.blue.900));
     background-clip: text;
     color: transparent;
   }

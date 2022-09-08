@@ -15,13 +15,13 @@ export default function Footer() {
         icon={<ArrowUpSLineIcon />}
         textContent="Back to top"
       />
-      <div className="py-6">
+      <div className="pt-8 pb-4">
         <p className="pb-2 text-2xl font-light md:text-3xl">
           LOUI<span className="font-bold">SITE</span>
         </p>
       </div>
-      <div className="flex items-center justify-between">
-        <p className="font-light">Made with ❤️ by Louis.</p>
+      <div className="items-center justify-between pb-4 xs:flex">
+        <p className="pb-4 font-light xs:pb-0">Made with ❤️ by Louis.</p>
         <NavLinks />
       </div>
     </footer>

@@ -14,7 +14,7 @@ export default function Home() {
         <title>LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <div className="bg-gradient h-screen">
+        <div className="bg-gradient-light dark:bg-gradient-dark h-screen">
           <Navbar />
           <Hero />
         </div>

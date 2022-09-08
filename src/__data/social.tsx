@@ -12,17 +12,17 @@ const social: socialProps[] = [
   {
     name: "Mail",
     url: "mailto:louis.gustavo@binus.ac.id",
-    icon: <MailFillIcon color="#e5e7eb" size={22} />,
+    icon: <MailFillIcon size={22} className="text-muted-dark dark:text-muted" />,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/louis-gustavo",
-    icon: <LinkedinFillIcon color="#e5e7eb" size={24} />,
+    icon: <LinkedinFillIcon size={24} className="text-muted-dark dark:text-muted" />,
   },
   {
     name: "GitHub",
     url: "https://github.com/itslouisgs",
-    icon: <GithubFillIcon color="#e5e7eb" size={24} />,
+    icon: <GithubFillIcon size={24} className="text-muted-dark dark:text-muted" />,
   },
 ];
 
