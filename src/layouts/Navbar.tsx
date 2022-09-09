@@ -3,14 +3,20 @@ import Dropdown from "../components/Dropdown";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 import Menu3FillIcon from "remixicon-react/Menu3FillIcon";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [isActive, setActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
+  const [toggle, setToggle] = useState(false);
 
-  const toggleMobileNav = () => {
-    setActive(!isActive);
-  };
+  const handleWidthChange = () => setIsMobile(window.innerWidth < 480);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWidthChange);
+    return () => {
+      window.removeEventListener("resize", handleWidthChange);
+    };
+  }, []);
 
   return (
     <nav className="container flex flex-wrap items-center justify-between py-5">
@@ -20,20 +26,19 @@ export default function Navbar() {
         </p>
       </Link>
       <div className="flex items-center gap-2 xs:gap-8">
-        <div className="hidden xs:block">
-          <NavLinks />
-        </div>
-        <div className="relative xs:hidden">
-          <button
-            className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
-            onClick={toggleMobileNav}
-          >
-            <Menu3FillIcon />
-          </button>
-          <div className={`${isActive ? "block" : "hidden"} absolute right-0 mt-2`}>
-            <Dropdown />
+        {!isMobile && <NavLinks />}
+        {isMobile && (
+          <div className="relative">
+            <button
+              className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
+              onClick={() => setToggle(!toggle)}
+            >
+              <Menu3FillIcon />
+            </button>
+            {toggle && <Dropdown />}
           </div>
-        </div>
+        )}
+
         <ThemeSwitcher />
       </div>
     </nav>
