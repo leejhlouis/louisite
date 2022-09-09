@@ -84,6 +84,18 @@
       padding-bottom: theme(spacing.16);
     }
   }
+
+  .tags li:not(:last-of-type) {
+    margin-right: theme(spacing.4);
+  }
+
+  .preloader > svg {
+    stroke: theme(colors.fuchsia.700);
+  }
+
+  .dark .preloader > svg {
+    stroke: theme(colors.fuchsia.400);
+  }
 }
 
 @layer utilities {
@@ -109,9 +121,5 @@
     background: linear-gradient(to top right, theme(colors.fuchsia.700), theme(colors.blue.900));
     background-clip: text;
     color: transparent;
-  }
-
-  .tags li:not(:last-of-type) {
-    margin-right: theme(spacing.4);
   }
 }
