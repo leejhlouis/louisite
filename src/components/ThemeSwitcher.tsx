@@ -6,14 +6,15 @@ import checkDarkTheme from "../functions/checkDarkTheme";
 export default function ThemeSwitcher() {
   const [isDark, setDark] = useState(checkDarkTheme);
 
-  useEffect(() => {
+  const toggleDarkTheme = () => {
     document.documentElement.classList.toggle("dark");
-    localStorage.theme = isDark ? "dark" : "light";
-  }, [isDark]);
+    localStorage.theme = isDark ? "light" : "dark";
+    setDark(!isDark);
+  };
 
   return (
     <button
-      onClick={() => setDark(!isDark)}
+      onClick={toggleDarkTheme}
       className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
     >
       {isDark ? <MoonLineIcon /> : <SunLineIcon />}
