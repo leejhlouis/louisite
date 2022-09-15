@@ -4,7 +4,7 @@ import Preloader from "../components/Preloader";
 
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
 const Hero = React.lazy(() => import("../containers/Hero"));
-const Portfolio = React.lazy(() => import("../containers/Portfolio"));
+const Portfolio = React.lazy(() => import("../containers/Works"));
 const Footer = React.lazy(() => import("../layouts/Footer"));
 
 export default function Home() {
