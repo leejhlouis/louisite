@@ -11,8 +11,8 @@ export default function Hero() {
     </li>
   ));
 
-  const scrollDown = () => {
-    window.scrollTo(0, window.innerHeight);
+  const scrollToWorks = () => {
+    window.location.assign("#works");
   };
 
   return (
@@ -28,10 +28,10 @@ export default function Hero() {
         <ul className="mt-3 flex list-none items-center gap-4">{social}</ul>
       </div>
       <Button
-        onClickEventHandler={scrollDown}
         className="mx-auto h-1/6"
         icon={<ArrowDownSLineIcon />}
         textContent="Featured works"
+        onClick={scrollToWorks}
       />
     </div>
   );

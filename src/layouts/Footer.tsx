@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="container py-4 sm:py-6 lg:py-8">
       <Button
-        onClickEventHandler={scrollToTop}
+        onClick={scrollToTop}
         className="mx-auto mb-6"
         icon={<ArrowUpSLineIcon />}
         textContent="Back to top"
