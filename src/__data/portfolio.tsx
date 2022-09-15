@@ -30,7 +30,8 @@ export const portfolioList = [
   {
     dateRange: "Jan 2022 – Ongoing",
     title: "Manager of Web Development Division, HIMTI BINUS University",
-    description: "Managed and maintained the official website of HIMTI during my tenure as the Manager in 2022.",
+    description:
+      "Managed and maintained the official website of HIMTI during my tenure as the Manager in 2022.",
     techStacks: ["Project management", "Leadership", "Web development"],
     links: [
       {
@@ -42,7 +43,8 @@ export const portfolioList = [
   {
     dateRange: "Jun – Sep 2022",
     title: "LOUISITE",
-    description: 'My all-new personal website—this is the second iteration. Portmanteau of "Louis" and "site".',
+    description:
+      'My all-new personal website—this is the second iteration. Portmanteau of "Louis" and "site".',
     techStacks: ["React", "TypeScript", "Tailwind CSS", "Figma"],
     links: [
       {
@@ -51,7 +53,7 @@ export const portfolioList = [
       },
       {
         ...live,
-        url: "https://itslouisgs.github.io",
+        url: "https://louisite.netfliy.app",
       },
     ],
   },
