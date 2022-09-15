@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SunLineIcon from "remixicon-react/SunLineIcon";
 import MoonLineIcon from "remixicon-react/MoonLineIcon";
 import checkDarkTheme from "../functions/checkDarkTheme";

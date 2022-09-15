@@ -14,7 +14,8 @@ export default function About() {
         <a
           href="https://binus.ac.id/"
           target="_blank"
-          className="font-bold text-blue-700 decoration-blue-700 dark:text-blue-200 dark:decoration-blue-200 hover:underline"
+          rel="noreferrer"
+          className="font-bold text-blue-700 decoration-blue-700 hover:underline dark:text-blue-200 dark:decoration-blue-200"
         >
           BINUS University
         </a>
@@ -27,8 +28,9 @@ export default function About() {
         You can reach me on{" "}
         <a
           href="mailto:louis.gustavo@binus.ac.id"
+          rel="noreferrer"
           target="_blank"
-          className="font-bold text-blue-700 decoration-blue-700 dark:text-blue-200 dark:decoration-blue-200 hover:underline"
+          className="font-bold text-blue-700 decoration-blue-700 hover:underline dark:text-blue-200 dark:decoration-blue-200"
         >
           Mail
         </a>
@@ -36,7 +38,8 @@ export default function About() {
         <a
           href="https://github.com/itslouisgs"
           target="_blank"
-          className="font-bold text-blue-700 decoration-blue-700 dark:text-blue-200 dark:decoration-blue-200 hover:underline"
+          rel="noreferrer"
+          className="font-bold text-blue-700 decoration-blue-700 hover:underline dark:text-blue-200 dark:decoration-blue-200"
         >
           GitHub
         </a>
@@ -44,7 +47,8 @@ export default function About() {
         <a
           href="https://linkedin.com/in/louis-gustavo"
           target="_blank"
-          className="font-bold text-blue-700 decoration-blue-700 dark:text-blue-200 dark:decoration-blue-200 hover:underline"
+          rel="noreferrer"
+          className="font-bold text-blue-700 decoration-blue-700 hover:underline dark:text-blue-200 dark:decoration-blue-200"
         >
           LinkedIn
         </a>
