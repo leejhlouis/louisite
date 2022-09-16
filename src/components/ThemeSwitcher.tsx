@@ -17,6 +17,7 @@ export default function ThemeSwitcher() {
       onClick={toggleDarkTheme}
       className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
     >
+      <p className="sr-only">Toggle theme</p>
       {isDark ? <MoonLineIcon /> : <SunLineIcon />}
     </button>
   );
