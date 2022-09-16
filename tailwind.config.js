@@ -16,6 +16,9 @@ module.exports = {
           dark: colors.neutral["800"],
         },
       },
+      spacing: {
+        18: "72px",
+      },
     },
     container: {
       center: true,
