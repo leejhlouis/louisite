@@ -2,7 +2,7 @@ import Heading2 from "../components/Heading2";
 
 export default function About() {
   return (
-    <section className="container min-h-[80vh] md:max-w-screen-md">
+    <section className="container md:max-w-screen-md">
       <Heading2 className="mb-6">About</Heading2>
       <p className="text-muted-dark dark:text-muted">
         Hey, it's <b>Louis "itslouisgs"</b>—a software engineer based in Indonesia. I enjoy building

@@ -14,12 +14,12 @@ export default function Home() {
         <title>LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <div className="bg-gradient-light dark:bg-gradient-dark h-screen">
+        <div className="bg-gradient-light dark:bg-gradient-dark h-screen min-h-[480px]">
           <Navbar />
           <Hero />
+          <Portfolio />
+          <Footer />
         </div>
-        <Portfolio />
-        <Footer />
       </Suspense>
     </>
   );

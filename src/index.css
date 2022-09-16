@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Nunito Sans", system-ui, sans-serif;
     scroll-behavior: smooth;
   }
 
@@ -88,7 +88,7 @@
     }
   }
 
-  @media screen(lg) {
+  @media screen(xl) {
     .container {
       padding-top: theme(spacing.16);
       padding-bottom: theme(spacing.16);
