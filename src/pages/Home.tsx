@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import Preloader from "../components/Preloader";
+import Wrapper from "../components/Wrapper";
 
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
 const Hero = React.lazy(() => import("../containers/Hero"));
@@ -14,12 +15,12 @@ export default function Home() {
         <title>LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <div className="bg-gradient-light dark:bg-gradient-dark h-screen min-h-[480px]">
+        <Wrapper>
           <Navbar />
           <Hero />
           <Portfolio />
           <Footer />
-        </div>
+        </Wrapper>
       </Suspense>
     </>
   );

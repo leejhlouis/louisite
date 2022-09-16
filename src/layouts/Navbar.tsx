@@ -19,28 +19,30 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="container flex flex-wrap items-center justify-between py-5">
-      <Link to="/" className="title">
-        <p className="pb-0 text-2xl font-light">
-          LOUI<span className="font-bold">SITE</span>
-        </p>
-      </Link>
-      <div className="flex items-center gap-2 xs:gap-8">
-        {!isMobile && <NavLinks />}
-        {isMobile && (
-          <div className="relative">
-            <button
-              className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
-              onClick={() => setToggle(!toggle)}
-            >
-              <p className="sr-only">Toggle theme</p>
-              <Menu3FillIcon />
-            </button>
-            {toggle && <Dropdown />}
-          </div>
-        )}
+    <nav className="fixed top-0 z-50 w-full backdrop-blur-lg dark:backdrop-blur-xl">
+      <div className="container flex flex-wrap items-center justify-between py-4">
+        <Link to="/" className="title">
+          <p className="pb-0 text-2xl font-light">
+            LOUI<span className="font-bold">SITE</span>
+          </p>
+        </Link>
+        <div className="flex items-center gap-2 xs:gap-8">
+          {!isMobile && <NavLinks />}
+          {isMobile && (
+            <div className="relative">
+              <button
+                className="cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20"
+                onClick={() => setToggle(!toggle)}
+              >
+                <p className="sr-only">Toggle theme</p>
+                <Menu3FillIcon />
+              </button>
+              {toggle && <Dropdown />}
+            </div>
+          )}
 
-        <ThemeSwitcher />
+          <ThemeSwitcher />
+        </div>
       </div>
     </nav>
   );
