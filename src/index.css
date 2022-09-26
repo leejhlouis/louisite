@@ -122,13 +122,13 @@
   }
 
   .text-highlight-light {
-    background: linear-gradient(to top right, theme(colors.fuchsia.400), theme(colors.blue.200));
+    background: linear-gradient(to top right, theme(colors.fuchsia.400), theme(colors.cyan.200));
     background-clip: text;
     color: transparent;
   }
 
   .text-highlight-dark {
-    background: linear-gradient(to top right, theme(colors.fuchsia.700), theme(colors.blue.900));
+    background: linear-gradient(to top right, theme(colors.fuchsia.600), theme(colors.cyan.700));
     background-clip: text;
     color: transparent;
   }
