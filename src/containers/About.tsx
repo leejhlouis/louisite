@@ -25,8 +25,11 @@ export default function About() {
         Here are some technologies that I know:
       </p>
       <ul className="pb-4 text-muted-dark dark:text-muted md:pb-8">
-        {skills.map((li) => (
-          <li className="mr-2 mb-2 inline-block cursor-pointer rounded-xl bg-slate-100/75 px-3 text-sm hover:bg-slate-100 hover:shadow-lg dark:bg-slate-800/50 dark:hover:bg-slate-800 md:text-base">
+        {skills.map((li, index) => (
+          <li
+            key={index}
+            className="mr-2 mb-2 inline-block cursor-pointer rounded-xl bg-slate-100/75 px-3 text-sm hover:bg-slate-100 hover:shadow-lg dark:bg-slate-800/50 dark:hover:bg-slate-800 md:text-base"
+          >
             {li}
           </li>
         ))}
