@@ -1,4 +1,3 @@
-import Heading3 from "./Heading3";
 import { portfolioProps } from "../__data/portfolio";
 
 export default function ListCard(props: portfolioProps) {

@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
-import Heading2 from "../components/Heading2";
 import Preloader from "../components/Preloader";
 import Wrapper from "../components/Wrapper";
 
