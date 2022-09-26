@@ -8,7 +8,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="container mb-2 flex h-[88vh] min-h-[480px] flex-col justify-between md:mb-4">
+    <div className="container flex h-[88vh] min-h-[480px] flex-col justify-between">
       <div className="flex h-3/4 flex-col justify-center gap-6">
         <h2 className="text-2xl md:text-4xl">I'm Louis Gustavo</h2>
         <h1 className="break-words text-4xl font-extrabold tracking-tight xs:text-5xl sm:text-6xl lg:text-7xl">
