@@ -1,16 +1,8 @@
 import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
 import Button from "../components/Button";
-import socialList from "../__data/social";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 export default function Hero() {
-  const social = socialList.map((item, index) => (
-    <li key={index}>
-      <a href={item.url} target="_blank" rel="noreferrer" aria-label={item.name}>
-        {item.icon}
-      </a>
-    </li>
-  ));
-
   const scrollToWorks = () => {
     window.location.assign("#works");
   };
@@ -25,7 +17,7 @@ export default function Hero() {
           <span className="text-highlight-dark dark:text-highlight-light">Computer Science</span>{" "}
           undergraduate.
         </h1>
-        <ul className="mt-3 flex list-none items-center gap-4">{social}</ul>
+        <SocialMediaLinks className="mt-3" />
       </div>
       <Button
         className="mx-auto"

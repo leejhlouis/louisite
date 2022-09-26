@@ -1,6 +1,7 @@
 import ArrowUpSLineIcon from "remixicon-react/ArrowUpSLineIcon";
 import Button from "../components/Button";
 import NavLinks from "../components/NavLinks";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -22,7 +23,10 @@ export default function Footer() {
       </div>
       <div className="items-center justify-between pb-4 xs:flex">
         <p className="pb-4 font-light xs:pb-0">Made with ❤️ by Louis.</p>
-        <NavLinks />
+        <div className="flex items-center gap-8">
+          <NavLinks />
+          <SocialMediaLinks />
+        </div>
       </div>
     </footer>
   );
