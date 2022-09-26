@@ -1,10 +1,13 @@
 interface Heading3Props {
+  id?: string;
   className?: string;
   children: any;
 }
 
 export default function Heading3(props: Heading3Props) {
   return (
-    <h3 className={`pb-4 text-xl font-bold md:text-2xl ${props.className}`}>{props.children}</h3>
+    <h3 id={props.id} className={`pb-4 text-2xl font-bold md:text-3xl ${props.className}`}>
+      {props.children}
+    </h3>
   );
 }

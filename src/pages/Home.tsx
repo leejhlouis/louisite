@@ -15,7 +15,7 @@ export default function Home() {
         <title>LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <Wrapper>
+        <Wrapper className="h-screen min-h-[480px]">
           <Navbar />
           <Hero />
           <Portfolio />

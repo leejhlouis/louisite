@@ -1,6 +1,6 @@
-export default function StylizedBackground(props: { children: React.ReactNode }) {
+export default function Wrapper(props: { children: React.ReactNode; className?: string }) {
   return (
-    <div className="bg-gradient-light dark:bg-gradient-dark h-screen min-h-[480px] pt-18">
+    <div className={`bg-gradient-light dark:bg-gradient-dark pt-18 ${props.className}`}>
       {props.children}
     </div>
   );

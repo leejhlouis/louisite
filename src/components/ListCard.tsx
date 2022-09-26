@@ -26,7 +26,7 @@ export default function ListCard(props: portfolioProps) {
         <p className="pb-2 text-sm uppercase tracking-wide text-muted-dark dark:text-muted md:text-base">
           {props.dateRange}
         </p>
-        <Heading3>{props.title}</Heading3>
+        <h3 className="pb-4 text-xl font-bold md:text-2xl">{props.title}</h3>
         <p className="text-muted-dark dark:text-muted">{props.description}</p>
       </header>
       <footer>
