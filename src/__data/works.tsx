@@ -7,7 +7,7 @@ interface linkProps {
   icon: JSX.Element;
 }
 
-export interface portfolioProps {
+export interface worksProps {
   dateRange: string;
   title: string;
   description: string | JSX.Element;
@@ -25,26 +25,11 @@ const live = {
   icon: <ExternalLinkFillIcon size={24} />,
 };
 
-// Coming soon
-export const portfolioList = [
-  {
-    dateRange: "Jan 2022 – Ongoing",
-    title: "Manager of Web Development Division, HIMTI BINUS University",
-    description:
-      "Managed and maintained the official website of HIMTI during my tenure as the Manager in 2022.",
-    techStacks: ["Project management", "Leadership", "Web development"],
-    links: [
-      {
-        ...github,
-        url: "https://github.com/himtibinus",
-      },
-    ],
-  },
+export const works = [
   {
     dateRange: "Jun – Sep 2022",
     title: "LOUISITE",
-    description:
-      'My all-new personal website—this is the second iteration. Portmanteau of "Louis" and "site".',
+    description: "My all-new personal website—this is the second and latest iteration.",
     techStacks: ["React", "TypeScript", "Tailwind CSS", "Figma"],
     links: [
       {
@@ -58,10 +43,10 @@ export const portfolioList = [
     ],
   },
   {
-    dateRange: "Aug 2022 – Ongoing",
+    dateRange: "Aug – Sep 2022",
     title: "JavaScript30",
     description:
-      "Now completing JavaScript30—a 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.",
+      "Completed JavaScript30—a 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.",
     techStacks: ["JavaScript"],
     links: [
       {
@@ -91,7 +76,7 @@ export const portfolioList = [
     dateRange: "Mar – May 2022",
     title: "BalaiTani",
     description:
-      "An e-commerce web app designed as a platform for connecting small farmers to buyers directly to prevent middlemen from inflating the retail costs.",
+      "An e-commerce web app designed as a platform for connecting small farmers to buyers directly to avoid middlemen from inflating the retail costs.",
     techStacks: ["Laravel", "Bootstrap"],
     links: [
       {
