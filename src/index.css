@@ -69,11 +69,11 @@
 
   html.dark a:not(.active):not(.title):hover,
   html.dark button:hover {
-    color: theme(colors.blue.200) !important;
+    color: theme(colors.blue.200);
   }
 
   html.dark a:hover svg {
-    fill: theme(colors.blue.200) !important;
+    fill: theme(colors.blue.200);
   }
 
   .container {
@@ -93,10 +93,6 @@
       padding-top: theme(spacing.16);
       padding-bottom: theme(spacing.16);
     }
-  }
-
-  .tags li:not(:last-of-type) {
-    margin-right: theme(spacing.4);
   }
 
   .preloader > svg {
