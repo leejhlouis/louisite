@@ -30,9 +30,9 @@ export default function ListCard(props: worksProps) {
         <h3 className="pb-4 text-xl font-bold md:text-2xl">
           <a
             href={
-              props.links.find((link) => link.label === "Live")
-                ? props.links.find((link) => link.label === "Live")?.url
-                : props.links.find((link) => link.label === "Source code")?.url
+              props.links.find((link) => link.label === "Source code")
+                ? props.links.find((link) => link.label === "Source code")?.url
+                : props.links.find((link) => link.label === "Live")?.url
             }
             className="z-0 !no-underline before:absolute before:top-0 before:left-0 before:h-full before:w-full"
           >
