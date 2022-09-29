@@ -120,16 +120,4 @@
       linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
       linear-gradient(210deg, #491616 20%, #00137a 80%);
   }
-
-  .text-highlight-light {
-    background: linear-gradient(to top right, theme(colors.fuchsia.400), theme(colors.cyan.200));
-    background-clip: text;
-    color: transparent;
-  }
-
-  .text-highlight-dark {
-    background: linear-gradient(to top right, theme(colors.fuchsia.600), theme(colors.cyan.700));
-    background-clip: text;
-    color: transparent;
-  }
 }
