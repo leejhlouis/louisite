@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className="items-center justify-between pb-4 xs:flex">
         <p className="pb-4 font-light xs:pb-0">Made with ❤️ by Louis.</p>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 sm:gap-8">
           <NavLinks />
           <SocialMediaLinks />
         </div>
