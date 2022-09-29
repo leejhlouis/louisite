@@ -14,11 +14,12 @@ export default function About() {
         <InlineLink href="https://www.fandom.com/">Fandom</InlineLink>.
       </p>
       <p className="text-muted-dark dark:text-muted">
-        I'm currently a third-year computer science undergraduate at{" "}
-        <InlineLink href="https://binus.ac.id">BINUS University</InlineLink>. I'm also the Manager
-        of Web Development Division at HIMTI BINUS University (BINUS University's computer science
-        student association), responsible for managing and maintaining the association's official
-        website.
+        I'm currently a third-year <b>computer science undergraduate</b> at{" "}
+        <InlineLink href="https://binus.ac.id">BINUS University</InlineLink> while serving as{" "}
+        <b>Manager of Web Development Division</b> at{" "}
+        <InlineLink href="https://himti.or.id">HIMTI BINUS University</InlineLink>. On top of that,
+        I received the Mentoring Scholarship Program at BINUS University for maintaining over 3.5
+        GPA, provided that I conduct peer-to-peer learning sessions for other students.
       </p>
       <Heading3 id="skills">Skills</Heading3>
       <p className="pb-3 text-muted-dark dark:text-muted">
@@ -28,7 +29,7 @@ export default function About() {
         {skills.map((li, index) => (
           <li
             key={index}
-            className="mr-2 mb-2 inline-block cursor-pointer rounded-xl bg-slate-100/75 px-3 text-sm hover:bg-slate-100 hover:shadow-lg dark:bg-slate-800/50 dark:hover:bg-slate-800 md:text-base"
+            className="mr-2 mb-2 inline-block cursor-pointer rounded-xl bg-slate-100/75 px-3 text-sm hover:bg-slate-100 hover:shadow dark:bg-slate-800/75 dark:hover:bg-slate-800 md:text-base"
           >
             {li}
           </li>

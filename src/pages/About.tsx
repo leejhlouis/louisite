@@ -17,8 +17,8 @@ export default function AboutPage() {
         <Wrapper>
           <Navbar />
           <About />
+          <Footer />
         </Wrapper>
-        <Footer />
       </Suspense>
     </>
   );
