@@ -6,7 +6,7 @@ export default function HighlightText(props: { children: React.ReactNode }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDegree(degree >= 360 ? 0 : degree + 15);
+      setDegree((degree + 15) % 360);
       if (ref.current !== null) {
         ref.current.style.backgroundImage = `linear-gradient(${degree}deg, var(--tw-gradient-stops))`;
       }
