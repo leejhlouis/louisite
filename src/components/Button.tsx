@@ -8,7 +8,9 @@ interface ButtonProps {
 export default function Button(props: ButtonProps) {
   return (
     <button
-      className={`flex w-fit items-center gap-1 font-semibold transition duration-300 ease-in-out hover:underline ${props.className}`}
+      className={`flex w-fit items-center gap-1 font-semibold transition duration-300 ease-in-out hover:underline ${
+        props.className ? props.className : ""
+      }`}
       onClick={props.onClick}
     >
       {props.icon}
