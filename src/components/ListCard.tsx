@@ -19,7 +19,7 @@ export default function ListCard(props: worksProps) {
   ));
 
   return (
-    <div
+    <li
       className="flex w-full transform cursor-pointer 
         flex-col justify-between rounded-xl border-[1px] bg-slate-100 py-8 px-6 drop-shadow-xl duration-300 hover:-translate-y-1 hover:bg-slate-50 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800 hover:dark:bg-[rgb(22,32,50)]"
     >
@@ -35,6 +35,8 @@ export default function ListCard(props: worksProps) {
                 : props.links.find((link) => link.label === "Live")?.url
             }
             className="z-0 !no-underline before:absolute before:top-0 before:left-0 before:h-full before:w-full"
+            target="_blank"
+            rel="noreferrer"
           >
             {props.title}
           </a>
@@ -45,6 +47,6 @@ export default function ListCard(props: worksProps) {
         <ul className="mb-4 flex flex-wrap">{techStacksEntry}</ul>
         <ul className="flex gap-4">{linksEntry}</ul>
       </footer>
-    </div>
+    </li>
   );
 }
