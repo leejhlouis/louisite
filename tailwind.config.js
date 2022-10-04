@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors: {
         muted: {
-          DEFAULT: colors.neutral["300"],
+          DEFAULT: colors.neutral["200"],
           dark: colors.neutral["800"],
         },
       },
