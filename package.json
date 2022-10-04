@@ -17,6 +17,7 @@
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-loader-spinner": "^5.2.0",
+    "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "remixicon-react": "^1.0.0",
