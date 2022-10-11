@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import { Helmet } from "react-helmet";
 import Preloader from "../components/Preloader";
-import Wrapper from "../components/Wrapper";
 
+const PageWrapper = React.lazy(() => import("../layouts/PageWrapper"));
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
-const Hero = React.lazy(() => import("../containers/Hero"));
-const Works = React.lazy(() => import("../containers/Works"));
+const Hero = React.lazy(() => import("../sections/Hero"));
+const Works = React.lazy(() => import("../sections/Works"));
 const Footer = React.lazy(() => import("../layouts/Footer"));
 
 export default function Home() {
@@ -15,12 +15,12 @@ export default function Home() {
         <title>LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <Wrapper className="h-screen min-h-[480px]">
+        <PageWrapper className="h-screen min-h-[480px]">
           <Navbar />
           <Hero />
           <Works />
           <Footer />
-        </Wrapper>
+        </PageWrapper>
       </Suspense>
     </>
   );

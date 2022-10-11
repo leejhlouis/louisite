@@ -1,4 +1,9 @@
-export default function Wrapper(props: { children: React.ReactNode; className?: string }) {
+interface PageWrapperProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function PageWrapper(props: PageWrapperProps) {
   return (
     <div
       className={`bg-gradient-light dark:bg-gradient-dark pt-18 ${

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SunLineIcon from "remixicon-react/SunLineIcon";
 import MoonLineIcon from "remixicon-react/MoonLineIcon";
-import checkDarkTheme from "../functions/checkDarkTheme";
+import checkDarkTheme from "../utils/checkDarkTheme";
 
 export default function ThemeSwitcher() {
   const [isDark, setDark] = useState(checkDarkTheme);

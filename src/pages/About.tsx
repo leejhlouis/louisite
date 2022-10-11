@@ -1,12 +1,11 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Preloader from "../components/Preloader";
-import { useEffect, useState } from "react";
 import about from "../__data/about/about.md";
 
-const Wrapper = React.lazy(() => import("../components/Wrapper"));
+const PageWrapper = React.lazy(() => import("../layouts/PageWrapper"));
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
-const About = React.lazy(() => import("../containers/About"));
+const About = React.lazy(() => import("../sections/About"));
 const Footer = React.lazy(() => import("../layouts/Footer"));
 
 export default function AboutPage() {
@@ -27,11 +26,11 @@ export default function AboutPage() {
         <title>About | LOUISITE</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
-        <Wrapper>
+        <PageWrapper>
           <Navbar />
           <About children={content} />
           <Footer />
-        </Wrapper>
+        </PageWrapper>
       </Suspense>
     </>
   );

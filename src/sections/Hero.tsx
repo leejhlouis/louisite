@@ -1,3 +1,4 @@
+import Section from "../layouts/Section";
 import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
 import HighlightText from "../components/HighlightText";
 import Button from "../components/Button";
@@ -9,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="container flex h-[88vh] min-h-[480px] flex-col justify-between">
+    <Section className="flex h-[88vh] min-h-[480px] flex-col justify-between">
       <div className="flex h-3/4 flex-col justify-center gap-6">
         <h2 className="text-2xl md:text-4xl">I'm Louis Gustavo</h2>
         <h1 className="break-words text-4xl font-extrabold tracking-tight xs:text-5xl sm:text-6xl lg:text-7xl">
@@ -24,6 +25,6 @@ export default function Hero() {
         textContent="Featured works"
         onClick={scrollToWorks}
       />
-    </section>
+    </Section>
   );
 }

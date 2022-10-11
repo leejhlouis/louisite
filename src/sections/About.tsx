@@ -1,11 +1,12 @@
 import ReactMarkdown from "react-markdown";
+import Section from "../layouts/Section";
 import Heading2 from "../components/Heading2";
 import Heading3 from "../components/Heading3";
 import InlineLink from "../components/InlineLink";
 
 export default function About(props: { children: string }) {
   return (
-    <section className="container md:max-w-screen-sm md:px-0">
+    <Section className="md:px-0" maxWidthClass="md:max-w-screen-sm">
       <ReactMarkdown
         children={localStorage.about ? localStorage.about : props.children}
         components={{
@@ -26,6 +27,6 @@ export default function About(props: { children: string }) {
           ),
         }}
       />
-    </section>
+    </Section>
   );
 }
