@@ -1,8 +1,8 @@
-import Section from "../layouts/Section";
+import Section from "../Section";
 import ArrowDownSLineIcon from "remixicon-react/ArrowDownSLineIcon";
-import HighlightText from "../components/HighlightText";
-import Button from "../components/Button";
-import SocialMediaLinks from "../components/SocialMediaLinks";
+import HighlightText from "../../components/HighlightText";
+import Button from "../../components/Button";
+import SocialMediaLinks from "../../components/SocialMediaLinks";
 
 export default function Hero() {
   const scrollToWorks = () => {

@@ -5,7 +5,7 @@ import about from "../__data/about/about.md";
 
 const PageWrapper = React.lazy(() => import("../layouts/PageWrapper"));
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
-const About = React.lazy(() => import("../sections/About"));
+const About = React.lazy(() => import("../layouts/sections/About"));
 const Footer = React.lazy(() => import("../layouts/Footer"));
 
 export default function AboutPage() {

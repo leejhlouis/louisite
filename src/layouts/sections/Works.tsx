@@ -1,7 +1,7 @@
-import Section from "../layouts/Section";
-import Heading2 from "../components/Heading2";
-import ListCard from "../components/ListCard";
-import { works } from "../__data/works";
+import Section from "../Section";
+import Heading2 from "../../components/Heading2";
+import ListCard from "../../components/ListCard";
+import { works } from "../../__data/works";
 
 export default function Works() {
   const worksEntry = works.map((work, index) => <ListCard {...work} key={index} />);

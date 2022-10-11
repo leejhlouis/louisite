@@ -4,8 +4,8 @@ import Preloader from "../components/Preloader";
 
 const PageWrapper = React.lazy(() => import("../layouts/PageWrapper"));
 const Navbar = React.lazy(() => import("../layouts/Navbar"));
-const Hero = React.lazy(() => import("../sections/Hero"));
-const Works = React.lazy(() => import("../sections/Works"));
+const Hero = React.lazy(() => import("../layouts/sections/Hero"));
+const Works = React.lazy(() => import("../layouts/sections/Works"));
 const Footer = React.lazy(() => import("../layouts/Footer"));
 
 export default function Home() {

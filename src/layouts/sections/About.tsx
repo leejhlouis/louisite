@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown";
-import Section from "../layouts/Section";
-import Heading2 from "../components/Heading2";
-import Heading3 from "../components/Heading3";
-import InlineLink from "../components/InlineLink";
+import Section from "../Section";
+import Heading2 from "../../components/Heading2";
+import Heading3 from "../../components/Heading3";
+import InlineLink from "../../components/InlineLink";
 
 export default function About(props: { children: string }) {
   return (
