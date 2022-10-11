@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 w-full backdrop-blur-lg dark:backdrop-blur-xl">
-      <div className="container flex flex-wrap items-center justify-between py-4">
+      <div className="container flex flex-wrap items-center justify-between py-4 xl:max-w-screen-xl">
         <Link to="/" className="title">
           <p className="pb-0 text-2xl font-light">
             LOUI<span className="font-bold">SITE</span>

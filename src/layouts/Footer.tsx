@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="container py-4 sm:py-6 lg:py-8">
+    <footer className="container py-4 sm:py-6 lg:py-8 xl:max-w-screen-xl">
       <Button
         onClick={scrollToTop}
         className="mx-auto mb-6"
