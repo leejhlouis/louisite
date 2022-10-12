@@ -1,7 +1,7 @@
 # LOUISITE
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5ed574c-98f0-4d7e-bec5-ebcf23f65039/deploy-status)](https://app.netlify.com/sites/louisite/deploys)
 
-**LOUISITE** (stylized as LOUI**SITE**, portmanteau of *Louis* and *site*) is my personal website—this is the second iteration—showcasing my opportunities. This website was built with React, TypeScript, and Tailwind CSS.
+**LOUISITE** (stylized as LOUI**SITE**, portmanteau of *Louis* and *site*) is my personal website—this is the second iteration—showcasing my opportunities. This website was built with [Tailwind CSS](), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/).
 
 ![Preview](src/__data/img/preview.png)
 
