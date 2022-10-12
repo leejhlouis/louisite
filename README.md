@@ -7,6 +7,7 @@
 
 ![Preview](src/__data/img/preview.png)
 
+## Overview
 The second iteration was designed with a much simpler and all-new layout to emphasize my works over any other things. Choosing to do multi-page website was a great option to prevent things from bloating the single index page, like what I regrettably did in the [first iteration](https://github.com/itslouisgs/louisite-v1).
 
 ## How to run the website locally
