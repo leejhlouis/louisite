@@ -1,6 +1,11 @@
 # LOUISITE
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5ed574c-98f0-4d7e-bec5-ebcf23f65039/deploy-status)](https://app.netlify.com/sites/louisite/deploys)
 
-**LOUISITE** is the second iteration of my personal website built with React, TypeScript, and Tailwind CSS.
+**LOUISITE** (stylized as LOUI**SITE**, portmanteau of *Louis* and *site*) is my personal website—this is the second iteration—showcasing my opportunities. This website was built with React, TypeScript, and Tailwind CSS.
+
+![Preview](src/__data/img/preview.png)
+
+The second iteration was designed with a much simpler and all-new layout to emphasize my works over any other things. Choosing to do multi-page website was a great option to prevent things from bloating the single index page, like what I regrettably did in the [first iteration](https://github.com/itslouisgs/louisite-v1).
 
 ## How to run the website locally
 1. Clone this repository to your local machine
