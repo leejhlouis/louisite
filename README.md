@@ -3,6 +3,8 @@
 
 **LOUISITE** (stylized as LOUI**SITE**, portmanteau of *Louis* and *site*) is my personal website—this is the second iteration—showcasing my accomplishments. This website was built with [Tailwind CSS](https://tailwindcss.com/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/).
 
+[Visit the website here](https://louisite.netlify.app)
+
 ![Preview](src/__data/img/preview.png)
 
 The second iteration was designed with a much simpler and all-new layout to emphasize my works over any other things. Choosing to do multi-page website was a great option to prevent things from bloating the single index page, like what I regrettably did in the [first iteration](https://github.com/itslouisgs/louisite-v1).
