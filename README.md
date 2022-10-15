@@ -21,7 +21,7 @@ As an undergraduate looking for opportunities, I figured out that I must have an
 
 To prevent stuff from bloating the single index page, I decided to build a multi-page website, in which I extracted the about me section to another page. I also merged several sections—my experience, educational background, and skills—to the “about me” page to minimize content. The website should not repeat what my [LinkedIn](https://www.linkedin.com/in/louis-gustavo) page does.
 
-Originally, I intended to feature a detailed page for each work. However, amidst the development phase, I personally thought that it would be better if I include them on their respective GitHub repository’s `[README.md](http://README.md)` for easier content management.
+Originally, I intended to feature a detailed page for each work. However, amidst the development phase, I personally thought that it would be better if I include them on their respective GitHub repository’s `README.md` for easier content management.
 
 On top of that, I implemented glassmorphism—a frosted glass effect popularized by [Michal Malewicz](https://uxdesign.cc/glassmorphism-in-user-interfaces-1f39bb1308c9)—in the navbar with Tailwind CSS’s [backdrop blur](https://tailwindcss.com/docs/backdrop-blur) utility classes. I also created a dark mode for this iteration by utilizing Tailwind CSS’s [dark mode variant](https://tailwindcss.com/docs/dark-mode). By default, this website uses the users’ preferred color theme, although the users can also manually override the theme.
 
