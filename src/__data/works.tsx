@@ -27,6 +27,23 @@ const live = {
 
 export const works = [
   {
+    dateRange: "Sep – Oct 2022",
+    title: "HIMTI Election 2022",
+    description:
+      "An e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University.",
+    techStacks: ["Bootstrap", "Laravel", "Project management"],
+    links: [
+      {
+        ...github,
+        url: "https://github.com/itslouisgs/himti-election-2022",
+      },
+      {
+        ...live,
+        url: "https://election.himtibinus.or.id/",
+      },
+    ],
+  },
+  {
     dateRange: "Jun – Sep 2022",
     title: "LOUISITE",
     description: "My all-new personal website—this is the second and latest iteration.",
@@ -39,36 +56,6 @@ export const works = [
       {
         ...live,
         url: "https://louisite.netfliy.app",
-      },
-    ],
-  },
-  {
-    dateRange: "Aug – Sep 2022",
-    title: "JavaScript30",
-    description:
-      "Completed JavaScript30—a 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.",
-    techStacks: ["JavaScript"],
-    links: [
-      {
-        ...github,
-        url: "https://github.com/itslouisgs/javascript30",
-      },
-      {
-        ...live,
-        url: "https://itslouisgs.github.io/javascript30",
-      },
-    ],
-  },
-  {
-    dateRange: "May – Jun 2022",
-    title: "BalaiTani, built with ASP.NET",
-    description:
-      "Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.",
-    techStacks: ["ASP.NET", "Bootstrap", "Domain-driven design"],
-    links: [
-      {
-        ...github,
-        url: "https://github.com/itslouisgs/balaitani-asp",
       },
     ],
   },
@@ -86,6 +73,19 @@ export const works = [
       {
         ...live,
         url: "http://balaitani.herokuapp.com",
+      },
+    ],
+  },
+  {
+    dateRange: "May – Jun 2022",
+    title: "BalaiTani, built with ASP.NET",
+    description:
+      "Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.",
+    techStacks: ["ASP.NET", "Bootstrap", "Domain-driven design"],
+    links: [
+      {
+        ...github,
+        url: "https://github.com/itslouisgs/balaitani-asp",
       },
     ],
   },
@@ -115,6 +115,23 @@ export const works = [
       {
         ...github,
         url: "https://github.com/itslouisgs/louisite-v1",
+      },
+    ],
+  },
+  {
+    dateRange: "Jul 2021 – Ongoing",
+    title: "himti.or.id",
+    description:
+      "The official website of HIMTI BINUS University.",
+    techStacks: ["Bootstrap", "PHP", "Project management"],
+    links: [
+      {
+        ...github,
+        url: "https://github.com/itslouisgs/himti.or.id",
+      },
+      {
+        ...live,
+        url: "https://himti.or.id/",
       },
     ],
   },
