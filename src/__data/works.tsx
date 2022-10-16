@@ -8,9 +8,9 @@ interface linkProps {
 }
 
 export interface worksProps {
-  dateRange: string;
   title: string;
   description: string | JSX.Element;
+  category: string;
   techStacks: string[];
   links: linkProps[];
 }
@@ -27,10 +27,10 @@ const live = {
 
 export const works = [
   {
-    dateRange: "Sep – Oct 2022",
     title: "HIMTI Election 2022",
     description:
       "An e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University.",
+    category: "Project management",
     techStacks: ["Bootstrap", "Laravel", "Project management"],
     links: [
       {
@@ -44,10 +44,10 @@ export const works = [
     ],
   },
   {
-    dateRange: "Jun – Sep 2022",
     title: "LOUISITE",
     description: "My all-new personal website—this is the second and latest iteration.",
     techStacks: ["React", "TypeScript", "Tailwind CSS", "Figma"],
+    category: "Front-end development",
     links: [
       {
         ...github,
@@ -60,10 +60,10 @@ export const works = [
     ],
   },
   {
-    dateRange: "Mar – May 2022",
     title: "BalaiTani",
     description:
       "An e-commerce web app designed as a platform for connecting small farmers to buyers directly to avoid middlemen from inflating the retail costs.",
+    category: "Full-stack development",
     techStacks: ["Laravel", "Bootstrap"],
     links: [
       {
@@ -77,10 +77,10 @@ export const works = [
     ],
   },
   {
-    dateRange: "May – Jun 2022",
     title: "BalaiTani, built with ASP.NET",
     description:
       "Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.",
+    category: "Full-stack development",
     techStacks: ["ASP.NET", "Bootstrap", "Domain-driven design"],
     links: [
       {
@@ -90,10 +90,10 @@ export const works = [
     ],
   },
   {
-    dateRange: "Feb – Mar 2022",
     title: "TukangTravel",
     description:
       "The landing page of TukangTravel—a lifestyle traveling app designed for travelers who love adventure and hidden gems.",
+    category: "Front-end development",
     techStacks: ["React", "Tailwind CSS", "Figma"],
     links: [
       {
@@ -107,9 +107,9 @@ export const works = [
     ],
   },
   {
-    dateRange: "Aug – Sep 2021",
     title: "LOUISITE v1",
     description: "First iteration of my personal website.",
+    category: "Front-end development",
     techStacks: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
     links: [
       {
@@ -119,10 +119,9 @@ export const works = [
     ],
   },
   {
-    dateRange: "Jul 2021 – Ongoing",
     title: "himti.or.id",
-    description:
-      "The official website of HIMTI BINUS University.",
+    description: "The official website of HIMTI BINUS University.",
+    category: "Project management",
     techStacks: ["Bootstrap", "PHP", "Project management"],
     links: [
       {
@@ -136,7 +135,6 @@ export const works = [
     ],
   },
   {
-    dateRange: "Mar – Jun 2021",
     title: "DanBam",
     description: (
       <span>
@@ -144,6 +142,7 @@ export const works = [
         <i>Itaewon Class</i>.
       </span>
     ),
+    category: "Front-end development",
     techStacks: ["HTML/CSS", "JavaScript", "jQuery"],
     links: [
       {
@@ -157,10 +156,10 @@ export const works = [
     ],
   },
   {
-    dateRange: "Nov – Dec 2020",
     title: "FAME",
     description:
       "The landing page of FAME Workshop—a game development workshop held by HIMTI BINUS University’s programming class division.",
+    category: "Front-end development",
     techStacks: ["HTML/CSS", "JavaScript"],
     links: [
       {

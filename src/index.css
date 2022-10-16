@@ -55,7 +55,7 @@
     color: inherit;
   }
 
-  a:not(.active):not(.title):hover,
+  a:not(.active):not(.title):not(.no-default):hover,
   button:hover {
     text-decoration-line: underline;
     color: theme(colors.blue.800);
@@ -67,7 +67,7 @@
     fill: theme(colors.blue.800);
   }
 
-  html.dark a:not(.active):not(.title):hover,
+  html.dark a:not(.active):not(.title):not(.no-default):hover,
   html.dark button:hover {
     color: theme(colors.blue.200);
   }
