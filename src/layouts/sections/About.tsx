@@ -21,7 +21,7 @@ export default function About(props: { children: string }) {
           ),
           li: ({ node, ...props }: any) => (
             <li
-              className="mr-2 mb-2 inline-block cursor-pointer rounded-xl bg-slate-100/75 px-3 text-sm hover:bg-slate-100 hover:shadow dark:bg-slate-800/75 dark:hover:bg-slate-800 md:text-base"
+              className="mr-2 mb-2 inline-block rounded-xl bg-slate-50/50 px-3 text-sm  hover:shadow dark:bg-slate-700/50 md:text-base"
               {...props}
             />
           ),
