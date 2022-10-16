@@ -11,7 +11,7 @@
 
 ### Background
 
-As an undergraduate looking for opportunities, I figured out that I must have an appealing personal website to showcase my accomplishments and to provide hiring managers with a better idea of who I am. 
+As an undergraduate looking for opportunities, I realized that I needed to build a visually appealing personal website to showcase my accomplishments and to provide hiring managers with a better idea of who I am. 
 
 ### The problem
 
