@@ -7,17 +7,6 @@
 @layer base {
   html {
     font-family: "Nunito Sans", system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background: theme(colors.slate.200);
-    color: theme(colors.slate.800);
-  }
-
-  .dark body {
-    background: theme(colors.slate.900);
-    color: theme(colors.white);
   }
 
   li,
