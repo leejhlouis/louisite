@@ -5,10 +5,6 @@ module.exports = {
   content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
-    screens: {
-      xs: "480px",
-      ...defaultTheme.screens,
-    },
     extend: {
       colors: {
         muted: {
@@ -17,7 +13,7 @@ module.exports = {
         },
       },
       spacing: {
-        18: "72px",
+        18: "4.5rem",
       },
     },
     container: {
@@ -27,6 +23,10 @@ module.exports = {
         md: "1.5rem",
         xl: "3rem",
       },
+    },
+    screens: {
+      xs: "480px",
+      ...defaultTheme.screens,
     },
   },
   plugins: [],
