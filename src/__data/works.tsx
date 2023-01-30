@@ -35,7 +35,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/himti-election-2022",
+        url: "https://github.com/leejhlouis/himti-election-2022",
       },
       {
         ...live,
@@ -51,7 +51,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/louisite",
+        url: "https://github.com/leejhlouis/louisite",
       },
       {
         ...live,
@@ -68,7 +68,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/balaitani",
+        url: "https://github.com/leejhlouis/balaitani",
       },
       {
         ...live,
@@ -85,7 +85,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/balaitani-asp",
+        url: "https://github.com/leejhlouis/balaitani-asp",
       },
     ],
   },
@@ -98,7 +98,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/tukang-travel",
+        url: "https://github.com/leejhlouis/tukang-travel",
       },
       {
         ...live,
@@ -114,7 +114,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/louisite-v1",
+        url: "https://github.com/leejhlouis/louisite-v1",
       },
     ],
   },
@@ -126,7 +126,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/himti.or.id",
+        url: "https://github.com/leejhlouis/himti.or.id",
       },
       {
         ...live,
@@ -147,7 +147,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/hci-danbam",
+        url: "https://github.com/leejhlouis/hci-danbam",
       },
       {
         ...live,
@@ -164,11 +164,11 @@ export const works = [
     links: [
       {
         ...github,
-        url: "https://github.com/itslouisgs/fame",
+        url: "https://github.com/leejhlouis/fame",
       },
       {
         ...live,
-        url: "https://itslouisgs.github.io/fame",
+        url: "https://leejhlouis.github.io/fame",
       },
     ],
   },

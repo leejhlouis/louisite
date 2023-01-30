@@ -21,7 +21,7 @@ const social: socialProps[] = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/itslouisgs",
+    url: "https://github.com/leejhlouis",
     icon: <GithubFillIcon size={24} className="text-muted-dark dark:text-muted" />,
   },
 ];
