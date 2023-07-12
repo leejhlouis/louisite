@@ -5,7 +5,7 @@
 
 [Visit the website here](https://louisite.netlify.app/)
 
-![Preview](src/__data/img/preview.png)
+![Preview](src/assets/images/preview.png)
 
 ## Overview
 
