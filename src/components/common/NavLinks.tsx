@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import navItems from '../../_data/navItems.ts'
+import navItems from '@/_data/navItems.ts'
 
 export default function NavLinks() {
   const links = navItems.map((item, index) => (

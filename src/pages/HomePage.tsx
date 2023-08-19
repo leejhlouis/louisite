@@ -2,11 +2,12 @@ import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet'
 import Preloader from '@/components/common/Preloader.tsx'
 
-const Navbar = React.lazy(() => import('@/components/layouts/Navbar.tsx'))
 const PageWrapper = React.lazy(() => import('@/components/layouts/PageWrapper.tsx'))
-const Footer = React.lazy(() => import('@/components/layouts/Footer.tsx'))
+const Navbar = React.lazy(() => import('@/components/layouts/Navbar.tsx'))
 const Hero = React.lazy(() => import('@/components/Hero.tsx'))
 const Works = React.lazy(() => import('@/components/Works.tsx'))
+const Footer = React.lazy(() => import('@/components/layouts/Footer.tsx'))
+const ScrollToTopFAB = React.lazy(() => import('@/components/common/ScrollToTopFAB.tsx'))
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
           <Hero />
           <Works />
           <Footer />
+          <ScrollToTopFAB />
         </PageWrapper>
       </Suspense>
     </>

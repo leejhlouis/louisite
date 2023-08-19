@@ -1,5 +1,5 @@
 import ArrowDownSLineIcon from 'remixicon-react/ArrowDownSLineIcon.js'
-import Button from '@/components/common/Button.tsx'
+import Button from '@/components/common/reusable/Button.tsx'
 import HighlightText from '@/components/common/HighlightText.tsx'
 import SocialMediaLinks from '@/components/common/SocialMediaLinks.tsx'
 import Section from '@/components/layouts/Section.tsx'
