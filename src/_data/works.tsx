@@ -1,5 +1,6 @@
 import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
 import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
+import social from '@/_data/social.tsx'
 
 interface linkProps {
   label: string
@@ -25,7 +26,78 @@ const live = {
   icon: <ExternalLinkFillIcon size={24} />
 }
 
+const githubUrl = social.find(({ name }) => name === 'GitHub')?.url ?? ''
+const getGitHubUrl = (repoName: string) => `${githubUrl}/${repoName}`
+
 export const works = [
+  {
+    title: 'LOUISITE',
+    description: 'My all-new personal website—this is the second and latest iteration.',
+    techStacks: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
+    category: 'Front-end development',
+    links: [
+      {
+        ...github,
+        url: getGitHubUrl('louisite')
+      },
+      {
+        ...live,
+        url: 'https://louisite.netfliy.app'
+      }
+    ]
+  },
+  {
+    title: 'Find a Coach',
+    description: 'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
+    techStacks: ['Vue', 'Firebase', 'Vuex'],
+    category: 'Front-end development',
+    links: [
+      {
+        ...github,
+        url: getGitHubUrl('find-a-coach')
+      },
+      {
+        ...live,
+        url: 'https://find-a-coach-355c2.web.app/'
+      }
+    ]
+  },
+  {
+    title: 'e-grocery',
+    description: 'An e-grocery web app built with Laravel.',
+    techStacks: ['Laravel', 'Bootstrap'],
+    category: 'Full-stack development',
+    links: [
+      {
+        ...github,
+        url: getGitHubUrl('e-grocery')
+      }
+    ]
+  },
+  {
+    title: 'MovieList',
+    description: 'A movie list web app built with Laravel.',
+    techStacks: ['Laravel', 'Bootstrap'],
+    category: 'Full-stack development',
+    links: [
+      {
+        ...github,
+        url: getGitHubUrl('movielist')
+      }
+    ]
+  },
+  {
+    title: 'Giant Book Supplier',
+    description: 'A book supplier website built with Laravel.',
+    techStacks: ['Laravel', 'Bootstrap'],
+    category: 'Full-stack development',
+    links: [
+      {
+        ...github,
+        url: getGitHubUrl('giant-book-supplier')
+      }
+    ]
+  },
   {
     title: 'HIMTI Election 2022',
     description:
@@ -35,27 +107,11 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/himti-election-2022'
+        url: getGitHubUrl('himti-election-2022')
       },
       {
         ...live,
         url: 'https://election.himtibinus.or.id/'
-      }
-    ]
-  },
-  {
-    title: 'LOUISITE',
-    description: 'My all-new personal website—this is the second and latest iteration.',
-    techStacks: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
-    category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: 'https://github.com/leejhlouis/louisite'
-      },
-      {
-        ...live,
-        url: 'https://louisite.netfliy.app'
       }
     ]
   },
@@ -68,7 +124,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/balaitani'
+        url: getGitHubUrl('balaitani')
       },
       {
         ...live,
@@ -85,7 +141,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/balaitani-asp'
+        url: getGitHubUrl('balaitani-asp')
       }
     ]
   },
@@ -98,7 +154,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/tukang-travel'
+        url: getGitHubUrl('tukang-travel')
       },
       {
         ...live,
@@ -114,7 +170,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/louisite-v1'
+        url: getGitHubUrl('louisite-v1')
       }
     ]
   },
@@ -126,7 +182,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/himti.or.id'
+        url: getGitHubUrl('himti.or.id')
       },
       {
         ...live,
@@ -147,7 +203,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/hci-danbam'
+        url: getGitHubUrl('hci-danbam')
       },
       {
         ...live,
@@ -164,7 +220,7 @@ export const works = [
     links: [
       {
         ...github,
-        url: 'https://github.com/leejhlouis/fame'
+        url: getGitHubUrl('fame')
       },
       {
         ...live,

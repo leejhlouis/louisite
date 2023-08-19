@@ -1,4 +1,4 @@
-import socialList from '../../_data/social.tsx'
+import socialList from '@/_data/social.tsx'
 
 export default function SocialMediaLinks(props: { className?: string }) {
   const social = socialList.map((item, index) => (
