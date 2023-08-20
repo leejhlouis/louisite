@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
-    "module": "Node16",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "Node16",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -26,6 +26,5 @@
     },
     "typeRoots": ["node_modules/@types", "d.ts"]
   },
-  "include": ["src", "d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,7 +1,7 @@
 import Section from '@/components/layouts/Section.tsx'
 import Heading2 from '@/components/common/reusable/Heading2.tsx'
 import ListCard from '@/components/common/ListCard.tsx'
-import { works } from '@/_data/works.tsx'
+import works from '@/_data/works.tsx'
 
 export default function Works() {
   const worksEntry = works.map((work, index) => (

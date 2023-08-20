@@ -2,20 +2,6 @@ import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
 import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
 import social from '@/_data/social.tsx'
 
-interface linkProps {
-  label: string
-  url: string
-  icon: JSX.Element
-}
-
-export interface worksProps {
-  title: string
-  description: string | JSX.Element
-  category: string
-  techStacks: string[]
-  links: linkProps[]
-}
-
 const github = {
   label: 'Source code',
   icon: <GithubFillIcon size={24} />
@@ -29,7 +15,7 @@ const live = {
 const githubUrl = social.find(({ name }) => name === 'GitHub')?.url ?? ''
 const getGitHubUrl = (repoName: string) => `${githubUrl}/${repoName}`
 
-export const works = [
+export default [
   {
     title: 'LOUISITE',
     description: 'My all-new personal website—this is the second and latest iteration.',
@@ -48,7 +34,8 @@ export const works = [
   },
   {
     title: 'Find a Coach',
-    description: 'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
+    description:
+      'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
     techStacks: ['Vue', 'Firebase', 'Vuex'],
     category: 'Front-end development',
     links: [

@@ -13,8 +13,8 @@ export default function AboutPage() {
 
   useEffect(() => {
     fetch(about as RequestInfo | URL)
-      .then((response) => response.text())
-      .then((text) => {
+      .then(response => response.text())
+      .then(text => {
         setContent(text)
         localStorage.about = text
       })
