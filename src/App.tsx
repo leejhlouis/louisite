@@ -19,7 +19,7 @@ export function App() {
         path='/'
         element={<HomePage />}
       />
-      <Route
+      <Route 
         path='/about'
         element={<AboutPage />}
       />

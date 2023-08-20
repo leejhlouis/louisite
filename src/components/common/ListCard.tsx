@@ -1,4 +1,4 @@
-import { worksProps } from '@/_data/works.tsx'
+import worksProps from '@/types/WorksProps'
 
 export default function ListCard(props: worksProps) {
   const techStacksEntry = props.techStacks.map((techStack, index) => (
@@ -36,9 +36,9 @@ export default function ListCard(props: worksProps) {
         <h3 className='pb-4 text-xl font-bold md:text-2xl'>
           <a
             href={
-              props.links.find((link) => link.label === 'Source code')
-                ? props.links.find((link) => link.label === 'Source code')?.url
-                : props.links.find((link) => link.label === 'Live')?.url
+              props.links.find(link => link.label === 'Source code')
+                ? props.links.find(link => link.label === 'Source code')?.url
+                : props.links.find(link => link.label === 'Live')?.url
             }
             className='no-default z-0 before:absolute before:top-0 before:left-0 before:h-full before:w-full'
             target='_blank'

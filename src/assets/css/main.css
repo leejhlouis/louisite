@@ -76,13 +76,21 @@
 
 @layer utilities {
   .bg-gradient-light {
-    background: linear-gradient(180deg, rgba(226, 232, 240, 0) 60%, theme(colors.slate.200) 100%),
+    background: linear-gradient(
+        180deg,
+        rgba(226, 232, 240, 0) 60%,
+        theme(colors.slate.200) 100%
+      ),
       linear-gradient(60deg, #cdd4f7 33%, rgba(175, 189, 255, 0) 66%),
       linear-gradient(210deg, #d9a0db 20%, #d1d1d1 80%);
   }
 
   .bg-gradient-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 60%, theme(colors.slate.900) 100%),
+    background: linear-gradient(
+        180deg,
+        rgba(15, 23, 42, 0) 60%,
+        theme(colors.slate.900) 100%
+      ),
       linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
       linear-gradient(210deg, #491616 20%, #00137a 80%);
   }

@@ -9,6 +9,7 @@ Previously, I assumed the role of **Manager of Web Development Division** of [HI
 ## Skills
 
 Here are some technologies that I am familiar with:
+
 - JavaScript (ES6+)
 - TypeScript
 - Vue
