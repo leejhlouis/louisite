@@ -1,5 +1,8 @@
 import ArrowUpFillIcon from 'remixicon-react/ArrowUpFillIcon.js'
 import { useEffect, useState } from 'react'
+import IconButton from '@/components/common/reusable/button/IconButton.tsx'
+
+const SCROLL_OFFSET = 120
 
 export default function ScrollToTopFAB() {
   const [isButtonVisible, setButtonVisible] = useState(false)
@@ -9,7 +12,11 @@ export default function ScrollToTopFAB() {
   }
 
   const handleScroll = () => {
-    setButtonVisible(window.scrollY + 72 > window.innerHeight)
+    const { scrollY, innerHeight } = window
+    const { scrollHeight } = document.documentElement
+    setButtonVisible(
+      scrollY + SCROLL_OFFSET > innerHeight && scrollY + innerHeight < scrollHeight - SCROLL_OFFSET
+    )
   }
 
   useEffect(() => {
@@ -20,16 +27,13 @@ export default function ScrollToTopFAB() {
   }, [])
 
   return (
-    <div
-      onClick={scrollToTop}
-      className={`${
-        isButtonVisible ? 'opacity-100' : 'opacity-0'
-      } fixed bottom-0 right-0 mb-8 mr-8 cursor-pointer rounded-full bg-slate-50/80 p-2 shadow-lg backdrop-filter duration-300 hover:mb-10 hover:bg-slate-50 dark:bg-slate-700/80 hover:dark:bg-slate-700`}
-    >
-      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-      {/*@ts-ignore*/}
-      <ArrowUpFillIcon size={24} />
-      <p className='sr-only'>Scroll to top</p>
+    <div className='fixed bottom-0 right-0 mb-8 mr-8'>
+      <IconButton
+        className={`${isButtonVisible ? 'opacity-100' : 'opacity-0'}  duration-300`}
+        icon={<ArrowUpFillIcon size={24} />}
+        screenReaderText='Scroll to top'
+        onClick={scrollToTop}
+      />
     </div>
   )
 }

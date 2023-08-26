@@ -4,6 +4,7 @@ import ThemeSwitcher from '@/components/common/ThemeSwitcher.tsx'
 import Menu3FillIcon from 'remixicon-react/Menu3FillIcon.js'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import IconButton from '@/components/common/reusable/button/IconButton.tsx'
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480)
@@ -29,21 +30,18 @@ export default function Navbar() {
             LOUI<span className='font-bold'>SITE</span>
           </p>
         </Link>
-        <div className='flex items-center gap-2 xs:gap-8'>
+        <div className='flex items-center space-x-2 xs:space-x-6'>
           {!isMobile && <NavLinks />}
           {isMobile && (
             <div className='relative'>
-              <button
-                className='cursor-pointer rounded-lg bg-slate-100/20 p-2 shadow-md backdrop-filter hover:bg-slate-100/30 dark:bg-slate-200/10 dark:hover:bg-slate-200/20'
+              <IconButton
+                icon={<Menu3FillIcon />}
+                screenReaderText='Toggle dropdown'
                 onClick={() => setToggle(!toggle)}
-              >
-                <p className='sr-only'>Toggle theme</p>
-                <Menu3FillIcon />
-              </button>
+              />
               {toggle && <Dropdown />}
             </div>
           )}
-
           <ThemeSwitcher />
         </div>
       </div>

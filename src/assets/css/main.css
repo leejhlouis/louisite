@@ -13,12 +13,11 @@
   i,
   p,
   button {
-    font-size: theme(fontSize.base);
     line-height: theme(lineHeight.6);
   }
 
   p {
-    padding-bottom: theme(spacing.4);
+    padding-bottom: theme(spacing.2);
   }
 
   @media screen(md) {
@@ -26,12 +25,11 @@
     i,
     p,
     button {
-      font-size: theme(fontSize.lg);
       line-height: theme(lineHeight.7);
     }
 
     p {
-      padding-bottom: theme(spacing.6);
+      padding-bottom: theme(spacing.4);
     }
   }
 
@@ -44,8 +42,7 @@
     color: inherit;
   }
 
-  a:not(.active):not(.title):not(.no-default):hover,
-  button:hover {
+  a:not(.active):not(.title):not(.no-default):hover {
     text-decoration-line: underline;
     color: theme(colors.blue.800);
     transition-duration: theme(transitionDuration.300);
@@ -57,12 +54,12 @@
   }
 
   html.dark a:not(.active):not(.title):not(.no-default):hover,
-  html.dark button:hover {
-    color: theme(colors.blue.200);
+  html.dark {
+    color: theme(colors.blue.300);
   }
 
   html.dark a:hover svg {
-    fill: theme(colors.blue.200);
+    fill: theme(colors.blue.300);
   }
 
   .preloader > svg {
@@ -76,22 +73,14 @@
 
 @layer utilities {
   .bg-gradient-light {
-    background: linear-gradient(
-        180deg,
-        rgba(226, 232, 240, 0) 60%,
-        theme(colors.slate.200) 100%
-      ),
-      linear-gradient(60deg, #cdd4f7 33%, rgba(175, 189, 255, 0) 66%),
-      linear-gradient(210deg, #d9a0db 20%, #d1d1d1 80%);
+    background: linear-gradient(25deg, #e8dffa 33%, #e8dffa00 66%),
+      linear-gradient(-135deg, #b9afff 10%, #c5ceff 90%);
+    background-attachment: fixed;
   }
 
   .bg-gradient-dark {
-    background: linear-gradient(
-        180deg,
-        rgba(15, 23, 42, 0) 60%,
-        theme(colors.slate.900) 100%
-      ),
-      linear-gradient(60deg, #110627 33%, rgba(17, 6, 39, 0) 66%),
-      linear-gradient(210deg, #491616 20%, #00137a 80%);
+    background: linear-gradient(25deg, #110627 33%, #11062700 66%),
+      linear-gradient(-135deg, #491616 10%, #00137a 90%);
+    background-attachment: fixed;
   }
 }

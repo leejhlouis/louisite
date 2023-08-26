@@ -17,7 +17,7 @@ export default function Projects() {
       className='scroll-mt-8'
     >
       <Heading2 className='text-center'>Featured projects</Heading2>
-      <ul className='mx-auto mt-6 grid justify-items-center gap-x-6 gap-y-8 sm:grid-cols-2 md:mt-8 lg:grid-cols-3'>
+      <ul className='mx-auto mt-6 grid justify-items-center gap-x-6 gap-y-8 sm:grid-cols-2 md:mt-8 xl:grid-cols-3'>
         {projectsEntry}
       </ul>
     </Section>

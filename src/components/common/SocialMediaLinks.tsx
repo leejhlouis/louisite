@@ -14,5 +14,5 @@ export default function SocialMediaLinks(props: { className?: string }) {
     </li>
   ))
 
-  return <ul className={`flex list-none items-center gap-4 ${props.className ?? ''}`}>{social}</ul>
+  return <ul className={`flex list-none items-center space-x-4 ${props.className ?? ''}`}>{social}</ul>
 }
