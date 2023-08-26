@@ -1,22 +1,22 @@
 import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
 import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
-import social from '@/_data/social.tsx'
+import getGitHubUrl from '@/utils/getGitHubUrl'
+import LinkProps from '@/types/LinkProps'
+import ProjectProps from '@/types/ProjectProps'
 
-const github = {
+const github: LinkProps = {
   label: 'Source code',
   icon: <GithubFillIcon size={24} />
 }
 
-const live = {
+const live: LinkProps = {
   label: 'Live',
   icon: <ExternalLinkFillIcon size={24} />
 }
 
-const githubUrl = social.find(({ name }) => name === 'GitHub')?.url ?? ''
-const getGitHubUrl = (repoName: string) => `${githubUrl}/${repoName}`
-
-export default [
+const projects: ProjectProps[] = [
   {
+    id: 'louisite',
     title: 'LOUISITE',
     description: 'My all-new personal website—this is the second and latest iteration.',
     techStacks: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
@@ -33,6 +33,7 @@ export default [
     ]
   },
   {
+    id: 'find-a-coach',
     title: 'Find a Coach',
     description:
       'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
@@ -50,6 +51,7 @@ export default [
     ]
   },
   {
+    id: 'e-grocery',
     title: 'e-grocery',
     description: 'An e-grocery web app built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
@@ -62,6 +64,7 @@ export default [
     ]
   },
   {
+    id: 'movielist',
     title: 'MovieList',
     description: 'A movie list web app built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
@@ -74,6 +77,7 @@ export default [
     ]
   },
   {
+    id: 'giant-book-supplier',
     title: 'Giant Book Supplier',
     description: 'A book supplier website built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
@@ -86,6 +90,7 @@ export default [
     ]
   },
   {
+    id: 'election-2022',
     title: 'HIMTI Election 2022',
     description:
       'An e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University.',
@@ -103,6 +108,7 @@ export default [
     ]
   },
   {
+    id: 'balaitani',
     title: 'BalaiTani',
     description:
       'An e-commerce web app designed as a platform for connecting small farmers to buyers directly to avoid middlemen from inflating the retail costs.',
@@ -120,6 +126,7 @@ export default [
     ]
   },
   {
+    id: 'balaitani-asp',
     title: 'BalaiTani, built with ASP.NET',
     description:
       'Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.',
@@ -133,6 +140,7 @@ export default [
     ]
   },
   {
+    id: 'tukang-travel',
     title: 'TukangTravel',
     description:
       'The landing page of TukangTravel—a lifestyle traveling app designed for travelers who love adventure and hidden gems.',
@@ -150,6 +158,7 @@ export default [
     ]
   },
   {
+    id: 'louisite-v1',
     title: 'LOUISITE v1',
     description: 'First iteration of my personal website.',
     category: 'Front-end development',
@@ -162,6 +171,7 @@ export default [
     ]
   },
   {
+    id: 'himti.or.id',
     title: 'himti.or.id',
     description: 'The official website of HIMTI BINUS University.',
     category: 'Project management',
@@ -178,6 +188,7 @@ export default [
     ]
   },
   {
+    id: 'hci-danbam',
     title: 'DanBam',
     description: (
       <span>
@@ -199,6 +210,7 @@ export default [
     ]
   },
   {
+    id: 'fame',
     title: 'FAME',
     description:
       'The landing page of FAME Workshop—a game development workshop held by HIMTI BINUS University’s programming class division.',
@@ -216,3 +228,5 @@ export default [
     ]
   }
 ]
+
+export default projects
