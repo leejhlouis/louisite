@@ -3,14 +3,13 @@ import ProjectProps from '@/types/ProjectProps'
 export default function ListCard({
   title,
   description,
-  category,
   techStacks,
   links
 }: ProjectProps) {
   const techStacksEntry = techStacks.map((techStack, index) => (
     <li
       key={index}
-      className='mr-4 text-base font-medium text-blue-700 last-of-type:mr-0 dark:text-blue-200'
+      className='mr-4 text-base font-medium text-blue-700 last-of-type:mr-0 dark:text-blue-300'
     >
       {techStack}
     </li>
@@ -33,10 +32,9 @@ export default function ListCard({
   ))
 
   return (
-    <li className='flex w-full transform cursor-pointer flex-col justify-between rounded-xl border-[1px] bg-slate-100 px-6 py-8 drop-shadow-xl duration-300 hover:-translate-y-1 hover:bg-slate-50 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800 hover:dark:bg-[rgb(22,32,50)]'>
+    <li className='flex w-full transform cursor-pointer flex-col justify-between rounded-xl border border-slate-500/60 bg-slate-100/10 hover:bg-slate-100/30 p-4 sm:p-6 backdrop-filter duration-300 dark:border-slate-600/30 dark:bg-slate-600/20 dark:hover:bg-slate-600/30'>
       <header>
-        <p className='pb-2 text-blue-700 dark:text-blue-200'>{category}</p>
-        <h3 className='pb-4 text-xl font-bold md:text-2xl'>
+        <h3 className='pb-4 text-lg font-bold md:text-xl'>
           <a
             href={
               links.find(({ label }) => label === 'Source code')?.url ??
@@ -53,7 +51,7 @@ export default function ListCard({
       </header>
       <footer>
         <ul className='mb-4 flex flex-wrap'>{techStacksEntry}</ul>
-        <ul className='flex gap-4'>{linksEntry}</ul>
+        <ul className='flex space-x-4'>{linksEntry}</ul>
       </footer>
     </li>
   )
