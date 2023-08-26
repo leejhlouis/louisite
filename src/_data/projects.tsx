@@ -3,6 +3,7 @@ import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
 import getGitHubUrl from '@/utils/getGitHubUrl'
 import LinkProps from '@/types/LinkProps'
 import ProjectProps from '@/types/ProjectProps'
+import constants from '@/constants'
 
 const github: LinkProps = {
   label: 'Source code',
@@ -223,7 +224,7 @@ const projects: ProjectProps[] = [
       },
       {
         ...live,
-        url: 'https://leejhlouis.github.io/fame'
+        url: `https://${constants.social.github}.github.io/fame`
       }
     ]
   }
