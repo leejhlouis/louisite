@@ -1,24 +1,24 @@
 import Section from '@/components/layouts/Section.tsx'
 import Heading2 from '@/components/common/reusable/Heading2.tsx'
 import ListCard from '@/components/common/ListCard.tsx'
-import works from '@/_data/works.tsx'
+import projects from '@/_data/projects'
 
-export default function Works() {
-  const worksEntry = works.map((work, index) => (
+export default function Projects() {
+  const projectsEntry = projects.map(project => (
     <ListCard
-      {...work}
-      key={index}
+      {...project}
+      key={project.id}
     />
   ))
 
   return (
     <Section
-      id='works'
+      id='projects'
       className='scroll-mt-8'
     >
-      <Heading2 className='text-center'>Featured works</Heading2>
+      <Heading2 className='text-center'>Featured projects</Heading2>
       <ul className='mx-auto mt-6 grid justify-items-center gap-x-6 gap-y-8 sm:grid-cols-2 md:mt-8 lg:grid-cols-3'>
-        {worksEntry}
+        {projectsEntry}
       </ul>
     </Section>
   )
