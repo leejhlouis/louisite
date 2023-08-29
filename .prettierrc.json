@@ -8,6 +8,6 @@
   "trailingComma": "none",
   "arrowParens": "avoid",
   "singleAttributePerLine": true,
-  "tailwindConfig": "./tailwind.config.cjs",
+  "tailwindConfig": "./tailwind.config.ts",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
