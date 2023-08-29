@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>LOUISITE</title>
+        <title>Louis Gustavo | Software Engineer and Computer Science Undergraduate</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>
