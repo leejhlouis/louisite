@@ -26,7 +26,7 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About | LOUISITE</title>
+        <title>About | Louis Gustavo</title>
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>
