@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-var-requires */
-const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
+import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
-module.exports = {
+export default {
   content: ['index.html', './src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
@@ -32,4 +31,4 @@ module.exports = {
     }
   },
   plugins: []
-}
+} satisfies Config
