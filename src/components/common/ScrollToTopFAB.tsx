@@ -1,6 +1,7 @@
 import ArrowUpFillIcon from 'remixicon-react/ArrowUpFillIcon.js'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import IconButton from '@/components/common/reusable/button/IconButton.tsx'
+import { useEventListener } from '@/hooks/useEventListener'
 
 const SCROLL_OFFSET = 120
 
@@ -11,20 +12,13 @@ export default function ScrollToTopFAB() {
     window.scrollTo(0, 0)
   }
 
-  const handleScroll = () => {
+  useEventListener('scroll', () => {
     const { scrollY, innerHeight } = window
     const { scrollHeight } = document.documentElement
     setButtonVisible(
       scrollY + SCROLL_OFFSET > innerHeight && scrollY + innerHeight < scrollHeight - SCROLL_OFFSET
     )
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  })
 
   return (
     <div className='fixed bottom-0 right-0 mb-8 mr-8'>

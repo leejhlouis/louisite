@@ -6,10 +6,10 @@ import NavLinks from '@/components/common/NavLinks.tsx'
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
-  }
+}
 
   return (
-    <footer className='container py-4 sm:py-6 xl:py-8 xl:max-w-screen-xl z-10'>
+    <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>
       <PrimaryButton
         onClick={scrollToTop}
         className='mx-auto mb-6'

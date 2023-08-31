@@ -3,21 +3,16 @@ import NavLinks from '@/components/common/NavLinks.tsx'
 import ThemeSwitcher from '@/components/common/ThemeSwitcher.tsx'
 import Menu3FillIcon from 'remixicon-react/Menu3FillIcon.js'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import IconButton from '@/components/common/reusable/button/IconButton.tsx'
+import { useEventListener } from '@/hooks/useEventListener'
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480)
   const [toggle, setToggle] = useState(false)
 
   const handleWidthChange = () => setIsMobile(window.innerWidth < 480)
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWidthChange)
-    return () => {
-      window.removeEventListener('resize', handleWidthChange)
-    }
-  }, [])
+  useEventListener('resize', handleWidthChange)
 
   return (
     <nav className='fixed top-0 z-50 w-full backdrop-blur-lg dark:backdrop-blur-xl'>
