@@ -69,24 +69,24 @@
 
 @layer utilities {
   .bg-gradient-light {
-    background: linear-gradient(25deg, #e3d7f9 33%, #e3d7f900 66%),
-      linear-gradient(-135deg, #b9afff 10%, #c5ceff 90%);
+    background: linear-gradient(15deg, #e3d7f9e6 33%, #e3d7f900 66%),
+      linear-gradient(-135deg, #b9afff 10%, #c5dbff 90%);
     background-attachment: fixed;
   }
 
   .bg-gradient-dark {
-    background: linear-gradient(25deg, #110627 33%, #11062700 66%),
+    background: linear-gradient(25deg, #110627e6 33%, #11062700 66%),
       linear-gradient(-135deg, #491616 10%, #00137a 90%);
     background-attachment: fixed;
   }
 
   .animate-fade-in {
-    transition: all 1000ms ease-out;
+    transition: all 500ms ease-out;
     opacity: 0;
     transform: translateY(50%);
   }
 
-  .mounted .animate-fade-in {
+  .animate-start .animate-fade-in {
     opacity: 1;
     transform: translateY(0);
   }

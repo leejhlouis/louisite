@@ -9,10 +9,5 @@ export const useMounted = () => {
     }, 100)
   }, [])
 
-  const mountedClass = mounted ? 'mounted' : ''
-
-  return {
-    mounted,
-    mountedClass
-  }
+  return { mounted }
 }
