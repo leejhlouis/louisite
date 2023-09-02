@@ -1,7 +1,9 @@
 import ArrowUpSLineIcon from 'remixicon-react/ArrowUpSLineIcon.js'
-import PrimaryButton from '@/components/common/reusable/button/PrimaryButton.tsx'
-import SocialMediaLinks from '@/components/common/SocialMediaLinks.tsx'
-import NavLinks from '@/components/common/NavLinks.tsx'
+import { lazy } from 'react'
+
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
+const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -14,8 +16,9 @@ export default function Footer() {
         onClick={scrollToTop}
         className='mx-auto mb-6'
         icon={<ArrowUpSLineIcon />}
-        textContent='Back to top'
-      />
+      >
+        Back to top
+      </PrimaryButton>
       <div className='pb-4 pt-8'>
         <p className='pb-2 text-2xl font-light md:text-3xl'>
           LOUI<span className='font-bold'>SITE</span>

@@ -1,13 +1,13 @@
-import React, { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet'
 import Preloader from '@/components/common/Preloader.tsx'
 
-const PageWrapper = React.lazy(() => import('@/components/layouts/PageWrapper.tsx'))
-const Navbar = React.lazy(() => import('@/components/layouts/Navbar.tsx'))
-const Hero = React.lazy(() => import('@/components/Hero.tsx'))
-const Projects = React.lazy(() => import('@/components/Projects.tsx'))
-const Footer = React.lazy(() => import('@/components/layouts/Footer.tsx'))
-const ScrollToTopFAB = React.lazy(() => import('@/components/common/ScrollToTopFAB.tsx'))
+const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
+const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
+const Hero = lazy(() => import('@/components/sections/Hero.tsx'))
+const Projects = lazy(() => import('@/components/sections/Projects.tsx'))
+const Footer = lazy(() => import('@/components/layouts/Footer.tsx'))
+const ScrollToTopFAB = lazy(() => import('@/components/common/ScrollToTopFAB.tsx'))
 
 export default function HomePage() {
   return (

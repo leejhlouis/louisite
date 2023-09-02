@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import ComponentProps from '@/types/components/ComponentProps'
 
-export default function HighlightText(props: { children: React.ReactNode }) {
+export default function HighlightText({ children }: ComponentProps) {
   const ref = useRef<HTMLLinkElement>(null)
   const [degree, setDegree] = useState(0)
 
@@ -19,7 +20,7 @@ export default function HighlightText(props: { children: React.ReactNode }) {
       ref={ref}
       className='from-fuchsia-700 to-blue-700 bg-clip-text text-transparent transition dark:from-fuchsia-400 dark:to-blue-400'
     >
-      {props.children}
+      {children}
     </span>
   )
 }

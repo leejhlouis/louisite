@@ -1,5 +1,8 @@
+import { lazy } from 'react'
 import { NavLink } from 'react-router-dom'
 import navItems from '@/_data/navItems.ts'
+
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 
 export default function NavLinks() {
   const links = navItems.map((item, index) => (
@@ -7,11 +10,8 @@ export default function NavLinks() {
       <NavLink
         key={index}
         to={item.href}
-        style={({ isActive }) => ({
-          fontWeight: isActive ? 'bold' : 'normal'
-        })}
       >
-        {item.name}
+        {({ isActive }) => <PrimaryButton active={isActive}>{item.name}</PrimaryButton>}
       </NavLink>
     </li>
   ))

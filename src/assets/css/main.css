@@ -17,7 +17,7 @@
   }
 
   p {
-    padding-bottom: theme(spacing.4);
+    padding-bottom: theme(spacing.6);
   }
 
   @media screen(md) {
@@ -29,33 +29,19 @@
     }
   }
 
-  span {
+  span,
+  i {
     color: inherit;
     font-size: inherit;
   }
 
-  i {
-    color: inherit;
-  }
-
-  a:not(.active):not(.title):not(.no-default):hover {
-    text-decoration-line: underline;
-    color: theme(colors.blue.800);
-    transition-duration: theme(transitionDuration.300);
-  }
-
   a:hover svg {
     transition-duration: theme(transitionDuration.300);
-    fill: theme(colors.blue.800);
-  }
-
-  html.dark a:not(.active):not(.title):not(.no-default):hover,
-  html.dark {
-    color: theme(colors.blue.300);
+    fill: theme(colors.blue.600);
   }
 
   html.dark a:hover svg {
-    fill: theme(colors.blue.300);
+    fill: theme(colors.blue.200);
   }
 
   .preloader > svg {
@@ -68,16 +54,39 @@
 }
 
 @layer utilities {
-  .bg-gradient-light {
-    background: linear-gradient(15deg, #e3d7f9e6 33%, #e3d7f900 66%),
-      linear-gradient(-135deg, #b9afff 10%, #c5dbff 90%);
+  .bg-primary {
+    background: linear-gradient(-135deg, #cfafff 10%, #aeb3ff 50%, #8ca9db 100%);
+  }
+
+  .bg-primary-overlay {
+    background: linear-gradient(60deg, #c5d1ffe6 33%, #c5d1ff00 66%),
+      linear-gradient(-135deg, #cfafff 10%, #aeb3ff 50%, #c5dbff 100%);
     background-attachment: fixed;
   }
 
-  .bg-gradient-dark {
-    background: linear-gradient(25deg, #110627e6 33%, #11062700 66%),
-      linear-gradient(-135deg, #491616 10%, #00137a 90%);
+  .bg-primary-dark {
+    background: linear-gradient(-135deg, #3a1529 20%, #281543 50%, #110627 100%);
+  }
+
+  .bg-primary-overlay-dark {
+    background: linear-gradient(30deg, #110627e6 10%, #11062700 66%),
+      linear-gradient(-135deg, #3a1529 20%, #281543 50%, #00137a 100%);
     background-attachment: fixed;
+  }
+
+  .cursor-tracking-gradient {
+    --gradientPosition: center;
+    --background: 197 219 255;
+    background: radial-gradient(
+      400px at var(--gradientPosition),
+      rgb(var(--background) / 0.4) 0%,
+      rgb(var(--background) / 0.2) 40%,
+      transparent 100%
+    );
+  }
+
+  html.dark .cursor-tracking-gradient {
+    --background: 0 19 122;
   }
 
   .animate-fade-in {

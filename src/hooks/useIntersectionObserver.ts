@@ -1,9 +1,9 @@
 import { useState, useEffect, RefObject } from 'react'
 
-export const useIntersectionObserver = (
+export default function useIntersectionObserver (
   ref: RefObject<HTMLElement>,
   onIntersection: () => void
-) => {
+) {
   const [isIntersecting, setIsIntersecting] = useState(false)
 
   useEffect(() => {

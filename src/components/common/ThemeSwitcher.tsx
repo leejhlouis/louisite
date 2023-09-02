@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { lazy, useState } from 'react'
 import SunLineIcon from 'remixicon-react/SunLineIcon.js'
 import MoonLineIcon from 'remixicon-react/MoonLineIcon.js'
 import checkDarkTheme from '@/utils/checkDarkTheme.ts'
-import IconButton from '@/components/common/reusable/button/IconButton.tsx'
+
+const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton.tsx'))
 
 export default function ThemeSwitcher() {
   const [isDark, setDark] = useState(checkDarkTheme)

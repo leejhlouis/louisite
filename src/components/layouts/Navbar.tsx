@@ -1,11 +1,12 @@
-import Dropdown from '@/components/common/Dropdown.tsx'
-import NavLinks from '@/components/common/NavLinks.tsx'
-import ThemeSwitcher from '@/components/common/ThemeSwitcher.tsx'
-import Menu3FillIcon from 'remixicon-react/Menu3FillIcon.js'
+import { lazy, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import IconButton from '@/components/common/reusable/button/IconButton.tsx'
-import { useEventListener } from '@/hooks/useEventListener'
+import useEventListener from '@/hooks/useEventListener'
+
+const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton.tsx'))
+const Dropdown = lazy(() => import('@/components/common/Dropdown'))
+const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
+const ThemeSwitcher = lazy(() => import('@/components/common/ThemeSwitcher'))
+const Menu3FillIcon = lazy(() => import('remixicon-react/Menu3FillIcon'))
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 480)

@@ -1,9 +1,10 @@
-import Section from '@/components/layouts/Section.tsx'
-import Heading2 from '@/components/common/reusable/Heading2.tsx'
-import ListCard from '@/components/common/ListCard.tsx'
+import { lazy, useRef } from 'react'
 import projects from '@/_data/projects'
-import { useRef } from 'react'
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+
+const Section = lazy(() => import('@/components/layouts/Section.tsx'))
+const Heading2 = lazy(() => import('@/components/common/reusable/Heading2.tsx'))
+const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null)

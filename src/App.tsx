@@ -2,9 +2,10 @@ import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from '@/pages/HomePage.tsx'
 import AboutPage from '@/pages/AboutPage.tsx'
+import NotFoundPage from '@/pages/NotFoundPage.tsx'
 import checkDarkTheme from '@/utils/checkDarkTheme.ts'
 
-export function App() {
+export default function App() {
   useEffect(() => {
     if (checkDarkTheme()) {
       document.documentElement.classList.add('dark')
