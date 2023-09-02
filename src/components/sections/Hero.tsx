@@ -1,13 +1,15 @@
-import ArrowDownSLineIcon from 'remixicon-react/ArrowDownSLineIcon.js'
-import PrimaryButton from '@/components/common/reusable/button/PrimaryButton.tsx'
-import HighlightText from '@/components/common/reusable/HighlightText.tsx'
-import SocialMediaLinks from '@/components/common/SocialMediaLinks.tsx'
-import Section from '@/components/layouts/Section.tsx'
-import { useMounted } from '@/hooks/useMounted'
+import { lazy } from 'react'
+import useMounted from '@/hooks/useMounted'
+
+const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon.js'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText.tsx'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
+const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 
 export default function Hero() {
   const scrollToProjects = () => window.location.assign('#projects')
-  const { mounted } = useMounted()
+  const mounted = useMounted()
   const mountedClass = mounted ? 'animate-start' : ''
 
   return (
@@ -23,9 +25,10 @@ export default function Hero() {
       <PrimaryButton
         className='mx-auto animate-bounce'
         icon={<ArrowDownSLineIcon />}
-        textContent='Featured projects'
         onClick={scrollToProjects}
-      />
+      >
+        Featured projects
+      </PrimaryButton>
     </Section>
   )
 }

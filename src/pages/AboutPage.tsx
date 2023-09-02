@@ -6,7 +6,7 @@ import about from '@/_data/about/about.md'
 const Navbar = React.lazy(() => import('@/components/layouts/Navbar.tsx'))
 const PageWrapper = React.lazy(() => import('@/components/layouts/PageWrapper.tsx'))
 const Footer = React.lazy(() => import('@/components/layouts/Footer.tsx'))
-const About = React.lazy(() => import('@/components/About.tsx'))
+const About = React.lazy(() => import('@/components/sections/About.tsx'))
 
 export default function AboutPage() {
   const [content, setContent] = useState('')

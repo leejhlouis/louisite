@@ -1,14 +1,16 @@
-import ReactMarkdown from 'react-markdown'
-import Section from '@/components/layouts/Section.tsx'
-import Heading1 from '@/components/common/reusable/Heading1.tsx'
-import Heading2 from '@/components/common/reusable/Heading2.tsx'
-import InlineLink from '@/components/common/reusable/InlineLink.tsx'
-import { useState } from 'react'
-import { useMounted } from '@/hooks/useMounted'
+import { lazy, useState } from 'react'
+import useMounted from '@/hooks/useMounted'
 import { useEventListener } from '@/hooks/useEventListener'
+import { SectionProps } from '@/types/SectionProps'
 
-export default function About(props: { children: string }) {
-  const { mounted } = useMounted()
+const Section = lazy(() => import('@/components/layouts/Section.tsx'))
+const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
+const Heading2 = lazy(() => import('@/components/common/reusable/Heading2.tsx'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
+const ReactMarkdown = lazy(() => import('react-markdown'))
+
+export default function About({ children }: SectionProps) {
+  const mounted = useMounted()
 
   const [hasScrolledToTop, setHasScrolledToTop] = useState(false)
 
@@ -26,7 +28,7 @@ export default function About(props: { children: string }) {
         maxWidthClass='md:max-w-screen-sm'
       >
         <ReactMarkdown
-          children={(localStorage.about as string) ?? props.children}
+          children={(localStorage.about as string) ?? children}
           components={{
             h1: Heading1,
             h2: Heading2,

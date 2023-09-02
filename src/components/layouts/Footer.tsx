@@ -6,7 +6,7 @@ import NavLinks from '@/components/common/NavLinks.tsx'
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
-}
+  }
 
   return (
     <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>
@@ -14,8 +14,9 @@ export default function Footer() {
         onClick={scrollToTop}
         className='mx-auto mb-6'
         icon={<ArrowUpSLineIcon />}
-        textContent='Back to top'
-      />
+      >
+        Back to top
+      </PrimaryButton>
       <div className='pb-4 pt-8'>
         <p className='pb-2 text-2xl font-light md:text-3xl'>
           LOUI<span className='font-bold'>SITE</span>

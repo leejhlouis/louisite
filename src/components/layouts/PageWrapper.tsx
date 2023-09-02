@@ -5,7 +5,7 @@ export default function PageWrapper({
   children
 }: PageWrapperProps) {
   return (
-    <div className={`${className ?? ''} bg-gradient-light dark:bg-gradient-dark pt-18 `}>
+    <div className={`${className ?? ''} bg-primary-overlay dark:bg-primary-overlay-dark pt-18`}>
       {children}
     </div>
   )
