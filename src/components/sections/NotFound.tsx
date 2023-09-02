@@ -2,6 +2,7 @@ import { lazy, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import useEventListener from '@/hooks/useEventListener'
 import useMounted from '@/hooks/useMounted'
+import clsx from 'clsx'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
@@ -20,10 +21,13 @@ export default function HomePage() {
   })
 
   const mounted = useMounted()
-  const mountedClass = mounted ? 'animate-start' : ''
 
   return (
-    <div className={mountedClass}>
+    <div
+      className={clsx({
+        'animate-start': mounted
+      })}
+    >
       <div
         ref={ref}
         className='cursor-tracking-gradient'
@@ -32,10 +36,21 @@ export default function HomePage() {
           className='flex h-screen flex-col justify-center md:items-center'
           maxWidthClass='md:max-w-screen-md'
         >
-          <Heading1 className='animate-fade-in text-4xl md:text-center md:text-5xl'>
+          {/* prettier-ignore */}
+          <Heading1 className={clsx(
+            'animate-fade-in', 
+            'text-4xl md:text-center md:text-5xl'
+            )}
+          >
             The page is not available
           </Heading1>
-          <p className='animate-fade-in mb-4 text-lg md:text-center md:text-xl'>
+          {/* prettier-ignore */}
+          <p
+            className={clsx(
+              'animate-fade-in',
+              'mb-4 text-lg md:text-center md:text-xl'
+            )}
+          >
             Oh, snap! You're in the middle of nowhere, but don't worry, returning home is just one
             click away.
           </p>

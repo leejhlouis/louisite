@@ -1,5 +1,6 @@
 import socialList from '@/_data/social.tsx'
 import ComponentProps from '@/types/components/ComponentProps'
+import clsx from 'clsx'
 
 export default function SocialMediaLinks({ className }: ComponentProps) {
   const social = socialList.map((item, index) => (
@@ -15,5 +16,15 @@ export default function SocialMediaLinks({ className }: ComponentProps) {
     </li>
   ))
 
-  return <ul className={`flex list-none items-center space-x-4 ${className ?? ''}`}>{social}</ul>
+  return (
+    // prettier-ignore
+    <ul
+      className={clsx(
+        className,
+        'flex list-none items-center space-x-4'
+      )}
+    >
+      {social}
+    </ul>
+  )
 }
