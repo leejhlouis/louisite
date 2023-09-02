@@ -5,7 +5,7 @@ import AboutPage from '@/pages/AboutPage.tsx'
 import NotFoundPage from '@/pages/NotFoundPage.tsx'
 import checkDarkTheme from '@/utils/checkDarkTheme.ts'
 
-export function App() {
+export default function App() {
   useEffect(() => {
     if (checkDarkTheme()) {
       document.documentElement.classList.add('dark')
@@ -20,13 +20,13 @@ export function App() {
         path='/'
         element={<HomePage />}
       />
-      <Route
+      <Route 
         path='/about'
         element={<AboutPage />}
       />
       <Route
         path='/*'
-        element={<NotFoundPage />}
+        element={<HomePage />}
       />
     </Routes>
   )

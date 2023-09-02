@@ -1,14 +1,12 @@
-import HeadingProps from '@/types/HeadingProps.ts'
+import ComponentProps from '@/types/components/ComponentProps'
 
-export default function Heading3(props: HeadingProps) {
+export default function Heading2({ id, className, children }: ComponentProps) {
   return (
     <h2
-      id={props.id}
-      className={`pt-3 pb-4 text-2xl font-bold md:pt-4 md:pb-6 md:text-3xl ${
-        props.className ?? ''
-      }`}
+      id={id}
+      className={`pb-4 pt-3 text-2xl font-bold md:pb-6 md:pt-4 md:text-3xl ${className ?? ''}`}
     >
-      {props.children}
+      {children}
     </h2>
   )
 }

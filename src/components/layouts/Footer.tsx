@@ -1,12 +1,14 @@
 import ArrowUpSLineIcon from 'remixicon-react/ArrowUpSLineIcon.js'
-import PrimaryButton from '@/components/common/reusable/button/PrimaryButton.tsx'
-import SocialMediaLinks from '@/components/common/SocialMediaLinks.tsx'
-import NavLinks from '@/components/common/NavLinks.tsx'
+import { lazy } from 'react'
+
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
+const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
-  }
+}
 
   return (
     <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>

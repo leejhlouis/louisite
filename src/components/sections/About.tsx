@@ -1,7 +1,7 @@
 import { lazy, useState } from 'react'
 import useMounted from '@/hooks/useMounted'
-import { useEventListener } from '@/hooks/useEventListener'
-import { SectionProps } from '@/types/SectionProps'
+import useEventListener from '@/hooks/useEventListener'
+import ComponentProps from '@/types/components/ComponentProps'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
@@ -9,7 +9,7 @@ const Heading2 = lazy(() => import('@/components/common/reusable/Heading2.tsx'))
 const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
 const ReactMarkdown = lazy(() => import('react-markdown'))
 
-export default function About({ children }: SectionProps) {
+export default function About({ children }: ComponentProps) {
   const mounted = useMounted()
 
   const [hasScrolledToTop, setHasScrolledToTop] = useState(false)

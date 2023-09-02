@@ -1,14 +1,14 @@
-import InlineLinkProps from '@/types/InlineLinkProps.ts'
+import InlineLinkProps from '@/types/components/InlineLinkProps'
 
-export default function InlineLink(props: InlineLinkProps) {
+export default function InlineLink({ href, children }: InlineLinkProps) {
   return (
     <a
-      href={props.href}
+      href={href}
       target='_blank'
       rel='noreferrer'
-      className='font-semibold text-blue-800 decoration-blue-800 hover:underline dark:text-blue-300 dark:decoration-blue-300'
+      className='dark:hover:text-blue-1w00 dark:hover:decoration-blue-1w00 font-semibold text-blue-800 decoration-blue-800 duration-300 hover:text-blue-600 hover:underline hover:decoration-blue-600 dark:text-blue-300 dark:decoration-blue-300'
     >
-      {props.children}
+      {children}
     </a>
   )
 }

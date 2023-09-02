@@ -1,4 +1,4 @@
-import { SectionProps } from '@/types/SectionProps.ts'
+import { SectionProps } from '@/types/components/SectionProps'
 
 export default function Section(props: SectionProps) {
   return (
