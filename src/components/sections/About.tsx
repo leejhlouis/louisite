@@ -2,6 +2,7 @@ import { lazy, useState } from 'react'
 import useMounted from '@/hooks/useMounted'
 import useEventListener from '@/hooks/useEventListener'
 import ComponentProps from '@/types/components/ComponentProps'
+import clsx from 'clsx'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
@@ -22,9 +23,17 @@ export default function About({ children }: ComponentProps) {
   })
 
   return (
-    <div className={`${mounted || hasScrolledToTop ? 'animate-start' : ''}`}>
+    <div
+      className={clsx({
+        'animate-start': mounted || hasScrolledToTop
+      })}
+    >
       <Section
-        className='[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0 [&_ul]:pb-4 md:[&_ul]:pb-6'
+        className={clsx(
+          'text-muted-dark dark:text-muted md:px-0',
+          '[&>*]:animate-fade-in',
+          '[&_ul]:pb-4 md:[&_ul]:pb-6'
+        )}
         maxWidthClass='md:max-w-screen-sm'
       >
         <ReactMarkdown
@@ -35,7 +44,11 @@ export default function About({ children }: ComponentProps) {
             a: InlineLink,
             li: ({ ...props }: object) => (
               <li
-                className='mb-2 mr-2 inline-block rounded-xl bg-slate-50/50 px-3 text-base hover:shadow dark:bg-slate-700/50'
+                className={clsx(
+                  'mb-2 mr-2 px-3',
+                  'bg-slate-50/50 dark:bg-slate-700/50',
+                  'inline-block rounded-xl text-base hover:shadow'
+                )}
                 {...props}
               />
             )

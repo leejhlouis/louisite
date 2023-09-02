@@ -1,14 +1,20 @@
 import { SectionProps } from '@/types/components/SectionProps'
+import clsx from 'clsx'
 
-export default function Section(props: SectionProps) {
+export default function Section({ id, className, maxWidthClass, children }: SectionProps) {
   return (
     <section
-      id={props.id || ''}
-      className={`container py-8 sm:py-12 xl:py-16 ${props.maxWidthClass ?? 'xl:max-w-screen-xl'} ${
-        props.className ?? ''
-      }`}
+      id={id || ''}
+      className={clsx(
+        className,
+        maxWidthClass,
+        {
+          'xl:max-w-screen-xl': !maxWidthClass
+        },
+        'container py-8 sm:py-12 xl:py-16'
+      )}
     >
-      {props.children}
+      {children}
     </section>
   )
 }

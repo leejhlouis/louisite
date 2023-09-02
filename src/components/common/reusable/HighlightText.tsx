@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import ComponentProps from '@/types/components/ComponentProps'
+import clsx from 'clsx'
 
 export default function HighlightText({ children }: ComponentProps) {
   const ref = useRef<HTMLLinkElement>(null)
@@ -18,7 +19,11 @@ export default function HighlightText({ children }: ComponentProps) {
   return (
     <span
       ref={ref}
-      className='from-fuchsia-700 to-blue-700 bg-clip-text text-transparent transition dark:from-fuchsia-400 dark:to-blue-400'
+      className={clsx(
+        'from-fuchsia-700 to-blue-700 bg-clip-text',
+        'dark:from-fuchsia-400 dark:to-blue-400',
+        'text-transparent transition'
+      )}
     >
       {children}
     </span>
