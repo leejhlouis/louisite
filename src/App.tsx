@@ -20,13 +20,13 @@ export default function App() {
         path='/'
         element={<HomePage />}
       />
-      <Route 
+      <Route
         path='/about'
         element={<AboutPage />}
       />
       <Route
         path='/*'
-        element={<HomePage />}
+        element={<NotFoundPage />}
       />
     </Routes>
   )
