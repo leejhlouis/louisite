@@ -29,31 +29,31 @@ export default function About({ children }: ComponentProps) {
       })}
     >
       <Section
-        className={clsx(
-          'text-muted-dark dark:text-muted md:px-0',
-          '[&>*]:animate-fade-in',
-          '[&_ul]:pb-4 md:[&_ul]:pb-6'
-        )}
+        className='md:px-0[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0'
         maxWidthClass='md:max-w-screen-sm'
       >
         <ReactMarkdown
-          children={(localStorage.about as string) ?? children}
           components={{
             h1: Heading1,
             h2: Heading2,
             a: InlineLink,
-            li: ({ ...props }: object) => (
-              <li
-                className={clsx(
-                  'mb-2 mr-2 px-3',
-                  'bg-slate-50/50 dark:bg-slate-700/50',
-                  'inline-block rounded-xl text-base hover:shadow'
-                )}
-                {...props}
-              />
-            )
+            ul: ({ children }) => (<ul className='pb-4 md:pb-6'>{children}</ul>) as JSX.Element,
+            li: ({ children }) =>
+              (
+                <li
+                  className={clsx(
+                    'mb-2 mr-2 px-3',
+                    'bg-slate-50/50 dark:bg-slate-700/50',
+                    'inline-block rounded-xl text-base hover:shadow'
+                  )}
+                >
+                  {children}
+                </li>
+              ) as JSX.Element
           }}
-        />
+        >
+          {(localStorage.about as string) ?? children}
+        </ReactMarkdown>
       </Section>
     </div>
   )

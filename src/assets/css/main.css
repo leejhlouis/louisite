@@ -55,12 +55,12 @@
 
 @layer utilities {
   .bg-primary {
-    background: linear-gradient(-135deg, #cfafff 10%, #aeb3ff 50%, #8ca9db 100%);
+    background: linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
   }
 
   .bg-primary-overlay {
-    background: linear-gradient(60deg, #c5d1ffe6 33%, #c5d1ff00 66%),
-      linear-gradient(-135deg, #cfafff 10%, #aeb3ff 50%, #c5dbff 100%);
+    background: linear-gradient(30deg, #c5d1ffe6 33%, #c5d1ff00 66%),
+      linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
     background-attachment: fixed;
   }
 
@@ -76,7 +76,7 @@
 
   .cursor-tracking-gradient {
     --gradientPosition: center;
-    --background: 197 219 255;
+    --background: 215 225 255;
     background: radial-gradient(
       400px at var(--gradientPosition),
       rgb(var(--background) / 0.4) 0%,
