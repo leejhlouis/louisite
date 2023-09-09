@@ -1,9 +1,9 @@
 import { lazy, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useEventListener from '@/hooks/useEventListener'
+import Dropdown from '@/components/common/Dropdown'
 
 const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton.tsx'))
-const Dropdown = lazy(() => import('@/components/common/Dropdown'))
 const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
 const ThemeSwitcher = lazy(() => import('@/components/common/ThemeSwitcher'))
 const Menu3FillIcon = lazy(() => import('remixicon-react/Menu3FillIcon'))
