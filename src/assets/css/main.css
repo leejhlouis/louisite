@@ -13,20 +13,11 @@
   i,
   p,
   button {
-    line-height: theme(lineHeight.6);
+    line-height: theme(lineHeight.7);
   }
 
   p {
     padding-bottom: theme(spacing.6);
-  }
-
-  @media screen(md) {
-    li,
-    i,
-    p,
-    button {
-      line-height: theme(lineHeight.7);
-    }
   }
 
   span,
