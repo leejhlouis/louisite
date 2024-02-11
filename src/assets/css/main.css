@@ -46,12 +46,12 @@
 
 @layer utilities {
   .bg-primary {
-    background: linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
+    background: linear-gradient(-135deg, #c6beff 10%, #aeb3ff 50%, #e0e7ff 100%);
   }
 
   .bg-primary-overlay {
     background: linear-gradient(30deg, #c5d1ffe6 33%, #c5d1ff00 66%),
-      linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
+      linear-gradient(-135deg, #c6beff 10%, #aeb3ff 50%, #e0e7ff 100%);
     background-attachment: fixed;
   }
 
