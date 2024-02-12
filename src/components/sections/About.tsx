@@ -43,7 +43,7 @@ export default function About({ children }: ComponentProps) {
                 <li
                   className={clsx(
                     'mb-2 mr-2 px-3',
-                    'bg-slate-50/50 dark:bg-slate-700/50',
+                    'bg-slate-50/30 dark:bg-slate-700/30',
                     'inline-block rounded-xl text-base hover:shadow'
                   )}
                 >
