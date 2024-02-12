@@ -7,7 +7,7 @@ export default function Heading1({ id, className, children }: ComponentProps) {
       id={id}
       className={clsx(
         className,
-        'pb-6 pt-4 md:pb-8 md:pt-6',
+        'pb-8 pt-6',
         'text-[1.75rem] font-bold leading-8 md:text-4xl'
       )}
     >

@@ -13,20 +13,11 @@
   i,
   p,
   button {
-    line-height: theme(lineHeight.6);
+    line-height: theme(lineHeight.7);
   }
 
   p {
     padding-bottom: theme(spacing.6);
-  }
-
-  @media screen(md) {
-    li,
-    i,
-    p,
-    button {
-      line-height: theme(lineHeight.7);
-    }
   }
 
   span,
@@ -55,12 +46,12 @@
 
 @layer utilities {
   .bg-primary {
-    background: linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
+    background: linear-gradient(-135deg, #cdc6ff 10%, #c6c9ff 50%, #e2f5ff 100%);
   }
 
   .bg-primary-overlay {
     background: linear-gradient(30deg, #c5d1ffe6 33%, #c5d1ff00 66%),
-      linear-gradient(-135deg, #b0a4ff 10%, #aeb3ff 50%, #ced1ff 100%);
+      linear-gradient(-135deg, #c4bdff 10%, #c6c9ff 50%, #e2f5ff 100%);
     background-attachment: fixed;
   }
 

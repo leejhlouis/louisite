@@ -6,9 +6,9 @@ export default function App() {
   useEffect(() => {
     if (checkDarkTheme()) {
       document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
+      return
     }
+    document.documentElement.classList.remove('dark')
   }, [])
 
   return <Router />
