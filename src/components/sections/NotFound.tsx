@@ -33,6 +33,7 @@ export default function HomePage() {
         className='cursor-tracking-gradient'
       >
         <Section
+          id='not-found'
           className='flex h-screen flex-col justify-center md:items-center'
           maxWidthClass='md:max-w-screen-md'
         >

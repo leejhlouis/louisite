@@ -12,6 +12,7 @@ export default function IconButton({ onClick, className, screenReaderText, icon 
         'bg-slate-100/10 dark:bg-slate-600/20',
         'hover:bg-slate-100/30 dark:hover:bg-slate-600/30'
       )}
+      aria-label={screenReaderText}
     >
       <p className='sr-only'>{screenReaderText}</p>
       {icon}

@@ -14,6 +14,7 @@ export default function Hero() {
 
   return (
     <Section
+      id='hero'
       className={clsx('flex h-[88vh] min-h-[480px] flex-col justify-between', {
         'animate-start': mounted
       })}
