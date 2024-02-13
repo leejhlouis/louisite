@@ -11,5 +11,7 @@ export default function App() {
     document.documentElement.classList.remove('dark')
   }, [])
 
+  should be error
+
   return <Router />
 }
