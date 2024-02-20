@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 export default function PageWrapper({ className, children }: ComponentProps) {
   return (
-    <div className={clsx(className, 'bg-primary-overlay dark:bg-primary-overlay-dark pt-18')}>
+    <div className={clsx(className, 'bg-overlay dark:bg-overlay-dark pt-18')}>
       {children}
     </div>
   )

@@ -4,25 +4,24 @@ import { lazy } from 'react'
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
 const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
+const Title = lazy(() => import('@/components/common/Title.tsx'))
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
-}
+  }
 
   return (
     <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>
       <PrimaryButton
         onClick={scrollToTop}
-        className='mx-auto mb-6'
+        className='mx-auto mb-6 animate-bounce'
         icon={<ArrowUpSLineIcon />}
       >
         Back to top
       </PrimaryButton>
       <div className='pb-4 pt-8'>
-        <p className='pb-2 text-2xl font-light md:text-3xl'>
-          LOUI<span className='font-bold'>SITE</span>
-        </p>
+        <Title size='lg' />
       </div>
       <div className='flex flex-col justify-between pb-4 xs:flex-row xs:items-center'>
         <p className='pb-4 font-light xs:pb-0'>Made with ❤️ by Louis.</p>

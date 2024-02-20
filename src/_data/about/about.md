@@ -1,4 +1,4 @@
-# Hey, it's Louis "leejhlouis"—a software engineer based in Indonesia.
+# Hey👋, it's Louis "leejhlouis"—a software engineer based in Indonesia.
 
 I find joy in coding and exploring programming languages, libraries, and frameworks. My obsession with modifying my [Fandom](https://www.fandom.com/) profile page's theme with HTML and CSS sparked my interest in software engineering.
 

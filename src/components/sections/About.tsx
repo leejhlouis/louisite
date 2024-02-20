@@ -29,7 +29,7 @@ export default function About({ children }: ComponentProps) {
       })}
     >
       <Section
-        className='md:px-0[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0'
+        className='[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0'
         maxWidthClass='md:max-w-screen-sm'
       >
         <ReactMarkdown

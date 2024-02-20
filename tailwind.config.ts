@@ -8,6 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: {
+          light: colors.blue['300'],
+          lighter: colors.blue['200'],
+          dark: colors.indigo['600'],
+          'lighter-dark': colors.indigo['500']
+        },
         muted: {
           DEFAULT: colors.neutral['300'],
           dark: colors.neutral['800']
@@ -26,8 +32,8 @@ export default {
       }
     },
     screens: {
-      xs: '480px',
-      ...defaultTheme.screens
+      ...defaultTheme.screens,
+      xs: '480px'
     }
   },
   plugins: []
