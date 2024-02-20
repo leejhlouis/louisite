@@ -24,7 +24,7 @@ export default function Navbar() {
           {isMobile && (
             <div className='relative'>
               <IconButton
-                icon={<Menu3FillIcon />}
+                icon={<Menu3FillIcon size={20} />}
                 screenReaderText='Toggle dropdown'
                 onClick={() => setToggle(!toggle)}
               />
