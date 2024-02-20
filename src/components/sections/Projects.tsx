@@ -26,10 +26,12 @@ export default function Projects() {
         id='projects'
         className='scroll-mt-8'
       >
-        <Heading2 className='animate-fade-in text-center'>Featured projects</Heading2>
+        <Heading2 className='animate-fade-in text-center text-primary-dark !delay-200 dark:text-white'>
+          Featured projects
+        </Heading2>
         <ul
           className={clsx(
-            'animate-fade-in',
+            'animate-fade-in !delay-300',
             'mx-auto mt-6 md:mt-8',
             'grid justify-items-center gap-x-6 gap-y-8 sm:grid-cols-2 xl:grid-cols-3'
           )}

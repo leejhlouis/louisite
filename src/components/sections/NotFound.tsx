@@ -39,6 +39,7 @@ export default function HomePage() {
           {/* prettier-ignore */}
           <Heading1 className={clsx(
             'animate-fade-in', 
+            'text-primary-dark dark:text-white',
             'text-4xl md:text-center md:text-5xl'
             )}
           >

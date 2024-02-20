@@ -32,7 +32,10 @@ export default function Hero() {
           A <HighlightText>software engineer</HighlightText> and a{' '}
           <HighlightText>Computer Science</HighlightText> undergraduate.
         </h1>
-        <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
+        <SocialMediaLinks
+          className={clsx('animate-fade-in !delay-500', 'mt-6')}
+          size='lg'
+        />
       </div>
       <PrimaryButton
         className='mx-auto animate-bounce'

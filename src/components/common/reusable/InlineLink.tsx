@@ -9,10 +9,10 @@ export default function InlineLink({ href, children }: InlineLinkProps) {
       rel='noreferrer'
       className={clsx(
         'font-semibold duration-300 hover:underline',
-        'text-blue-800 decoration-blue-800',
-        'hover:text-blue-600 hover:decoration-blue-600',
-        'dark:text-blue-300 dark:decoration-blue-300',
-        'dark:hover:text-blue-100 dark:hover:decoration-blue-100'
+        'text-primary-dark decoration-primary-dark',
+        'hover:text-primary-lighter-dark hover:decoration-primary-lighter-dark',
+        'dark:text-primary-light dark:decoration-primary-light',
+        'dark:hover:text-primary-lighter dark:hover:decoration-primary-lighter'
       )}
     >
       {children}

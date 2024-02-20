@@ -1,13 +1,19 @@
-import ProjectProps from '@/types/ProjectProps'
+import ProjectProps from '@/types/components/ProjectProps'
 import clsx from 'clsx'
 
-export default function ListCard({ title, description, techStacks, links }: ProjectProps) {
+export default function ListCard({
+  className,
+  title,
+  description,
+  techStacks,
+  links
+}: ProjectProps) {
   const techStacksEntry = techStacks.map((techStack, index) => (
     <li
       key={index}
       className={clsx(
         'mr-4 last-of-type:mr-0',
-        'text-base font-medium text-blue-700 dark:text-blue-300'
+        'text-base font-medium text-primary-dark dark:text-primary-light'
       )}
     >
       {techStack}
@@ -36,10 +42,11 @@ export default function ListCard({ title, description, techStacks, links }: Proj
         'w-full p-4 sm:p-6',
         'flex flex-col justify-between',
         'transform duration-300',
-        'rounded-xl border border-slate-500/60 dark:border-slate-600/30',
-        'bg-slate-100/10 dark:bg-slate-600/20',
-        'hover:bg-slate-100/30 dark:hover:bg-slate-600/30',
-        'cursor-pointer backdrop-filter'
+        'rounded-xl border border-slate-500/30 dark:border-slate-600/30',
+        'bg-slate-100/25 dark:bg-slate-600/20',
+        'hover:bg-slate-100/40 dark:hover:bg-slate-600/30',
+        'cursor-pointer backdrop-filter',
+        className
       )}
     >
       <header>

@@ -14,7 +14,7 @@ export default function Dropdown() {
       }
       to={item.href}
     >
-      <li className='cursor-pointer px-2 py-1 hover:bg-slate-200 hover:dark:bg-slate-800'>
+      <li className='cursor-pointer px-2 py-1 hover:bg-slate-100 hover:dark:bg-slate-900'>
         {item.name}
       </li>
     </NavLink>
@@ -25,7 +25,7 @@ export default function Dropdown() {
       className={clsx(
         'absolute right-0',
         'mt-2 py-2',
-        'bg-white dark:bg-slate-900',
+        'bg-slate-50 dark:bg-slate-950',
         'flex w-32 flex-col rounded-lg shadow-lg'
       )}
     >

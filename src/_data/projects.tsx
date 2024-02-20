@@ -2,7 +2,7 @@ import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
 import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
 import getGitHubUrl from '@/utils/getGitHubUrl'
 import LinkProps from '@/types/LinkProps'
-import ProjectProps from '@/types/ProjectProps'
+import ProjectProps from '@/types/components/ProjectProps'
 import constants from '@/constants'
 
 const github: LinkProps = {
