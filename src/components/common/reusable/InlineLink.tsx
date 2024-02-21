@@ -8,6 +8,7 @@ export default function InlineLink({ href, children }: InlineLinkProps) {
       target='_blank'
       rel='noreferrer'
       className={clsx(
+        'cursor-pointer',
         'font-semibold duration-300 hover:underline',
         'text-primary-dark decoration-primary-dark',
         'hover:text-primary-lighter-dark hover:decoration-primary-lighter-dark',

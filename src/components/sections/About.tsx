@@ -1,8 +1,7 @@
-import { lazy, useState } from 'react'
-import useMounted from '@/hooks/useMounted'
-import useEventListener from '@/hooks/useEventListener'
+import { lazy } from 'react'
 import ComponentProps from '@/types/components/ComponentProps'
 import clsx from 'clsx'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
@@ -11,23 +10,10 @@ const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.ts
 const ReactMarkdown = lazy(() => import('react-markdown'))
 
 export default function About({ children }: ComponentProps) {
-  const mounted = useMounted()
-
-  const [hasScrolledToTop, setHasScrolledToTop] = useState(false)
-
-  useEventListener('scroll', () => {
-    if (hasScrolledToTop) {
-      return
-    }
-    setHasScrolledToTop(mounted && window.scrollY <= 25)
-  })
+  const { animationClass } = useFadeInMounted()
 
   return (
-    <div
-      className={clsx({
-        'animate-start': mounted || hasScrolledToTop
-      })}
-    >
+    <div className={clsx(animationClass)}>
       <Section
         className='[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0'
         maxWidthClass='md:max-w-screen-sm'
