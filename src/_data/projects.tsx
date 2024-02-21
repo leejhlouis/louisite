@@ -16,6 +16,14 @@ const live: LinkProps = {
   icon: <ExternalLinkFillIcon size={24} />
 }
 
+const getLinks = (githubRepo: string, url?: string) => {
+  const links = [{ ...github, url: getGitHubUrl(githubRepo) }]
+  if (url) {
+    links.push({ ...live, url })
+  }
+  return links
+}
+
 const filters = [
   'React',
   'Vue.js',
@@ -45,16 +53,7 @@ const projects: ProjectProps[] = [
     techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('louisite')
-      },
-      {
-        ...live,
-        url: 'https://louisite.netfliy.app'
-      }
-    ]
+    links: getLinks('louisite', 'https://louisite.netfliy.app')
   },
   {
     id: 'vue-member-management',
@@ -69,12 +68,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Vue.js', 'Axios Mock'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('vue-member-management')
-      }
-    ]
+    links: getLinks('vue-member-management')
   },
   {
     id: 'find-a-coach',
@@ -93,16 +87,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Vue.js', 'Firebase'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('find-a-coach')
-      },
-      {
-        ...live,
-        url: 'https://find-a-coach-355c2.web.app/'
-      }
-    ]
+    links: getLinks('find-a-coach', 'https://find-a-coach-355c2.web.app/')
   },
   {
     id: 'e-grocery',
@@ -111,12 +96,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Laravel', 'Bootstrap'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('e-grocery')
-      }
-    ]
+    links: getLinks('e-grocery')
   },
   {
     id: 'movielist',
@@ -126,12 +106,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Laravel', 'Bootstrap'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('movielist')
-      }
-    ]
+    links: getLinks('movielist')
   },
   {
     id: 'election-2022',
@@ -142,16 +117,7 @@ const projects: ProjectProps[] = [
     category: 'Project management',
     techStacks: ['Bootstrap', 'Laravel', 'Project management'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('himti-election-2022')
-      },
-      {
-        ...live,
-        url: 'https://election.himtibinus.or.id/'
-      }
-    ]
+    links: getLinks('himti-election-2022', 'https://election.himtibinus.or.id/')
   },
   {
     id: 'giant-book-supplier',
@@ -162,12 +128,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Laravel', 'Bootstrap'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('giant-book-supplier')
-      }
-    ]
+    links: getLinks('giant-book-supplier')
   },
   {
     id: 'balaitani',
@@ -178,16 +139,7 @@ const projects: ProjectProps[] = [
     category: 'Full-stack development',
     techStacks: ['Laravel', 'Bootstrap'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('balaitani')
-      },
-      {
-        ...live,
-        url: 'http://balaitani.herokuapp.com'
-      }
-    ]
+    links: getLinks('balaitani', 'http://balaitani.herokuapp.com')
   },
   {
     id: 'balaitani-asp',
@@ -197,12 +149,7 @@ const projects: ProjectProps[] = [
     category: 'Full-stack development',
     techStacks: ['ASP.NET', 'Bootstrap', 'Domain-driven design'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('balaitani-asp')
-      }
-    ]
+    links: getLinks('balaitani-asp')
   },
   {
     id: 'got-wordle',
@@ -217,16 +164,7 @@ const projects: ProjectProps[] = [
     techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('got-wordle')
-      },
-      {
-        ...live,
-        url: 'https://leejhlouis.github.io/got-wordle/'
-      }
-    ]
+    links: getLinks('got-wordle', `https://${constants.social.github}.github.io/got-wordle/`)
   },
   {
     id: 'unified-registration',
@@ -237,16 +175,7 @@ const projects: ProjectProps[] = [
     category: 'Full-stack development',
     techStacks: ['Laravel', 'Bootstrap'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('unified-registration')
-      },
-      {
-        ...live,
-        url: 'https://registration.himtibinus.or.id'
-      }
-    ]
+    links: getLinks('unified-registration', 'https://registration.himtibinus.or.id')
   },
   {
     id: 'himti.or.id',
@@ -256,16 +185,7 @@ const projects: ProjectProps[] = [
     category: 'Project management',
     techStacks: ['Bootstrap', 'PHP', 'Project management'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('himti.or.id')
-      },
-      {
-        ...live,
-        url: 'https://himti.or.id/'
-      }
-    ]
+    links: getLinks('himti.or.id', 'https://himti.or.id/')
   },
   {
     id: 'javascript30',
@@ -274,16 +194,7 @@ const projects: ProjectProps[] = [
       'A 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.',
     techStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('javascript30')
-      },
-      {
-        ...live,
-        url: 'https://leejhlouis.github.io/javascript30'
-      }
-    ]
+    links: getLinks('javascript30', 'https://leejhlouis.github.io/javascript30')
   },
   {
     id: 'tukang-travel',
@@ -293,16 +204,7 @@ const projects: ProjectProps[] = [
     category: 'Front-end development',
     techStacks: ['React', 'Tailwind CSS'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('tukang-travel')
-      },
-      {
-        ...live,
-        url: 'https://tukang-travel.web.app/'
-      }
-    ]
+    links: getLinks('tukang-travel', 'https://tukang-travel.web.app/')
   },
   {
     id: 'louisite-v1',
@@ -310,12 +212,7 @@ const projects: ProjectProps[] = [
     description: 'First iteration of my personal website.',
     category: 'Front-end development',
     techStacks: ['JavaScript', 'Tailwind CSS', 'HTML/CSS'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('louisite-v1')
-      }
-    ]
+    links: getLinks('louisite-v1', `https://${constants.social.github}.github.io/louisite-v1/`)
   },
   {
     id: 'hci-danbam',
@@ -328,16 +225,7 @@ const projects: ProjectProps[] = [
     ),
     category: 'Front-end development',
     techStacks: ['HTML/CSS', 'JavaScript', 'jQuery'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('hci-danbam')
-      },
-      {
-        ...live,
-        url: 'https://hci-danbam.itslouisgs.repl.co/'
-      }
-    ]
+    links: getLinks('hci-danbam', `https://${constants.social.github}.github.io/hci-danbam`)
   },
   {
     id: 'fame',
@@ -346,16 +234,7 @@ const projects: ProjectProps[] = [
       'The landing page of FAME Workshop—a game development workshop held by HIMTI BINUS University’s programming class division.',
     category: 'Front-end development',
     techStacks: ['HTML/CSS', 'JavaScript'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('fame')
-      },
-      {
-        ...live,
-        url: `https://${constants.social.github}.github.io/fame`
-      }
-    ]
+    links: getLinks('fame', `https://${constants.social.github}.github.io/fame`)
   },
   {
     id: 'cinema-cgp',
@@ -363,12 +242,7 @@ const projects: ProjectProps[] = [
     description: "A movie ticket-booking Android app. Built for Mobile Programming's final exam.",
     category: 'Android app development',
     techStacks: ['Java', 'Android SDK', 'Android Studio'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('fame')
-      }
-    ]
+    links: getLinks('cinema-cgp')
   },
   {
     id: 'tokoku',
@@ -377,12 +251,7 @@ const projects: ProjectProps[] = [
       "An Android app showing list of available items on a shop in which the users can add them to their own list. Built for Mobile Programming's group project.",
     category: 'Android app development',
     techStacks: ['Java', 'Android SDK', 'Android Studio'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('tokoku')
-      }
-    ]
+    links: getLinks('tokoku')
   },
   {
     id: 'final-fla',
@@ -391,12 +260,7 @@ const projects: ProjectProps[] = [
       "A hotel reservation console app built with Java. Built for Framework Layer Architecture's final exam.",
     category: 'Console app development',
     techStacks: ['Java'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('final-fla')
-      }
-    ]
+    links: getLinks('final-fla')
   },
   {
     id: 'transactease',
@@ -405,12 +269,7 @@ const projects: ProjectProps[] = [
       "A POS console app built with Java. Built for Framework Layer Architecture's group project.",
     category: 'Console app development',
     techStacks: ['Java'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('transactease')
-      }
-    ]
+    links: getLinks('transactease')
   },
   {
     id: 'binus-board',
@@ -419,12 +278,7 @@ const projects: ProjectProps[] = [
       "A bulletin board console application built with Java. Built for Framework Layer Architecture's mid exam.",
     category: 'Console app development',
     techStacks: ['Java'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('binus-board')
-      }
-    ]
+    links: getLinks('binus-board')
   },
   {
     id: 'atm-python',
@@ -433,16 +287,7 @@ const projects: ProjectProps[] = [
       'An ATM console app built using Python. Built as a project for the bootcamp held by HIMTI BINUS University x Progate.',
     category: 'Console app development',
     techStacks: ['Python'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('fame')
-      },
-      {
-        ...live,
-        url: `https://${constants.social.github}.github.io/fame`
-      }
-    ]
+    links: getLinks('atm-python')
   }
 ]
 
