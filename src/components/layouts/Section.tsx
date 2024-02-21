@@ -11,7 +11,7 @@ export default function Section({ id, className, maxWidthClass, children }: Sect
         {
           'xl:max-w-screen-xl': !maxWidthClass
         },
-        'container py-8 sm:py-12 xl:py-16'
+        'container py-6 sm:py-12'
       )}
     >
       {children}

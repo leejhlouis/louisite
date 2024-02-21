@@ -5,7 +5,7 @@ import Preloader from '@/components/common/Preloader.tsx'
 const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
 const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
 const Hero = lazy(() => import('@/components/sections/Hero.tsx'))
-const Projects = lazy(() => import('@/components/sections/Projects.tsx'))
+const FeaturedProjects = lazy(() => import('@/components/sections/FeaturedProjects'))
 const Footer = lazy(() => import('@/components/layouts/Footer.tsx'))
 const ScrollToTopFAB = lazy(() => import('@/components/common/ScrollToTopFAB.tsx'))
 
@@ -19,7 +19,7 @@ export default function HomePage() {
         <PageWrapper>
           <Navbar />
           <Hero />
-          <Projects />
+          <FeaturedProjects />
           <Footer />
           <ScrollToTopFAB />
         </PageWrapper>

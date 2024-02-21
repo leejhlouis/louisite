@@ -6,5 +6,6 @@ export default interface ProjectProps extends ComponentProps {
   description: string | JSX.Element
   category: string
   techStacks: string[]
+  otherTechStacks?: string[]
   links: LinkProps[]
 }

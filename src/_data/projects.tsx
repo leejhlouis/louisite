@@ -15,12 +15,28 @@ const live: LinkProps = {
   icon: <ExternalLinkFillIcon size={24} />
 }
 
+const filters = [
+  'React',
+  'Vue.js',
+  'Laravel',
+  'ASP.NET',
+  'TypeScript',
+  'JavaScript',
+  'jQuery',
+  'Tailwind CSS',
+  'Bootstrap',
+  'HTML/CSS',
+  'PHP',
+  'Firebase'
+]
+
 const projects: ProjectProps[] = [
   {
     id: 'louisite',
     title: 'LOUISITE',
     description: 'My all-new personal website—this is the second and latest iteration.',
-    techStacks: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
+    techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
     links: [
       {
@@ -38,7 +54,8 @@ const projects: ProjectProps[] = [
     title: 'Find a Coach',
     description:
       'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
-    techStacks: ['Vue', 'Firebase', 'Vuex'],
+    techStacks: ['Vue.js', 'Firebase'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
     links: [
       {
@@ -56,6 +73,7 @@ const projects: ProjectProps[] = [
     title: 'e-grocery',
     description: 'An e-grocery web app built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
     links: [
       {
@@ -69,6 +87,7 @@ const projects: ProjectProps[] = [
     title: 'MovieList',
     description: 'A movie list web app built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
     links: [
       {
@@ -82,6 +101,7 @@ const projects: ProjectProps[] = [
     title: 'Giant Book Supplier',
     description: 'A book supplier website built with Laravel.',
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
     links: [
       {
@@ -97,6 +117,7 @@ const projects: ProjectProps[] = [
       'An e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University.',
     category: 'Project management',
     techStacks: ['Bootstrap', 'Laravel', 'Project management'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     links: [
       {
         ...github,
@@ -115,6 +136,7 @@ const projects: ProjectProps[] = [
       'An e-commerce web app designed as a platform for connecting small farmers to buyers directly to avoid middlemen from inflating the retail costs.',
     category: 'Full-stack development',
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     links: [
       {
         ...github,
@@ -133,6 +155,7 @@ const projects: ProjectProps[] = [
       'Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.',
     category: 'Full-stack development',
     techStacks: ['ASP.NET', 'Bootstrap', 'Domain-driven design'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     links: [
       {
         ...github,
@@ -146,7 +169,8 @@ const projects: ProjectProps[] = [
     description:
       'The landing page of TukangTravel—a lifestyle traveling app designed for travelers who love adventure and hidden gems.',
     category: 'Front-end development',
-    techStacks: ['React', 'Tailwind CSS', 'Figma'],
+    techStacks: ['React', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     links: [
       {
         ...github,
@@ -163,7 +187,7 @@ const projects: ProjectProps[] = [
     title: 'LOUISITE v1',
     description: 'First iteration of my personal website.',
     category: 'Front-end development',
-    techStacks: ['HTML/CSS', 'JavaScript', 'Tailwind CSS'],
+    techStacks: ['JavaScript', 'Tailwind CSS', 'HTML/CSS'],
     links: [
       {
         ...github,
@@ -177,6 +201,7 @@ const projects: ProjectProps[] = [
     description: 'The official website of HIMTI BINUS University.',
     category: 'Project management',
     techStacks: ['Bootstrap', 'PHP', 'Project management'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     links: [
       {
         ...github,
@@ -230,4 +255,4 @@ const projects: ProjectProps[] = [
   }
 ]
 
-export default projects
+export { filters, projects }
