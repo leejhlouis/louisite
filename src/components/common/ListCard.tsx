@@ -39,12 +39,13 @@ export default function ListCard({
   return (
     <li
       className={clsx(
+        'group',
         'w-full p-4 sm:p-6',
         'flex flex-col justify-between',
         'transform duration-300',
-        'rounded-xl border border-slate-500/30 dark:border-slate-600/30',
-        'bg-slate-100/25 dark:bg-slate-600/20',
-        'hover:bg-slate-100/40 dark:hover:bg-slate-600/30',
+        'rounded-xl border border-slate-500/20 dark:border-slate-600/30',
+        'bg-slate-100/20 dark:bg-slate-600/20',
+        'hover:bg-slate-100/30 dark:hover:bg-slate-600/30',
         'cursor-pointer backdrop-filter',
         className
       )}
@@ -58,7 +59,7 @@ export default function ListCard({
             }
             className={clsx(
               'no-default z-0',
-              'before:absolute before:left-0 before:top-0 before:h-full before:w-full'
+              'group-hover:text-primary-dark group-hover:dark:text-primary-light'
             )}
             target='_blank'
             rel='noreferrer'

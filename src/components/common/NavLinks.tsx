@@ -16,5 +16,5 @@ export default function NavLinks() {
     </li>
   ))
 
-  return <ul className='flex flex-row items-center space-x-4 sm:space-x-6'>{links}</ul>
+  return <ul className='flex flex-row items-center space-x-6'>{links}</ul>
 }

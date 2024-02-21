@@ -4,6 +4,7 @@ import getGitHubUrl from '@/utils/getGitHubUrl'
 import LinkProps from '@/types/LinkProps'
 import ProjectProps from '@/types/components/ProjectProps'
 import constants from '@/constants'
+import InlineLink from '@/components/common/reusable/InlineLink'
 
 const github: LinkProps = {
   label: 'Source code',
@@ -15,116 +16,130 @@ const live: LinkProps = {
   icon: <ExternalLinkFillIcon size={24} />
 }
 
+const getLinks = (githubRepo: string, url?: string) => {
+  const links = [{ ...github, url: getGitHubUrl(githubRepo) }]
+  if (url) {
+    links.push({ ...live, url })
+  }
+  return links
+}
+
+const filters = [
+  'React',
+  'Vue.js',
+  'Laravel',
+  'TypeScript',
+  'JavaScript',
+  'jQuery',
+  'Tailwind CSS',
+  'Bootstrap',
+  'HTML/CSS',
+  'PHP',
+  'Java',
+  'Python',
+  'ASP.NET',
+  'Android SDK',
+  'Firebase',
+  'Axios Mock'
+]
+
 const projects: ProjectProps[] = [
   {
     id: 'louisite',
+    featured: true,
     title: 'LOUISITE',
-    description: 'My all-new personal website—this is the second and latest iteration.',
-    techStacks: ['React', 'TypeScript', 'Tailwind CSS', 'Figma'],
+    description:
+      'My all-new personal website—this is the second and latest iteration—built with React and TypeScript.',
+    techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('louisite')
-      },
-      {
-        ...live,
-        url: 'https://louisite.netfliy.app'
-      }
-    ]
+    links: getLinks('louisite', 'https://louisite.netfliy.app')
+  },
+  {
+    id: 'vue-member-management',
+    featured: true,
+    title: 'Member Management App',
+    description: (
+      <span>
+        A member management system app built with Vue.js. Built as a probation project during my
+        internship at <InlineLink href='https://blibli.com'>Blibli</InlineLink>.
+      </span>
+    ),
+    techStacks: ['Vue.js', 'Axios Mock'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
+    category: 'Front-end development',
+    links: getLinks('vue-member-management')
   },
   {
     id: 'find-a-coach',
+    featured: true,
     title: 'Find a Coach',
-    description:
-      'A coach finder web app that allows users to search for and connect with coaches who specialize in a variety of fields.',
-    techStacks: ['Vue', 'Firebase', 'Vuex'],
+    description: (
+      <span>
+        A coach finder web app that allows users to search for and connect with coaches who
+        specialize in a variety of fields. A project from{' '}
+        <InlineLink href='https://github.com/maxschwarzmueller'>
+          Maximilian Schwarzmüller
+        </InlineLink>
+        's Udemy course.
+      </span>
+    ),
+    techStacks: ['Vue.js', 'Firebase'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('find-a-coach')
-      },
-      {
-        ...live,
-        url: 'https://find-a-coach-355c2.web.app/'
-      }
-    ]
+    links: getLinks('find-a-coach', 'https://find-a-coach-355c2.web.app/')
   },
   {
     id: 'e-grocery',
     title: 'e-grocery',
-    description: 'An e-grocery web app built with Laravel.',
+    description: "An e-grocery web app built with Laravel. Built for Web Programming's final exam.",
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('e-grocery')
-      }
-    ]
+    links: getLinks('e-grocery')
   },
   {
     id: 'movielist',
+    featured: true,
     title: 'MovieList',
-    description: 'A movie list web app built with Laravel.',
+    description: "A movie list web app built with Laravel. Built for Web Programming's project.",
     techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
     category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('movielist')
-      }
-    ]
-  },
-  {
-    id: 'giant-book-supplier',
-    title: 'Giant Book Supplier',
-    description: 'A book supplier website built with Laravel.',
-    techStacks: ['Laravel', 'Bootstrap'],
-    category: 'Full-stack development',
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('giant-book-supplier')
-      }
-    ]
+    links: getLinks('movielist')
   },
   {
     id: 'election-2022',
+    featured: true,
     title: 'HIMTI Election 2022',
     description:
       'An e-voting website that allows students and lecturers of the School of Computer Science to vote for the next Chairman of HIMTI BINUS University.',
     category: 'Project management',
     techStacks: ['Bootstrap', 'Laravel', 'Project management'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('himti-election-2022')
-      },
-      {
-        ...live,
-        url: 'https://election.himtibinus.or.id/'
-      }
-    ]
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
+    links: getLinks('himti-election-2022', 'https://election.himtibinus.or.id/')
+  },
+  {
+    id: 'giant-book-supplier',
+    featured: true,
+    title: 'Giant Book Supplier',
+    description:
+      "A book supplier website built with Laravel. Built for Web Programming's mid exam.",
+    techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
+    category: 'Full-stack development',
+    links: getLinks('giant-book-supplier')
   },
   {
     id: 'balaitani',
+    featured: true,
     title: 'BalaiTani',
     description:
       'An e-commerce web app designed as a platform for connecting small farmers to buyers directly to avoid middlemen from inflating the retail costs.',
     category: 'Full-stack development',
     techStacks: ['Laravel', 'Bootstrap'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('balaitani')
-      },
-      {
-        ...live,
-        url: 'http://balaitani.herokuapp.com'
-      }
-    ]
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
+    links: getLinks('balaitani', 'http://balaitani.herokuapp.com')
   },
   {
     id: 'balaitani-asp',
@@ -133,12 +148,53 @@ const projects: ProjectProps[] = [
       'Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.',
     category: 'Full-stack development',
     techStacks: ['ASP.NET', 'Bootstrap', 'Domain-driven design'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('balaitani-asp')
-      }
-    ]
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'PHP'],
+    links: getLinks('balaitani-asp')
+  },
+  {
+    id: 'got-wordle',
+    featured: true,
+    title: 'GOT Wordle',
+    description: (
+      <span>
+        A fun <i>Game of Thrones</i>-themed Wordle clone. This is a fork of{' '}
+        <InlineLink href='https://github.com/cwackerfuss/reactle'>cwackerfuss/reactle</InlineLink>.
+      </span>
+    ),
+    techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
+    category: 'Front-end development',
+    links: getLinks('got-wordle', `https://${constants.social.github}.github.io/got-wordle/`)
+  },
+  {
+    id: 'unified-registration',
+    featured: true,
+    title: 'HIMTI unified registration',
+    description:
+      'The official website of HIMTI BINUS University. Contributed to this project during my time at the student association.',
+    category: 'Full-stack development',
+    techStacks: ['Laravel', 'Bootstrap'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
+    links: getLinks('unified-registration', 'https://registration.himtibinus.or.id')
+  },
+  {
+    id: 'himti.or.id',
+    title: 'himti.or.id',
+    description:
+      'The official website of HIMTI BINUS University. Managed this project during my time as Manager of Web Development Division.',
+    category: 'Project management',
+    techStacks: ['Bootstrap', 'PHP', 'Project management'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
+    links: getLinks('himti.or.id', 'https://himti.or.id/')
+  },
+  {
+    id: 'javascript30',
+    title: '30 Days of JavaScript',
+    description:
+      'A 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.',
+    techStacks: ['HTML/CSS', 'JavaScript'],
+    category: 'Front-end development',
+    links: getLinks('javascript30', 'https://leejhlouis.github.io/javascript30')
   },
   {
     id: 'tukang-travel',
@@ -146,47 +202,17 @@ const projects: ProjectProps[] = [
     description:
       'The landing page of TukangTravel—a lifestyle traveling app designed for travelers who love adventure and hidden gems.',
     category: 'Front-end development',
-    techStacks: ['React', 'Tailwind CSS', 'Figma'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('tukang-travel')
-      },
-      {
-        ...live,
-        url: 'https://tukang-travel.web.app/'
-      }
-    ]
+    techStacks: ['React', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript'],
+    links: getLinks('tukang-travel', 'https://tukang-travel.web.app/')
   },
   {
     id: 'louisite-v1',
     title: 'LOUISITE v1',
     description: 'First iteration of my personal website.',
     category: 'Front-end development',
-    techStacks: ['HTML/CSS', 'JavaScript', 'Tailwind CSS'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('louisite-v1')
-      }
-    ]
-  },
-  {
-    id: 'himti.or.id',
-    title: 'himti.or.id',
-    description: 'The official website of HIMTI BINUS University.',
-    category: 'Project management',
-    techStacks: ['Bootstrap', 'PHP', 'Project management'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('himti.or.id')
-      },
-      {
-        ...live,
-        url: 'https://himti.or.id/'
-      }
-    ]
+    techStacks: ['JavaScript', 'Tailwind CSS', 'HTML/CSS'],
+    links: getLinks('louisite-v1', `https://${constants.social.github}.github.io/louisite-v1/`)
   },
   {
     id: 'hci-danbam',
@@ -194,21 +220,12 @@ const projects: ProjectProps[] = [
     description: (
       <span>
         The landing page of DanBam—a fictitious Korean restaurant featured in the K-drama hit{' '}
-        <i>Itaewon Class</i>.
+        <i>Itaewon Class</i>. Built for Human and Computer Interaction's project.
       </span>
     ),
     category: 'Front-end development',
     techStacks: ['HTML/CSS', 'JavaScript', 'jQuery'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('hci-danbam')
-      },
-      {
-        ...live,
-        url: 'https://hci-danbam.itslouisgs.repl.co/'
-      }
-    ]
+    links: getLinks('hci-danbam', `https://${constants.social.github}.github.io/hci-danbam`)
   },
   {
     id: 'fame',
@@ -217,17 +234,61 @@ const projects: ProjectProps[] = [
       'The landing page of FAME Workshop—a game development workshop held by HIMTI BINUS University’s programming class division.',
     category: 'Front-end development',
     techStacks: ['HTML/CSS', 'JavaScript'],
-    links: [
-      {
-        ...github,
-        url: getGitHubUrl('fame')
-      },
-      {
-        ...live,
-        url: `https://${constants.social.github}.github.io/fame`
-      }
-    ]
+    links: getLinks('fame', `https://${constants.social.github}.github.io/fame`)
+  },
+  {
+    id: 'cinema-cgp',
+    title: 'Cinema CGP',
+    description: "A movie ticket-booking Android app. Built for Mobile Programming's final exam.",
+    category: 'Android app development',
+    techStacks: ['Java', 'Android SDK', 'Android Studio'],
+    links: getLinks('cinema-cgp')
+  },
+  {
+    id: 'tokoku',
+    title: 'Tokoku',
+    description:
+      "An Android app showing list of available items on a shop in which the users can add them to their own list. Built for Mobile Programming's group project.",
+    category: 'Android app development',
+    techStacks: ['Java', 'Android SDK', 'Android Studio'],
+    links: getLinks('tokoku')
+  },
+  {
+    id: 'final-fla',
+    title: 'Hotel Reservation System',
+    description:
+      "A hotel reservation console app built with Java. Built for Framework Layer Architecture's final exam.",
+    category: 'Console app development',
+    techStacks: ['Java'],
+    links: getLinks('final-fla')
+  },
+  {
+    id: 'transactease',
+    title: 'POS Console App',
+    description:
+      "A POS console app built with Java. Built for Framework Layer Architecture's group project.",
+    category: 'Console app development',
+    techStacks: ['Java'],
+    links: getLinks('transactease')
+  },
+  {
+    id: 'binus-board',
+    title: 'BINUS Board',
+    description:
+      "A bulletin board console application built with Java. Built for Framework Layer Architecture's mid exam.",
+    category: 'Console app development',
+    techStacks: ['Java'],
+    links: getLinks('binus-board')
+  },
+  {
+    id: 'atm-python',
+    title: 'ATM Console App',
+    description:
+      'An ATM console app built using Python. Built as a project for the bootcamp held by HIMTI BINUS University x Progate.',
+    category: 'Console app development',
+    techStacks: ['Python'],
+    links: getLinks('atm-python')
   }
 ]
 
-export default projects
+export { filters, projects }

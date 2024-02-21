@@ -58,7 +58,7 @@ export default function HomePage() {
           <NavLink to='/'>
             <PrimaryButton
               icon={<ArrowLeftSLineIcon />}
-              className='animate-bounce md:mx-auto'
+              className='animate-bounce pl-1 md:mx-auto'
               inverted
             >
               Go home

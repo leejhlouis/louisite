@@ -8,7 +8,7 @@ export default function IconButton({ onClick, className, screenReaderText, icon 
       className={clsx(
         className,
         'rounded-xl p-2 backdrop-blur-sm backdrop-filter',
-        'border border-slate-500/30 dark:border-slate-600/30',
+        'border border-slate-500/20 dark:border-slate-600/30',
         'bg-slate-100/10 dark:bg-slate-600/20',
         'hover:bg-slate-100/20 dark:hover:bg-slate-600/30'
       )}

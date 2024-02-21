@@ -1,6 +1,6 @@
 import { lazy } from 'react'
-import useMounted from '@/hooks/useMounted'
 import clsx from 'clsx'
+import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon.js'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
@@ -9,14 +9,12 @@ const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 
 export default function Hero() {
+  const { animationClass } = useFadeInMounted()
   const scrollToProjects = () => window.location.assign('#projects')
-  const mounted = useMounted()
 
   return (
     <Section
-      className={clsx('flex h-[88vh] min-h-[480px] flex-col justify-between', {
-        'animate-start': mounted
-      })}
+      className={clsx(animationClass, 'flex h-[88vh] min-h-[480px] flex-col justify-between')}
     >
       <div className='flex h-3/4 flex-col justify-center space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-2xl md:text-4xl')}>
@@ -32,10 +30,7 @@ export default function Hero() {
           A <HighlightText>software engineer</HighlightText> and a{' '}
           <HighlightText>Computer Science</HighlightText> undergraduate.
         </h1>
-        <SocialMediaLinks
-          className={clsx('animate-fade-in !delay-500', 'mt-6')}
-          size='lg'
-        />
+        <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>
       <PrimaryButton
         className='mx-auto animate-bounce'
