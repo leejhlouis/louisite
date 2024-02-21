@@ -17,7 +17,7 @@ export default function ThemeSwitcher() {
   return (
     <IconButton
       className='duration-300'
-      icon={isDark ? <MoonLineIcon /> : <SunLineIcon />}
+      icon={isDark ? <MoonLineIcon size={20} /> : <SunLineIcon size={20} />}
       screenReaderText='Toggle theme'
       onClick={toggleDarkTheme}
     />
