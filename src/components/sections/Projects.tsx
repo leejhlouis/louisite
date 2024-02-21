@@ -85,7 +85,7 @@ export default function Projects() {
         >
           Projects
         </Heading1>
-        <p className='animate-fade-in !delay-200'>Showcase of my projects.</p>
+        <p className='animate-fade-in !delay-200'>Archives of my projects.</p>
         <ul className='flex flex-wrap gap-2'>
           <li className='animate-fade-in inline !delay-200'>Filters:</li>
           {filterEntry}

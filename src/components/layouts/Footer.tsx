@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>
       <PrimaryButton
         onClick={scrollToTop}
-        className='mx-auto mb-6 animate-bounce'
+        className='mx-auto mb-6'
         icon={<ArrowUpSLineIcon />}
       >
         Back to top
@@ -25,7 +25,7 @@ export default function Footer() {
       </div>
       <div className='flex flex-col justify-between pb-4 sm:flex-row sm:items-center'>
         <p className='pb-4 font-light sm:pb-0'>Made with ❤️ by Louis.</p>
-        <div className='flex flex-wrap items-start space-x-4 sm:space-x-6'>
+        <div className='flex flex-col flex-wrap items-start gap-4 sm:flex-row sm:items-center sm:gap-0 sm:space-x-6'>
           <NavLinks />
           <SocialMediaLinks />
         </div>

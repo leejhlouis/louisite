@@ -16,7 +16,7 @@ export default {
         },
         muted: {
           DEFAULT: colors.neutral['400'],
-          dark: colors.neutral['600']
+          dark: colors.neutral['800']
         }
       },
       spacing: {

@@ -19,8 +19,10 @@ export default function PrimaryButton({
           'font-semibold': !active
         },
         {
-          'text-primary-dark underline dark:text-primary-light': inverted,
-          'hover:text-primary-lighter-dark dark:hover:text-primary-lighter': inverted && !active,
+          'rounded-xl px-3 py-1': inverted,
+          'text-primary-dark dark:text-primary-light': inverted,
+          'hover:bg-primary-dark/5 hover:text-primary-lighter-dark dark:hover:bg-primary-light/5 dark:hover:text-primary-lighter':
+            inverted && !active,
           'hover:text-primary-dark hover:underline dark:hover:text-primary-light':
             !inverted && !active
         }

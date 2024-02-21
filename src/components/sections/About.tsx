@@ -15,7 +15,7 @@ export default function About({ children }: ComponentProps) {
   return (
     <div className={clsx(animationClass)}>
       <Section
-        className='[&>*]:animate-fade-in text-muted-dark dark:text-muted md:px-0'
+        className='[&>*]:animate-fade-in md:px-0 [&_p]:text-muted-dark [&_p]:dark:text-muted'
         maxWidthClass='md:max-w-screen-sm'
       >
         <ReactMarkdown
@@ -28,8 +28,9 @@ export default function About({ children }: ComponentProps) {
               (
                 <li
                   className={clsx(
-                    'mb-2 mr-2 px-3',
+                    'mb-3 mr-1 px-3',
                     'bg-slate-50/30 dark:bg-slate-700/30',
+                    'text-muted-dark,dark:text-muted',
                     'inline-block rounded-xl text-base hover:shadow'
                   )}
                 >

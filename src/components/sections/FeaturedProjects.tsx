@@ -2,10 +2,13 @@ import { lazy, useRef } from 'react'
 import { projects } from '@/_data/projects'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import clsx from 'clsx'
+import { NavLink } from 'react-router-dom'
 
+const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon.js'))
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading2 = lazy(() => import('@/components/common/reusable/Heading2.tsx'))
 const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null)
@@ -13,12 +16,14 @@ export default function Projects() {
     ref.current?.classList.add('animate-start')
   })
 
-  const projectsEntry = projects.map(project => (
-    <ListCard
-      {...project}
-      key={project.id}
-    />
-  ))
+  const projectsEntry = projects
+    .filter(({ featured }) => !!featured)
+    .map(project => (
+      <ListCard
+        {...project}
+        key={project.id}
+      />
+    ))
 
   return (
     <div ref={ref}>
@@ -26,7 +31,7 @@ export default function Projects() {
         id='projects'
         className='scroll-mt-8'
       >
-        <Heading2 className='animate-fade-in text-center text-primary-dark !delay-200 dark:text-white'>
+        <Heading2 className='animate-fade-in pb-6 text-center text-primary-dark !delay-200 dark:text-white'>
           Featured projects
         </Heading2>
         <ul
@@ -38,6 +43,17 @@ export default function Projects() {
         >
           {projectsEntry}
         </ul>
+        <div className='animate-fade-in !delay-500'>
+          <NavLink to='/projects'>
+            <PrimaryButton
+              className='my-8 pr-1'
+              inverted
+            >
+              More projects
+              <ArrowRightSLineIcon size={20} />
+            </PrimaryButton>
+          </NavLink>
+        </div>
       </Section>
     </div>
   )
