@@ -80,7 +80,7 @@ export default function Projects() {
             'animate-fade-in',
             'text-primary-dark dark:text-white',
             'font-extrabold',
-            'pb-4 pt-4'
+            'pb-4 pt-2'
           )}
         >
           Projects

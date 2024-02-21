@@ -23,8 +23,8 @@ export default function Footer() {
       <div className='pb-4 pt-8'>
         <Title size='lg' />
       </div>
-      <div className='flex flex-col justify-between pb-4 xs:flex-row xs:items-center'>
-        <p className='pb-4 font-light xs:pb-0'>Made with ❤️ by Louis.</p>
+      <div className='flex flex-col justify-between pb-4 sm:flex-row sm:items-center'>
+        <p className='pb-4 font-light sm:pb-0'>Made with ❤️ by Louis.</p>
         <div className='flex flex-wrap items-start space-x-4 sm:space-x-6'>
           <NavLinks />
           <SocialMediaLinks />
