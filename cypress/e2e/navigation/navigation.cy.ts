@@ -1,6 +1,12 @@
 import social from '@/_data/social'
 
 describe('navigation specs', () => {
+  it('should visit projects page', () => {
+    cy.visit('/projects')
+    cy.get('nav ul li').contains('Projects').click()
+    cy.url().should('contain', '/projects')
+  })
+
   it('should visit about page', () => {
     cy.visit('/')
     cy.get('nav ul li').contains('About').click()

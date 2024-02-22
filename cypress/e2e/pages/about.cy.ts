@@ -3,7 +3,7 @@ describe('about page specs', () => {
     cy.visit('/about')
     cy.get('#about h1').should(
       'contain',
-      'Hey, it\'s Louis "leejhlouis"—a software engineer based in Indonesia.'
+      'Hey👋, it\'s Louis Gustavo, a software engineer looking for opportunities'
     )
   })
 })
