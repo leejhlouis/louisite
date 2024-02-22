@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <div ref={ref}>
       <Section
-        id='projects'
+        id='featured-projects'
         className='scroll-mt-8'
       >
         <Heading2 className='animate-fade-in pb-6 text-center text-primary-dark !delay-200 dark:text-white'>

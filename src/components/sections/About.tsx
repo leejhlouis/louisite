@@ -17,6 +17,7 @@ export default function About({ children }: ComponentProps) {
   return (
     <div className={clsx(animationClass)}>
       <Section
+        id='about'
         className='[&>*]:animate-fade-in md:px-0 [&_p]:text-muted-dark [&_p]:dark:text-muted'
         maxWidthClass='md:max-w-screen-sm'
       >

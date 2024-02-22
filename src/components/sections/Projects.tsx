@@ -63,7 +63,10 @@ export default function Projects() {
   ))
 
   return (
-    <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}>
+    <Section
+      id='projects'
+      className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}
+    >
       <div className='pb-6'>
         <Heading1
           className={clsx(
