@@ -1,5 +1,8 @@
+import { lazy } from 'react'
 import ProjectProps from '@/types/components/ProjectProps'
 import clsx from 'clsx'
+
+const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
 
 export default function ListCard({
   className,
@@ -51,7 +54,7 @@ export default function ListCard({
       )}
     >
       <header>
-        <h3 className='pb-4 text-lg font-bold md:text-xl'>
+        <Heading3>
           <a
             href={
               links.find(({ label }) => label === 'Source code')?.url ??
@@ -66,7 +69,7 @@ export default function ListCard({
           >
             {title}
           </a>
-        </h3>
+        </Heading3>
         <p className='text-muted-dark dark:text-muted'>{description}</p>
       </header>
       <footer>

@@ -5,7 +5,7 @@ import useMounted from '@/hooks/useMounted'
 import clsx from 'clsx'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
-const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
+const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 const ArrowLeftSLineIcon = lazy(() => import('remixicon-react/ArrowLeftSLineIcon'))
 
