@@ -1,13 +1,22 @@
-import ProjectProps from '@/types/ProjectProps'
+import { lazy } from 'react'
+import ProjectProps from '@/types/components/ProjectProps'
 import clsx from 'clsx'
 
-export default function ListCard({ title, description, techStacks, links }: ProjectProps) {
+const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
+
+export default function ListCard({
+  className,
+  title,
+  description,
+  techStacks,
+  links
+}: ProjectProps) {
   const techStacksEntry = techStacks.map((techStack, index) => (
     <li
       key={index}
       className={clsx(
         'mr-4 last-of-type:mr-0',
-        'text-base font-medium text-blue-700 dark:text-blue-300'
+        'text-base font-medium text-primary-dark dark:text-primary-light'
       )}
     >
       {techStack}
@@ -33,17 +42,19 @@ export default function ListCard({ title, description, techStacks, links }: Proj
   return (
     <li
       className={clsx(
+        'group',
         'w-full p-4 sm:p-6',
         'flex flex-col justify-between',
         'transform duration-300',
-        'rounded-xl border border-slate-500/60 dark:border-slate-600/30',
-        'bg-slate-100/10 dark:bg-slate-600/20',
+        'rounded-xl border border-slate-500/20 dark:border-slate-600/30',
+        'bg-slate-100/20 dark:bg-slate-600/20',
         'hover:bg-slate-100/30 dark:hover:bg-slate-600/30',
-        'cursor-pointer backdrop-filter'
+        'cursor-pointer backdrop-filter',
+        className
       )}
     >
       <header>
-        <h3 className='pb-4 text-lg font-bold md:text-xl'>
+        <Heading3>
           <a
             href={
               links.find(({ label }) => label === 'Source code')?.url ??
@@ -51,14 +62,14 @@ export default function ListCard({ title, description, techStacks, links }: Proj
             }
             className={clsx(
               'no-default z-0',
-              'before:absolute before:left-0 before:top-0 before:h-full before:w-full'
+              'group-hover:text-primary-dark group-hover:dark:text-primary-light'
             )}
             target='_blank'
             rel='noreferrer'
           >
             {title}
           </a>
-        </h3>
+        </Heading3>
         <p className='text-muted-dark dark:text-muted'>{description}</p>
       </header>
       <footer>

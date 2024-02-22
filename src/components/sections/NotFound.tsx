@@ -5,7 +5,7 @@ import useMounted from '@/hooks/useMounted'
 import clsx from 'clsx'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
-const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
+const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 const ArrowLeftSLineIcon = lazy(() => import('remixicon-react/ArrowLeftSLineIcon'))
 
@@ -40,6 +40,7 @@ export default function HomePage() {
           {/* prettier-ignore */}
           <Heading1 className={clsx(
             'animate-fade-in', 
+            'text-primary-dark dark:text-white',
             'text-4xl md:text-center md:text-5xl'
             )}
           >
@@ -58,7 +59,7 @@ export default function HomePage() {
           <NavLink to='/'>
             <PrimaryButton
               icon={<ArrowLeftSLineIcon />}
-              className='animate-bounce md:mx-auto'
+              className='animate-bounce pl-1 md:mx-auto'
               inverted
             >
               Go home

@@ -15,13 +15,16 @@ export default function PrimaryButton({
         className,
         'flex w-fit items-center space-x-1 transition duration-300 ease-in-out',
         {
-          'font-extrabold': active,
+          'font-extrabold text-primary-dark dark:text-white': active,
           'font-semibold': !active
         },
         {
-          'text-blue-800 underline dark:text-blue-300': inverted,
-          'hover:text-blue-600 dark:hover:text-blue-100': inverted && !active,
-          'hover:text-blue-800 hover:underline dark:hover:text-blue-300': !inverted && !active
+          'rounded-xl px-3 py-1': inverted,
+          'text-primary-dark dark:text-primary-light': inverted,
+          'hover:bg-primary-dark/5 hover:text-primary-lighter-dark dark:hover:bg-primary-light/5 dark:hover:text-primary-lighter':
+            inverted && !active,
+          'hover:text-primary-dark hover:underline dark:hover:text-primary-light':
+            !inverted && !active
         }
       )}
       onClick={onClick}
