@@ -6,13 +6,14 @@ import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
-const Heading1 = lazy(() => import('@/components/common/reusable/Heading1.tsx'))
+const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
+const Badge = lazy(() => import('@/components/common/reusable/Badge.tsx'))
 const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
 
 export default function Projects() {
   const { animationClass } = useFadeInMounted()
 
-  const [filteredProjects, setFilteredProjects] = useState<Array<ProjectProps>>([])
+  const [filteredProjects, setFilteredProjects] = useState<Array<ProjectProps>>([...projects])
   const [selectedFilters, setSelectedFilters] = useState<Array<string>>([])
 
   const filterProjects = (newValue: string) => {
@@ -51,29 +52,18 @@ export default function Projects() {
   ))
 
   const filterEntry = filters.map(filter => (
-    <li
+    <Badge
       key={filter}
-      className={clsx(
-        {
-          'bg-primary-dark/20 font-bold text-primary-dark dark:bg-primary-light/20 dark:text-primary-light':
-            selectedFilters.includes(filter),
-          'bg-primary-dark/10 font-semibold text-primary-dark/95 dark:bg-primary-light/10 dark:text-primary-light/95':
-            !selectedFilters.includes(filter)
-        },
-        'animate-fade-in !delay-200',
-        'inline cursor-pointer list-none',
-        'duration-300 hover:bg-primary-dark/[0.175] hover:dark:bg-primary-light/[0.175]',
-        'text-sm',
-        'rounded-xl px-2 py-1'
-      )}
+      className='animate-fade-in cursor-pointer !delay-200'
+      active={selectedFilters.includes(filter)}
       onClick={() => filterProjects(filter)}
     >
       {filter}
-    </li>
+    </Badge>
   ))
 
   return (
-    <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)] scroll-mt-8')}>
+    <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}>
       <div className='pb-6'>
         <Heading1
           className={clsx(
@@ -103,7 +93,7 @@ export default function Projects() {
         </ul>
       )}
       {!filteredProjects.length && (
-        <div className='mt-8'>
+        <div className='animate-fade-in mt-8 !delay-300'>
           <p className='text-muted-dark dark:text-muted'>
             Results not found.{' '}
             <span onClick={removeselectedFilters}>

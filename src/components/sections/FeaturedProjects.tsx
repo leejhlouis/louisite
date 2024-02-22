@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon.js'))
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
-const Heading2 = lazy(() => import('@/components/common/reusable/Heading2.tsx'))
+const Heading2 = lazy(() => import('@/components/common/reusable/heading/Heading2'))
 const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 
