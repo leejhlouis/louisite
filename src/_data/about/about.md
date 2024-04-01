@@ -55,6 +55,6 @@ Here are some technologies that I am familiar with:
 
 ## Contact Me
 
-Wanna ask me a question or simply say hi? Feel free to reach me via email at [louis.gustavo@binus.ac.id](mailto:louis.gustavo@binus.ac.id). I'd be delighted to hear from you.
+Wanna ask me a question or simply say hi? Feel free to reach me via email at [louisgustavo07@gmail.com](mailto:louisgustavo07@gmail.com). I'd be delighted to hear from you.
 
 Additionally, you may find me on [GitHub](https://github.com/leejhlouis) and [LinkedIn](https://linkedin.com/in/louis-gustavo).
