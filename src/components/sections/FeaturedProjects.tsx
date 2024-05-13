@@ -46,11 +46,11 @@ export default function Projects() {
         <div className='animate-fade-in !delay-500'>
           <NavLink to='/projects'>
             <PrimaryButton
-              className='my-8 pr-1'
+              className='my-8'
+              icon={<ArrowRightSLineIcon size={20} />}
               inverted
             >
               More projects
-              <ArrowRightSLineIcon size={20} />
             </PrimaryButton>
           </NavLink>
         </div>

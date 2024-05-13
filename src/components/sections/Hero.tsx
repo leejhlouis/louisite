@@ -5,6 +5,7 @@ import useFadeInMounted from '@/hooks/useFadeInMounted'
 const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon.js'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText.tsx'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline.tsx'))
 const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 
@@ -18,7 +19,13 @@ export default function Hero() {
     >
       <div className='flex h-3/4 flex-col justify-center space-y-6'>
         <h2 className={clsx('animate-fade-in', 'text-2xl md:text-4xl')}>
-          Hey👋, I'm Louis Gustavo
+          Hey👋, I'm{' '}
+          <SlidingInUnderline
+            type='secondary'
+            height='lg'
+          >
+            Louis Gustavo
+          </SlidingInUnderline>
         </h2>
         <h1
           className={clsx(
@@ -27,7 +34,7 @@ export default function Hero() {
             'break-words font-extrabold tracking-tight'
           )}
         >
-          A <HighlightText>software engineer</HighlightText> and a{' '}
+          A <HighlightText>software engineer</HighlightText> and{' '}
           <HighlightText>Computer Science</HighlightText> undergraduate.
         </h1>
         <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
