@@ -1,6 +1,8 @@
 import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps'
 import clsx from 'clsx'
-import SlidingInUnderline from '../SlidingInUnderline'
+import { lazy } from 'react'
+
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
 
 export default function PrimaryButton({
   className,
@@ -10,13 +12,6 @@ export default function PrimaryButton({
   inverted,
   active
 }: PrimaryButtonProps) {
-  const underlineType = () => {
-    if (inverted) {
-      return 'secondary'
-    }
-    return 'primary'
-  }
-
   return (
     <button
       className={clsx(
@@ -36,7 +31,7 @@ export default function PrimaryButton({
       onClick={onClick}
     >
       <div>{icon}</div>
-      <SlidingInUnderline type={underlineType()}>{children}</SlidingInUnderline>
+      <SlidingInUnderline type='secondary'>{children}</SlidingInUnderline>
     </button>
   )
 }

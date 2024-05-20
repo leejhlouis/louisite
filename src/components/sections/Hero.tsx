@@ -18,7 +18,7 @@ export default function Hero() {
       className={clsx(animationClass, 'flex h-[88vh] min-h-[480px] flex-col justify-between')}
     >
       <div className='flex h-3/4 flex-col justify-center space-y-6'>
-        <h2 className={clsx('animate-fade-in', 'text-2xl md:text-4xl')}>
+        <h2 className={clsx('animate-fade-in', 'text-2xl md:text-3xl')}>
           Hey👋, I'm{' '}
           <SlidingInUnderline
             type='secondary'
@@ -29,13 +29,13 @@ export default function Hero() {
         </h2>
         <h1
           className={clsx(
-            'animate-fade-in !delay-200',
-            'text-4xl xs:text-5xl md:text-6xl xl:text-7xl',
+            'animate-fade-in !delay-200 pb-2',
+            'text-4xl xs:text-5xl lg:text-6xl',
             'break-words font-extrabold tracking-tight'
           )}
         >
-          A <HighlightText>software engineer</HighlightText> and{' '}
-          <HighlightText>Computer Science</HighlightText> undergraduate.
+          A <HighlightText>Computer Science</HighlightText> fresh graduate seeking opportunities in{' '}
+          <HighlightText>Software Engineering</HighlightText>.
         </h1>
         <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>
