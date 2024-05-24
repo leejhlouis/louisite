@@ -1,8 +1,8 @@
 import type { Handler } from '@netlify/functions'
+import fetch from 'node-fetch'
+import dotenv from 'dotenv'
 
-const fetch = require('node-fetch')
-const dotenv = require('dotenv')
-dotenv.config();
+dotenv.config()
 
 const client_id = process.env.VITE_SPOTIFY_CLIENT_ID
 const client_secret = process.env.VITE_SPOTIFY_CLIENT_SECRET
