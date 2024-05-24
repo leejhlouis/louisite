@@ -38,8 +38,7 @@ export const getNowPlaying = async (): Promise<Response> => {
 
 export const handler: Handler = async () => {
   const response = await getNowPlaying()
-
-  let response = {
+  const jsonResponse = {
     statusCode: 200,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -54,7 +53,7 @@ export const handler: Handler = async () => {
     response.data.currently_playing_type !== 'track'
   ) {
     return {
-      ...response,
+      ...jsonResponse,
       body: {
         isPlaying: false
       }
@@ -62,7 +61,7 @@ export const handler: Handler = async () => {
   }
 
   return {
-    ...response,
+    ...jsonResponse,
     body: {
       isPlaying: response.data.is_playing,
       title: response.data.item.name,
