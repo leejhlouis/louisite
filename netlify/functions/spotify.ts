@@ -1,5 +1,8 @@
 import type { Handler } from '@netlify/functions'
-import fetch from 'node-fetch'
+
+const fetch = require('node-fetch')
+const dotenv = require('dotenv')
+dotenv.config();
 
 const client_id = process.env.VITE_SPOTIFY_CLIENT_ID
 const client_secret = process.env.VITE_SPOTIFY_CLIENT_SECRET
@@ -27,7 +30,7 @@ const getAccessToken = async () => {
   return access_token
 }
 
-export const getNowPlaying = async (): Promise<Response> => {
+export const getNowPlaying = async () => {
   const access_token = await getAccessToken()
 
   return fetch(NOW_PLAYING_ENDPOINT, {
