@@ -1,4 +1,5 @@
 import type { Handler } from '@netlify/functions'
+import fetch from 'node-fetch'
 
 const client_id = process.env.VITE_SPOTIFY_CLIENT_ID
 const client_secret = process.env.VITE_SPOTIFY_CLIENT_SECRET
