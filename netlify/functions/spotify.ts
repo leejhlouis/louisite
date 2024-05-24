@@ -1,8 +1,8 @@
 import type { Handler } from '@netlify/functions'
 
-const client_id = import.meta.env.VITE_SPOTIFY_CLIENT_ID
-const client_secret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET
-const refresh_token = import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN
+const client_id = process.env.VITE_SPOTIFY_CLIENT_ID
+const client_secret = process.env.VITE_SPOTIFY_CLIENT_SECRET
+const refresh_token = process.env.VITE_SPOTIFY_REFRESH_TOKEN
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64')
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token'
