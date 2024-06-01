@@ -71,7 +71,7 @@ export default function Blog() {
         Blog
       </Heading1>
       <p className='animate-fade-in !delay-200'>
-        Collection of my writings and thoughts written in English, Bahasa Indonesia, and JavaScript.
+        Collection of my writings and thoughts.
         Subscribe to <InlineLink href='/blog/rss'>RSS feed</InlineLink>.
       </p>
       <div
