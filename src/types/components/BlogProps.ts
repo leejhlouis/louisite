@@ -1,8 +1,6 @@
 import ComponentProps from '@/types/components/ComponentProps'
+import ArticleProps from '@/types/ArticleProps'
 
-export default interface ProjectProps extends ComponentProps {
-  title: string
-  link: string
-  datePublished: string
-  minRead: number
+export default interface BlogProps extends ComponentProps {
+  articles: ArticleProps[]
 }
