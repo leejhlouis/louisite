@@ -18,7 +18,8 @@ export default function BlogCard({ link, title, datePublished, minRead }: BlogPr
             className={clsx(
               'text-primary-dark dark:text-white',
               'group-hover:text-primary-lighter-dark  group-hover:dark:text-primary-light',
-              'group-hover:font'
+              'group-hover:font',
+              '!pb-2'
             )}
           >
             {title}
