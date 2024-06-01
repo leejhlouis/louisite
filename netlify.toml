@@ -1,0 +1,9 @@
+[build]
+  publish = "dist"
+  command = "vite build"
+
+[[redirects]]
+  from = "/blog/rss"
+  to = "https://medium.com/@leejhlouis/feed"
+  status = 200
+  force = true
