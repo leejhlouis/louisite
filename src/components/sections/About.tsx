@@ -28,7 +28,12 @@ export default function About({ children }: ComponentProps) {
             a: InlineLink,
             ul: ({ children }) =>
               (<ul className='mb-8 flex flex-wrap gap-2'>{children}</ul>) as JSX.Element,
-            li: ({ children }) => (<Badge>{children}</Badge>) as JSX.Element
+            li: ({ children }) =>
+              (
+                <li>
+                  <Badge>{children}</Badge>
+                </li>
+              ) as JSX.Element
           }}
         >
           {(localStorage.about as string) ?? children}

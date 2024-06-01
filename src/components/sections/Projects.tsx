@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
 
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
-const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
 const Badge = lazy(() => import('@/components/common/reusable/Badge.tsx'))
 const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
@@ -45,7 +45,7 @@ export default function Projects() {
   }, [selectedFilters])
 
   const projectsEntry = filteredProjects.map(project => (
-    <ListCard
+    <ProjectCard
       {...project}
       key={project.id}
     />
@@ -70,7 +70,7 @@ export default function Projects() {
             'animate-fade-in',
             'text-primary-dark dark:text-white',
             'font-extrabold',
-            'pb-4 pt-2'
+            'pb-2 pt-2'
           )}
         >
           Projects
@@ -82,7 +82,7 @@ export default function Projects() {
         </ul>
       </div>
       {!!filteredProjects.length && (
-        <ul
+        <div
           className={clsx(
             'animate-fade-in !delay-300',
             'mx-auto mt-6 md:mt-8',
@@ -90,7 +90,7 @@ export default function Projects() {
           )}
         >
           {projectsEntry}
-        </ul>
+        </div>
       )}
       {!filteredProjects.length && (
         <div className='animate-fade-in mt-8 !delay-300'>
