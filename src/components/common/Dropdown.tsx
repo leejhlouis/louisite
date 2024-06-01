@@ -10,17 +10,23 @@ export default function Dropdown() {
     <NavLink
       key={index}
       className={({ isActive }) =>
-        clsx('hover:color-[inherit] flex w-full hover:no-underline', {
+        clsx('w-full', 'hover:color-[inherit] hover:no-underline', {
           'font-bold': isActive,
           'font-nomal': !isActive
         })
       }
       to={item.href}
     >
-      <li className='cursor-pointer px-2 py-1 hover:bg-slate-100 hover:dark:bg-slate-900'>
-        {item.name}
+      <li
+        className={clsx(
+          'cursor-pointer',
+          'flex w-full px-2 py-1',
+          'hover:bg-slate-300/50 hover:dark:bg-slate-950/50'
+        )}
+      >
+        <span>{item.name}</span>
+        <span className='my-auto ml-1'>{item.isNew && <Badge size='small'>NEW</Badge>}</span>
       </li>
-      {item.isNew && <Badge size='small'>NEW</Badge>}
     </NavLink>
   ))
 
@@ -29,7 +35,7 @@ export default function Dropdown() {
       className={clsx(
         'absolute right-0',
         'mt-2 py-2',
-        'bg-slate-50 dark:bg-slate-950',
+        'bg-slate-200/95 dark:bg-slate-900/95',
         'flex w-32 flex-col rounded-lg shadow-lg'
       )}
     >
