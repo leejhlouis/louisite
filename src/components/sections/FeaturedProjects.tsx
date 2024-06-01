@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon.js'))
 const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading2 = lazy(() => import('@/components/common/reusable/heading/Heading2'))
-const ListCard = lazy(() => import('@/components/common/ListCard.tsx'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard.tsx'))
 const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
 
 export default function Projects() {
@@ -19,7 +19,7 @@ export default function Projects() {
   const projectsEntry = projects
     .filter(({ featured }) => !!featured)
     .map(project => (
-      <ListCard
+      <ProjectCard
         {...project}
         key={project.id}
       />
@@ -34,7 +34,7 @@ export default function Projects() {
         <Heading2 className='animate-fade-in pb-6 text-center text-primary-dark !delay-200 dark:text-white'>
           Featured projects
         </Heading2>
-        <ul
+        <div
           className={clsx(
             'animate-fade-in !delay-300',
             'mx-auto mt-6 md:mt-8',
@@ -42,7 +42,7 @@ export default function Projects() {
           )}
         >
           {projectsEntry}
-        </ul>
+        </div>
         <div className='animate-fade-in !delay-500'>
           <NavLink to='/projects'>
             <PrimaryButton

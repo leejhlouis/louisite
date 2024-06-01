@@ -3,14 +3,9 @@ import ProjectProps from '@/types/components/ProjectProps'
 import clsx from 'clsx'
 
 const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
+const Card = lazy(() => import('@/components/common/reusable/Card'))
 
-export default function ListCard({
-  className,
-  title,
-  description,
-  techStacks,
-  links
-}: ProjectProps) {
+export default function ProjectCard({ title, description, techStacks, links }: ProjectProps) {
   const techStacksEntry = techStacks.map((techStack, index) => (
     <li
       key={index}
@@ -40,19 +35,7 @@ export default function ListCard({
   ))
 
   return (
-    <li
-      className={clsx(
-        'group',
-        'w-full p-4 sm:p-6',
-        'flex flex-col justify-between',
-        'transform duration-300',
-        'rounded-xl border border-slate-500/20 dark:border-slate-600/30',
-        'bg-slate-100/20 dark:bg-slate-600/20',
-        'hover:bg-slate-100/30 dark:hover:bg-slate-600/30',
-        'cursor-pointer backdrop-filter',
-        className
-      )}
-    >
+    <Card className='flex flex-col justify-between p-4 sm:p-6'>
       <header>
         <Heading3>
           <a
@@ -76,6 +59,6 @@ export default function ListCard({
         <ul className='mb-4 flex flex-wrap'>{techStacksEntry}</ul>
         <ul className='flex space-x-4'>{linksEntry}</ul>
       </footer>
-    </li>
+    </Card>
   )
 }
