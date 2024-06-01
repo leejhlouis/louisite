@@ -1,11 +1,11 @@
-import BlogProps from '@/types/components/BlogProps'
+import ArticleProps from '@/types/ArticleProps'
 import clsx from 'clsx'
 import { lazy } from 'react'
 
 const Card = lazy(() => import('@/components/common/reusable/Card'))
 const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
 
-export default function BlogCard({ link, title, datePublished, minRead }: BlogProps) {
+export default function BlogCard({ link, title, datePublished, minRead }: ArticleProps) {
   return (
     <a
       href={link}
