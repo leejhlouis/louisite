@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Preloader from '@/components/common/Preloader.tsx'
 import calculateMinRead from '@/utils/calculateMinRead'
 import ArticleProps from '@/types/ArticleProps'
+import truncateText from '@/utils/truncateText'
 
 const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
 const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
@@ -37,12 +38,14 @@ export default function BlogPage() {
           const parser = new DOMParser()
           const parsedContent = parser.parseFromString(content?.textContent ?? '', 'text/html')
           const minRead = calculateMinRead(parsedContent.body.textContent ?? '')
+          const preview = truncateText(parsedContent.body.textContent ?? '', 150)
 
           loadedItems.push({
             title,
             link,
             datePublished: formattedDate,
-            minRead
+            minRead,
+            preview
           })
         }
 

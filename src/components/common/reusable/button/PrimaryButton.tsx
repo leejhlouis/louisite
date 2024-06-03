@@ -16,7 +16,7 @@ export default function PrimaryButton({
     <button
       className={clsx(
         className,
-        'group/underline flex w-fit items-center space-x-1 transition duration-300 ease-in-out',
+        'group/underline flex w-fit items-center transition duration-300 ease-in-out',
         {
           'font-extrabold text-primary-dark dark:text-white': active,
           'font-semibold': !active
@@ -30,8 +30,9 @@ export default function PrimaryButton({
       )}
       onClick={onClick}
     >
-      <div>{icon}</div>
-      <SlidingInUnderline type='secondary'>{children}</SlidingInUnderline>
+      {icon && <div className='pe-1'>{icon}</div>}
+      {!active && <SlidingInUnderline type='secondary'>{children}</SlidingInUnderline>}
+      {active && children}
     </button>
   )
 }

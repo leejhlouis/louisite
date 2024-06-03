@@ -3,4 +3,5 @@ export default interface ArticleProps {
   link: string
   datePublished: string
   minRead: number
+  preview: string
 }
