@@ -16,7 +16,10 @@ export default function ScrollToTopFAB() {
 
   useEventListener('scroll', () => {
     const { scrollY, innerHeight } = window
-    setButtonVisible(scrollY + SCROLL_OFFSET > innerHeight)
+    const { scrollHeight } = document.documentElement
+    setButtonVisible(
+      scrollY + SCROLL_OFFSET > innerHeight && scrollY + innerHeight < scrollHeight - SCROLL_OFFSET
+    )
   })
 
   return (
