@@ -37,7 +37,7 @@ export default function Blog({ articles }: BlogProps) {
       <div
         className={clsx(
           'animate-fade-in !delay-300',
-          'grid justify-items-center gap-6 md:grid-cols-2',
+          'grid justify-items-center gap-8 md:grid-cols-2',
           'pt-6'
         )}
       >

@@ -38,7 +38,7 @@ export default function BlogPage() {
           const parser = new DOMParser()
           const parsedContent = parser.parseFromString(content?.textContent ?? '', 'text/html')
           const minRead = calculateMinRead(parsedContent.body.textContent ?? '')
-          const preview = truncateText(parsedContent.body.textContent ?? '', 150)
+          const preview = truncateText(parsedContent.body.textContent ?? '', 120)
 
           loadedItems.push({
             title,
