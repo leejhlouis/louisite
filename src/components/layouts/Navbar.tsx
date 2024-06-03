@@ -16,7 +16,7 @@ export default function Navbar() {
   useEventListener('resize', handleWidthChange)
 
   return (
-    <nav className='fixed top-0 z-50 w-full backdrop-blur-lg dark:backdrop-blur-xl'>
+    <nav className='fixed top-0 z-50 w-full backdrop-blur-xl'>
       <div className='container flex flex-wrap items-center justify-between py-4 xl:max-w-screen-xl'>
         <Title size='sm' />
         <div className='flex items-center space-x-2 sm:space-x-6'>
