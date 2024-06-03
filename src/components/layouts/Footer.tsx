@@ -13,13 +13,13 @@ export default function Footer() {
 
   return (
     <footer className='container py-4 sm:py-6 xl:max-w-screen-xl xl:py-8'>
-      <PrimaryButton
+      {/* <PrimaryButton
         onClick={scrollToTop}
         className='mx-auto mb-6'
         icon={<ArrowUpSLineIcon />}
       >
         Back to top
-      </PrimaryButton>
+      </PrimaryButton> */}
       <div className='pb-4 pt-8'>
         <Title size='lg' />
       </div>
