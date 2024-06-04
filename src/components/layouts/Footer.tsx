@@ -5,6 +5,7 @@ const PrimaryButton = lazy(() => import('@/components/common/reusable/button/Pri
 const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
 const NavLinks = lazy(() => import('@/components/common/NavLinks.tsx'))
 const Title = lazy(() => import('@/components/common/Title.tsx'))
+const SpotifyNowPlaying = lazy(() => import('@/components/common/SpotifyNowPlaying.tsx'))
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -20,6 +21,7 @@ export default function Footer() {
       >
         Back to top
       </PrimaryButton>
+      <SpotifyNowPlaying />
       <div className='pb-4 pt-8'>
         <Title size='lg' />
       </div>

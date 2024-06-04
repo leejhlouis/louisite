@@ -7,6 +7,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        marquee: 'marquee 10s linear infinite'
+      },
       colors: {
         primary: {
           light: colors.blue['300'],
@@ -17,6 +20,12 @@ export default {
         muted: {
           DEFAULT: colors.slate['300'],
           dark: colors.slate['700']
+        }
+      },
+      keyframes: {
+        marquee: {
+          '10%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
         }
       },
       spacing: {
