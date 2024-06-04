@@ -15,8 +15,8 @@ export default {
           'lighter-dark': colors.indigo['500']
         },
         muted: {
-          DEFAULT: colors.neutral['300'],
-          dark: colors.neutral['800']
+          DEFAULT: colors.slate['300'],
+          dark: colors.slate['700']
         }
       },
       spacing: {
