@@ -1,9 +1,9 @@
-import ArrowUpFillIcon from 'remixicon-react/ArrowUpFillIcon.js'
 import { lazy, useState } from 'react'
 import useEventListener from '@/hooks/useEventListener'
 import clsx from 'clsx'
 
 const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton.tsx'))
+const ArrowUpFillIcon = lazy(() => import('remixicon-react/ArrowUpFillIcon.js'))
 
 const SCROLL_OFFSET = 120
 
