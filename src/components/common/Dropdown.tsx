@@ -25,7 +25,6 @@ export default function Dropdown() {
         )}
       >
         <span>{item.name}</span>
-        <span className='my-auto ml-1'>{item.isNew && <Badge size='small'>NEW</Badge>}</span>
       </li>
     </NavLink>
   ))
