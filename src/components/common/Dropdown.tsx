@@ -1,9 +1,6 @@
-import { lazy } from 'react'
 import { NavLink } from 'react-router-dom'
 import navItems from '@/_data/navItems.ts'
 import clsx from 'clsx'
-
-const Badge = lazy(() => import('@/components/common/reusable/Badge.tsx'))
 
 export default function Dropdown() {
   const links = navItems.map((item, index) => (
