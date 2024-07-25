@@ -69,7 +69,6 @@ export default function Projects() {
           className={clsx(
             'animate-fade-in',
             'text-primary-dark dark:text-white',
-            'font-extrabold',
             'pb-2 pt-2'
           )}
         >
