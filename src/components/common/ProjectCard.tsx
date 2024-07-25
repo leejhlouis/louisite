@@ -36,7 +36,7 @@ export default function ProjectCard({ title, description, techStacks, links }: P
   ))
 
   return (
-    <Card className='flex flex-col justify-between p-4 sm:p-6'>
+    <Card className='flex flex-col justify-between'>
       <header>
         <Heading3>
           <a

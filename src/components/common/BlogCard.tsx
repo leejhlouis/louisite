@@ -12,7 +12,7 @@ export default function BlogCard({ link, title, datePublished, minRead, preview 
       className='group'
       target='_blank'
     >
-      <Card className='p-6'>
+      <Card>
         <Heading3
           className={clsx(
             'text-primary-dark dark:text-white',
