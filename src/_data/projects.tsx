@@ -8,12 +8,12 @@ import InlineLink from '@/components/common/reusable/InlineLink'
 
 const github: LinkProps = {
   label: 'Source code',
-  icon: <GithubFillIcon size={24} />
+  icon: <GithubFillIcon size={22} />
 }
 
 const live: LinkProps = {
   label: 'Live',
-  icon: <ExternalLinkFillIcon size={24} />
+  icon: <ExternalLinkFillIcon size={22} />
 }
 
 const getLinks = (githubRepo: string, url?: string) => {
@@ -68,7 +68,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Vue.js', 'Axios Mock'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: getLinks('vue-member-management')
+    links: getLinks('vue-member-management', 'https://leejhlouis.github.io/vue-member-management/')
   },
   {
     id: 'find-a-coach',
