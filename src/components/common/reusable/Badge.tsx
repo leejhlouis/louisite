@@ -13,7 +13,7 @@ export default function Badge({ className, children, active, onClick }: BadgePro
           'bg-primary-dark/20 font-bold text-primary-dark dark:bg-primary-light/20 dark:text-primary-light': active
         },
         'duration-300 hover:bg-primary-dark/[0.175] hover:dark:bg-primary-light/[0.175]',
-        'rounded-xl px-2 py-1 my-auto text-sm'
+        'rounded-lg px-2 py-1 my-auto text-sm'
       )}
       onClick={onClick}
     >
