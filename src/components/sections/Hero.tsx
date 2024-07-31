@@ -40,14 +40,13 @@ export default function Hero() {
         </h1>
         <p
           className={clsx(
-            'hidden',
             'animate-fade-in !delay-300',
             'text-muted-dark  dark:text-muted',
             'sm:text-lg lg:text-xl',
             'pb-0'
           )}
         >
-          Software Engineer at
+          Software Engineer at <InlineLink href="https://traveloka.com">Traveloka</InlineLink>
         </p>
         <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>
