@@ -21,12 +21,7 @@ export default function Blog({ articles }: BlogProps) {
   return (
     <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}>
       <Heading1
-        className={clsx(
-          'animate-fade-in',
-          'text-primary-dark dark:text-white',
-          'font-extrabold',
-          'pb-2 pt-2'
-        )}
+        className={clsx('animate-fade-in', 'text-primary-dark dark:text-white', 'pb-2 pt-2')}
       >
         Blog
       </Heading1>
