@@ -1,44 +1,47 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import Preloader from '@/components/common/Preloader.tsx'
-import calculateMinRead from '@/utils/calculateMinRead'
+import Preloader from '@/components/common/Preloader'
 import ArticleProps from '@/types/ArticleProps'
+import calculateMinRead from '@/utils/calculateMinRead'
 import truncateText from '@/utils/truncateText'
 
-const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
-const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
-const Footer = lazy(() => import('@/components/layouts/Footer.tsx'))
-const Blog = lazy(() => import('@/components/sections/Blog.tsx'))
+const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper'))
+const Navbar = lazy(() => import('@/components/layouts/Navbar'))
+const Blog = lazy(() => import('@/components/sections/Blog'))
+const Footer = lazy(() => import('@/components/layouts/Footer'))
 
-export default function BlogPage() {
+export default function BlogPage(): JSX.Element {
   const [articles, setArticles] = useState<ArticleProps[]>([])
 
-  const getProperty = (item: Element, query: string) => item.querySelector(query)?.textContent ?? ''
+  const getProperty = (item: Element, query: string): string =>
+    item.querySelector(query)?.textContent ?? ''
 
-  useEffect(() => {
+  useEffect((): void => {
     fetch('/blog/rss')
-      .then(res => res.text())
-      .then(str => new window.DOMParser().parseFromString(str, 'text/xml'))
-      .then(data => {
-        const items = data.querySelectorAll('item')
-        const loadedItems = []
+      .then((res: Response): Promise<string> => res.text())
+      .then((str: string): Document => new DOMParser().parseFromString(str, 'text/xml'))
+      .then((data: Document): void => {
+        const items: NodeListOf<Element> = data.querySelectorAll('item')
+        const loadedItems: ArticleProps[] = []
 
         for (const item of items) {
-          const title = getProperty(item, 'title')
-          const link = getProperty(item, 'link')
+          const title: string = getProperty(item, 'title')
+          const link: string = getProperty(item, 'link')
 
-          const pubDate = new Date(getProperty(item, 'pubDate'))
-          const formattedDate = pubDate.toLocaleDateString('en-US', {
+          const pubDate: Date = new Date(getProperty(item, 'pubDate'))
+          const formattedDate: string = pubDate.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })
 
-          const content = item.getElementsByTagNameNS('*', 'encoded').item(0)
-          const parser = new DOMParser()
-          const parsedContent = parser.parseFromString(content?.textContent ?? '', 'text/html')
-          const minRead = calculateMinRead(parsedContent.body.textContent ?? '')
-          const preview = truncateText(parsedContent.body.textContent ?? '', 120)
+          const content: Element | null = item.getElementsByTagNameNS('*', 'encoded').item(0)
+          const parsedContent: Document = new DOMParser().parseFromString(
+            content?.textContent ?? '',
+            'text/html'
+          )
+          const minRead: number = calculateMinRead(parsedContent.body.textContent ?? '')
+          const preview: string = truncateText(parsedContent.body.textContent ?? '', 120)
 
           loadedItems.push({
             title,
@@ -51,6 +54,7 @@ export default function BlogPage() {
 
         setArticles(loadedItems)
       })
+      .catch((): void => setArticles([]))
   }, [])
 
   return (

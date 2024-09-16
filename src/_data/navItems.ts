@@ -1,4 +1,4 @@
-import NavItemsProps from '@/types/NavItemsProps.ts'
+import NavItemsProps from '@/types/NavItemsProps'
 
 const navItems: NavItemsProps[] = [
   {
@@ -9,7 +9,7 @@ const navItems: NavItemsProps[] = [
   {
     name: 'Blog',
     href: '/blog',
-    isNew: true,
+    isNew: true
   },
   {
     name: 'Projects',

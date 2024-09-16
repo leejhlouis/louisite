@@ -1,17 +1,17 @@
 import { lazy } from 'react'
-import ComponentProps from '@/types/components/ComponentProps'
 import clsx from 'clsx'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
+import ComponentProps from '@/types/components/ComponentProps'
 
-const Section = lazy(() => import('@/components/layouts/Section.tsx'))
 const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
 const Heading2 = lazy(() => import('@/components/common/reusable/heading/Heading2'))
 const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
 const Badge = lazy(() => import('@/components/common/reusable/Badge'))
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
+const Section = lazy(() => import('@/components/layouts/Section'))
 const ReactMarkdown = lazy(() => import('react-markdown'))
 
-export default function About({ children }: ComponentProps) {
+export default function About({ children }: ComponentProps): JSX.Element {
   const { animationClass } = useFadeInMounted()
 
   return (
@@ -26,14 +26,14 @@ export default function About({ children }: ComponentProps) {
             h2: Heading2,
             h3: Heading3,
             a: InlineLink,
-            ul: ({ children }) =>
-              (<ul className='mb-8 flex flex-wrap gap-2'>{children}</ul>) as JSX.Element,
-            li: ({ children }) =>
-              (
-                <li>
-                  <Badge>{children}</Badge>
-                </li>
-              ) as JSX.Element
+            ul: ({ children }): JSX.Element => (
+              <ul className='mb-8 flex flex-wrap gap-2'>{children}</ul>
+            ),
+            li: ({ children }): JSX.Element => (
+              <li>
+                <Badge>{children}</Badge>
+              </li>
+            )
           }}
         >
           {(localStorage.about as string) ?? children}

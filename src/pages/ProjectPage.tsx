@@ -1,13 +1,13 @@
 import { lazy, Suspense } from 'react'
 import { Helmet } from 'react-helmet'
-import Preloader from '@/components/common/Preloader.tsx'
+import Preloader from '@/components/common/Preloader'
 
-const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
-const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
-const Footer = lazy(() => import('@/components/layouts/Footer.tsx'))
-const Projects = lazy(() => import('@/components/sections/Projects.tsx'))
+const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper'))
+const Navbar = lazy(() => import('@/components/layouts/Navbar'))
+const Projects = lazy(() => import('@/components/sections/Projects'))
+const Footer = lazy(() => import('@/components/layouts/Footer'))
 
-export default function AboutPage() {
+export default function AboutPage(): JSX.Element {
   return (
     <>
       <Helmet>

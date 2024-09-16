@@ -1,10 +1,10 @@
-import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
-import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon.js'
-import getGitHubUrl from '@/utils/getGitHubUrl'
-import LinkProps from '@/types/LinkProps'
-import ProjectProps from '@/types/components/ProjectProps'
-import constants from '@/constants'
+import GithubFillIcon from 'remixicon-react/GithubFillIcon'
+import ExternalLinkFillIcon from 'remixicon-react/ExternalLinkFillIcon'
 import InlineLink from '@/components/common/reusable/InlineLink'
+import constants from '@/constants'
+import ProjectProps from '@/types/components/ProjectProps'
+import LinkProps from '@/types/LinkProps'
+import getGitHubUrl from '@/utils/getGitHubUrl'
 
 const github: LinkProps = {
   label: 'Source code',
@@ -16,15 +16,15 @@ const live: LinkProps = {
   icon: <ExternalLinkFillIcon size={22} />
 }
 
-const getLinks = (githubRepo: string, url?: string) => {
-  const links = [{ ...github, url: getGitHubUrl(githubRepo) }]
+const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
+  const links: LinkProps[] = [{ ...github, url: getGitHubUrl(githubRepo) }]
   if (url) {
     links.push({ ...live, url })
   }
   return links
 }
 
-const filters = [
+const filters: string[] = [
   'React',
   'Vue.js',
   'Laravel',

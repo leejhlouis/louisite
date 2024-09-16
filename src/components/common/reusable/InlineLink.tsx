@@ -1,8 +1,10 @@
-import InlineLinkProps from '@/types/components/InlineLinkProps'
+import { lazy } from 'react'
 import clsx from 'clsx'
-import SlidingInUnderline from './SlidingInUnderline'
+import InlineLinkProps from '@/types/components/InlineLinkProps'
 
-export default function InlineLink({ href, children }: InlineLinkProps) {
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
+
+export default function InlineLink({ href, children }: InlineLinkProps): JSX.Element {
   return (
     <a
       href={href}

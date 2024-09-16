@@ -1,7 +1,12 @@
-import { SectionProps } from '@/types/components/SectionProps'
 import clsx from 'clsx'
+import { SectionProps } from '@/types/components/SectionProps'
 
-export default function Section({ id, className, maxWidthClass, children }: SectionProps) {
+export default function Section({
+  id,
+  className,
+  maxWidthClass,
+  children
+}: SectionProps): JSX.Element {
   return (
     <section
       id={id || ''}

@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
-import ComponentProps from '@/types/components/ComponentProps'
 import clsx from 'clsx'
+import ComponentProps from '@/types/components/ComponentProps'
 
-export default function HighlightText({ children }: ComponentProps) {
+export default function HighlightText({ children }: ComponentProps): JSX.Element {
   const ref = useRef<HTMLLinkElement>(null)
-  const [degree, setDegree] = useState(0)
+  const [degree, setDegree] = useState<number>(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect((): (() => void) => {
+    const interval = setInterval((): void => {
       setDegree((degree + 15) % 360)
       if (ref.current) {
         ref.current.style.backgroundImage = `linear-gradient(${degree}deg, var(--tw-gradient-stops))`
       }
     }, 75)
-    return () => clearInterval(interval)
+    return (): void => clearInterval(interval)
   })
 
   return (

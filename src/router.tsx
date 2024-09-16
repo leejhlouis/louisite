@@ -1,12 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
+import HomePage from '@/pages/HomePage'
+import BlogPage from '@/pages/BlogPage'
+import AboutPage from '@/pages/AboutPage'
+import ProjectPage from '@/pages/ProjectPage'
+import NotFoundPage from '@/pages/NotFoundPage'
 
-import HomePage from '@/pages/HomePage.tsx'
-import BlogPage from '@/pages/BlogPage.tsx'
-import AboutPage from '@/pages/AboutPage.tsx'
-import ProjectPage from '@/pages/ProjectPage.tsx'
-import NotFoundPage from '@/pages/NotFoundPage.tsx'
-
-export default function Router() {
+export default function Router(): JSX.Element {
   return (
     <Routes>
       <Route

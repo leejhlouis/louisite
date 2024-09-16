@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import navItems from '@/_data/navItems.ts'
 import clsx from 'clsx'
+import navItems from '@/_data/navItems.ts'
+import NavItemsProps from '@/types/NavItemsProps'
 
-export default function Dropdown() {
-  const links = navItems.map((item, index) => (
+export default function Dropdown(): JSX.Element {
+  const links = navItems.map((item: NavItemsProps, index: number): JSX.Element => (
     <NavLink
       key={index}
       className={({ isActive }) =>

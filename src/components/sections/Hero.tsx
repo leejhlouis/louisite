@@ -2,17 +2,17 @@ import { lazy } from 'react'
 import clsx from 'clsx'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
 
-const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon.js'))
-const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
-const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText.tsx'))
-const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline.tsx'))
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
-const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks.tsx'))
-const Section = lazy(() => import('@/components/layouts/Section.tsx'))
+const ArrowDownSLineIcon = lazy(() => import('remixicon-react/ArrowDownSLineIcon'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton'))
+const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
+const HighlightText = lazy(() => import('@/components/common/reusable/HighlightText'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
+const SocialMediaLinks = lazy(() => import('@/components/common/SocialMediaLinks'))
+const Section = lazy(() => import('@/components/layouts/Section'))
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
   const { animationClass } = useFadeInMounted()
-  const scrollToProjects = () => window.location.assign('#projects')
+  const scrollToProjects = (): void => window.location.assign('#projects')
 
   return (
     <Section
@@ -41,12 +41,12 @@ export default function Hero() {
         <p
           className={clsx(
             'animate-fade-in !delay-300',
-            'text-muted-dark  dark:text-muted',
+            'text-muted-dark dark:text-muted',
             'sm:text-lg lg:text-xl',
             'pb-0'
           )}
         >
-          Software Engineer at <InlineLink href="https://traveloka.com">Traveloka</InlineLink>
+          Software Engineer at <InlineLink href='https://traveloka.com'>Traveloka</InlineLink>
         </p>
         <SocialMediaLinks className={clsx('animate-fade-in !delay-500', 'mt-6')} />
       </div>

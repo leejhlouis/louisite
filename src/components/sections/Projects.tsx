@@ -1,33 +1,33 @@
-import ProjectProps from '@/types/components/ProjectProps'
 import { lazy, useEffect, useState } from 'react'
-import { filters, projects } from '@/_data/projects'
 import clsx from 'clsx'
+import { filters, projects } from '@/_data/projects'
 import useFadeInMounted from '@/hooks/useFadeInMounted'
+import ProjectProps from '@/types/components/ProjectProps'
 
-const Section = lazy(() => import('@/components/layouts/Section.tsx'))
-const ProjectCard = lazy(() => import('@/components/common/ProjectCard.tsx'))
+const Badge = lazy(() => import('@/components/common/reusable/Badge'))
 const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
-const Badge = lazy(() => import('@/components/common/reusable/Badge.tsx'))
-const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink.tsx'))
+const InlineLink = lazy(() => import('@/components/common/reusable/InlineLink'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard'))
+const Section = lazy(() => import('@/components/layouts/Section'))
 
-export default function Projects() {
+export default function Projects(): JSX.Element {
   const { animationClass } = useFadeInMounted()
 
   const [filteredProjects, setFilteredProjects] = useState<Array<ProjectProps>>([...projects])
   const [selectedFilters, setSelectedFilters] = useState<Array<string>>([])
 
-  const filterProjects = (newValue: string) => {
+  const filterProjects = (newValue: string): void => {
     if (selectedFilters.includes(newValue)) {
       setSelectedFilters(selectedFilters.filter(value => value !== newValue))
       return
     }
     setSelectedFilters([...selectedFilters, newValue])
   }
-  const removeselectedFilters = () => {
+  const removeselectedFilters = (): void => {
     setSelectedFilters([])
   }
 
-  useEffect(() => {
+  useEffect((): void => {
     let filtered: ProjectProps[] = [...projects]
 
     if (selectedFilters.length) {
@@ -44,19 +44,19 @@ export default function Projects() {
     setFilteredProjects(filtered)
   }, [selectedFilters])
 
-  const projectsEntry = filteredProjects.map(project => (
+  const projectsEntry: JSX.Element[] = filteredProjects.map(project => (
     <ProjectCard
       {...project}
       key={project.id}
     />
   ))
 
-  const filterEntry = filters.map(filter => (
+  const filterEntry: JSX.Element[] = filters.map(filter => (
     <Badge
       key={filter}
       className='animate-fade-in cursor-pointer !delay-200'
       active={selectedFilters.includes(filter)}
-      onClick={() => filterProjects(filter)}
+      onClick={(): void => filterProjects(filter)}
     >
       {filter}
     </Badge>
@@ -66,11 +66,7 @@ export default function Projects() {
     <Section className={clsx(animationClass, 'min-h-[calc(100vh-320px)]')}>
       <div className='pb-6'>
         <Heading1
-          className={clsx(
-            'animate-fade-in',
-            'text-primary-dark dark:text-white',
-            'pb-2 pt-2'
-          )}
+          className={clsx('animate-fade-in', 'text-primary-dark dark:text-white', 'pb-2 pt-2')}
         >
           Projects
         </Heading1>

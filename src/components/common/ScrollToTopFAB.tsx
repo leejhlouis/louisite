@@ -1,20 +1,20 @@
 import { lazy, useState } from 'react'
-import useEventListener from '@/hooks/useEventListener'
 import clsx from 'clsx'
+import useEventListener from '@/hooks/useEventListener'
 
-const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton.tsx'))
-const ArrowUpFillIcon = lazy(() => import('remixicon-react/ArrowUpFillIcon.js'))
+const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton'))
+const ArrowUpFillIcon = lazy(() => import('remixicon-react/ArrowUpFillIcon'))
 
 const SCROLL_OFFSET = 120
 
-export default function ScrollToTopFAB() {
-  const [isButtonVisible, setButtonVisible] = useState(false)
+export default function ScrollToTopFAB(): JSX.Element {
+  const [isButtonVisible, setButtonVisible] = useState<boolean>(false)
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo(0, 0)
   }
 
-  useEventListener('scroll', () => {
+  useEventListener('scroll', (): void => {
     const { scrollY, innerHeight } = window
     const { scrollHeight } = document.documentElement
     setButtonVisible(
