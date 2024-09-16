@@ -2,11 +2,13 @@ import { useState } from 'react'
 import useMounted from '@/hooks/useMounted'
 import useEventListener from '@/hooks/useEventListener'
 
-export default function useFadeInMounted() {
-  const mounted = useMounted()
-  const [hasScrolledToTop, setHasScrolledToTop] = useState(false)
+export default function useFadeInMounted(): {
+  animationClass: Record<string, boolean>
+} {
+  const mounted: boolean = useMounted()
+  const [hasScrolledToTop, setHasScrolledToTop] = useState<boolean>(false)
 
-  useEventListener('scroll', () => {
+  useEventListener('scroll', (): void => {
     if (hasScrolledToTop) {
       return
     }

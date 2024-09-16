@@ -1,14 +1,14 @@
 import { RefObject, useEffect } from 'react'
 
-export default function useEventListener (
+export default function useEventListener(
   eventType: string,
   listener: (e: Event) => void,
   element?: RefObject<HTMLElement>
-) {
+): void {
   const el = element?.current ?? window
-  useEffect(() => {
+  useEffect((): (() => void) => {
     el.addEventListener(eventType, listener)
-    return () => {
+    return (): void => {
       el.removeEventListener(eventType, listener)
     }
   }, [el, eventType, listener])

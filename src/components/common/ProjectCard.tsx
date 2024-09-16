@@ -1,39 +1,49 @@
 import { lazy } from 'react'
-import ProjectProps from '@/types/components/ProjectProps'
 import clsx from 'clsx'
+import ProjectProps from '@/types/components/ProjectProps'
+import LinkProps from '@/types/LinkProps'
 
-const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
-const Card = lazy(() => import('@/components/common/reusable/Card'))
 const Badge = lazy(() => import('@/components/common/reusable/Badge'))
+const Card = lazy(() => import('@/components/common/reusable/Card'))
+const Heading3 = lazy(() => import('@/components/common/reusable/heading/Heading3'))
 
-export default function ProjectCard({ title, description, techStacks, links }: ProjectProps) {
-  const techStacksEntry = techStacks.map((techStack, index) => (
-    <Badge
-      key={index}
-      className={clsx(
-        'mr-2 last-of-type:mr-0',
-        'text-base font-medium text-primary-dark dark:text-primary-light'
-      )}
-    >
-      {techStack}
-    </Badge>
-  ))
-
-  const linksEntry = links.map((link, index) => (
-    <li
-      key={index}
-      className='z-10'
-    >
-      <a
-        href={link.url}
-        target='_blank'
-        rel='noreferrer'
-        aria-label={link.label}
+export default function ProjectCard({
+  title,
+  description,
+  techStacks,
+  links
+}: ProjectProps): JSX.Element {
+  const techStacksEntry = techStacks.map(
+    (techStack: string, index: number): JSX.Element => (
+      <Badge
+        key={index}
+        className={clsx(
+          'mr-2 last-of-type:mr-0',
+          'text-base font-medium text-primary-dark dark:text-primary-light'
+        )}
       >
-        {link.icon}
-      </a>
-    </li>
-  ))
+        {techStack}
+      </Badge>
+    )
+  )
+
+  const linksEntry = links.map(
+    (link: LinkProps, index: number): JSX.Element => (
+      <li
+        key={index}
+        className='z-10'
+      >
+        <a
+          href={link.url}
+          target='_blank'
+          rel='noreferrer'
+          aria-label={link.label}
+        >
+          {link.icon}
+        </a>
+      </li>
+    )
+  )
 
   return (
     <Card className='flex flex-col justify-between'>

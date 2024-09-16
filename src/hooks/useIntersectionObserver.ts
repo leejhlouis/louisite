@@ -1,12 +1,12 @@
 import { useState, useEffect, RefObject } from 'react'
 
-export default function useIntersectionObserver (
+export default function useIntersectionObserver(
   ref: RefObject<HTMLElement>,
   onIntersection: () => void
-) {
-  const [isIntersecting, setIsIntersecting] = useState(false)
+): void {
+  const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting)
@@ -14,10 +14,10 @@ export default function useIntersectionObserver (
       { rootMargin: '-100px' }
     )
     ref.current && observer.observe(ref.current)
-    return () => observer.disconnect()
+    return (): void => observer.disconnect()
   }, [isIntersecting, ref])
 
-  useEffect(() => {
+  useEffect((): void => {
     if (ref.current && isIntersecting) {
       onIntersection()
     }

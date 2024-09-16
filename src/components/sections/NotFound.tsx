@@ -1,18 +1,18 @@
 import { lazy, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import clsx from 'clsx'
 import useEventListener from '@/hooks/useEventListener'
 import useMounted from '@/hooks/useMounted'
-import clsx from 'clsx'
 
-const Section = lazy(() => import('@/components/layouts/Section.tsx'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton'))
 const Heading1 = lazy(() => import('@/components/common/reusable/heading/Heading1'))
-const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
+const Section = lazy(() => import('@/components/layouts/Section'))
 const ArrowLeftSLineIcon = lazy(() => import('remixicon-react/ArrowLeftSLineIcon'))
 
-export default function HomePage() {
+export default function HomePage(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEventListener('mousemove', e => {
+  useEventListener('mousemove', (e: Event): void => {
     if (!(e instanceof MouseEvent) || !ref.current) {
       return
     }
@@ -20,7 +20,7 @@ export default function HomePage() {
     ref.current.style.setProperty('--gradientPosition', `${clientX}px ${clientY}px`)
   })
 
-  const mounted = useMounted()
+  const mounted: boolean = useMounted()
 
   return (
     <div

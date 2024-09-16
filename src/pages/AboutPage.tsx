@@ -1,26 +1,24 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import Preloader from '@/components/common/Preloader.tsx'
 import about from '@/_data/about/about.md'
+import Preloader from '@/components/common/Preloader'
 
-const Navbar = lazy(() => import('@/components/layouts/Navbar.tsx'))
-const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper.tsx'))
-const Footer = lazy(() => import('@/components/layouts/Footer.tsx'))
-const About = lazy(() => import('@/components/sections/About.tsx'))
+const PageWrapper = lazy(() => import('@/components/layouts/PageWrapper'))
+const Navbar = lazy(() => import('@/components/layouts/Navbar'))
+const About = lazy(() => import('@/components/sections/About'))
+const Footer = lazy(() => import('@/components/layouts/Footer'))
 
-export default function AboutPage() {
-  const [content, setContent] = useState('')
+export default function AboutPage(): JSX.Element {
+  const [content, setContent] = useState<string>('')
 
-  useEffect(() => {
-    fetch(about as RequestInfo | URL)
-      .then(response => response.text())
-      .then(text => {
+  useEffect((): void => {
+    fetch(about as RequestInfo)
+      .then((response: Response): Promise<string> => response.text())
+      .then((text: string): void => {
         setContent(text)
         localStorage.about = text
       })
-      .catch(() => {
-        setContent('Failed to load content. Please reload the page')
-      })
+      .catch((): void => setContent('Failed to load content. Please reload the page!'))
   }, [content])
 
   return (

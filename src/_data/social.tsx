@@ -1,8 +1,8 @@
-import MailFillIcon from 'remixicon-react/MailFillIcon.js'
-import LinkedinFillIcon from 'remixicon-react/LinkedinFillIcon.js'
-import GithubFillIcon from 'remixicon-react/GithubFillIcon.js'
-import SocialProps from '@/types/SocialProps.ts'
+import MailFillIcon from 'remixicon-react/MailFillIcon'
+import LinkedinFillIcon from 'remixicon-react/LinkedinFillIcon'
+import GithubFillIcon from 'remixicon-react/GithubFillIcon'
 import constants from '@/constants'
+import SocialProps from '@/types/SocialProps'
 
 const social: SocialProps[] = [
   {

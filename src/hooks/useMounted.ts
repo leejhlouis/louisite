@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
-export default function useMounted() {
-  const [mounted, setMounted] = useState(false)
+export default function useMounted(): boolean {
+  const [mounted, setMounted] = useState<boolean>(false)
 
-  useEffect(() => {
-    setTimeout(() => {
+  useEffect((): void => {
+    setTimeout((): void => {
       setMounted(true)
     }, 100)
   }, [])

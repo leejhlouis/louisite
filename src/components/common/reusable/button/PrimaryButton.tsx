@@ -1,6 +1,6 @@
-import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps'
-import clsx from 'clsx'
 import { lazy } from 'react'
+import clsx from 'clsx'
+import PrimaryButtonProps from '@/types/components/buttons/PrimaryButtonProps'
 
 const SlidingInUnderline = lazy(() => import('@/components/common/reusable/SlidingInUnderline'))
 
@@ -11,7 +11,7 @@ export default function PrimaryButton({
   children,
   inverted,
   active
-}: PrimaryButtonProps) {
+}: PrimaryButtonProps): JSX.Element {
   return (
     <button
       className={clsx(

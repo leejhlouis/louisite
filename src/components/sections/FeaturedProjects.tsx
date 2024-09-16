@@ -1,22 +1,22 @@
 import { lazy, useRef } from 'react'
+import { NavLink } from 'react-router-dom'
 import { projects } from '@/_data/projects'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import clsx from 'clsx'
-import { NavLink } from 'react-router-dom'
 
-const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon.js'))
-const Section = lazy(() => import('@/components/layouts/Section.tsx'))
+const ArrowRightSLineIcon = lazy(() => import('remixicon-react/ArrowRightSLineIcon'))
+const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton'))
 const Heading2 = lazy(() => import('@/components/common/reusable/heading/Heading2'))
-const ProjectCard = lazy(() => import('@/components/common/ProjectCard.tsx'))
-const PrimaryButton = lazy(() => import('@/components/common/reusable/button/PrimaryButton.tsx'))
+const ProjectCard = lazy(() => import('@/components/common/ProjectCard'))
+const Section = lazy(() => import('@/components/layouts/Section'))
 
-export default function Projects() {
+export default function Projects(): JSX.Element {
   const ref = useRef<HTMLDivElement>(null)
-  useIntersectionObserver(ref, () => {
+  useIntersectionObserver(ref, (): void => {
     ref.current?.classList.add('animate-start')
   })
 
-  const projectsEntry = projects
+  const projectsEntry: JSX.Element[] = projects
     .filter(({ featured }) => !!featured)
     .map(project => (
       <ProjectCard
