@@ -12,7 +12,11 @@ export default function HomePage(): JSX.Element {
   return (
     <>
       <Helmet>
-        <title>Louis Gustavo | Software Engineer and Computer Science Undergraduate</title>
+        <title>Louis Gustavo | Software Engineer</title>
+        <meta
+          name="description"
+          content="Software Engineer at Traveloka specializing in building web interfaces and backend systems using Spring Boot, Vue.js, React, Laravel, and more."
+        />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>

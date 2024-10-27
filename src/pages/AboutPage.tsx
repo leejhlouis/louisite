@@ -25,6 +25,10 @@ export default function AboutPage(): JSX.Element {
     <>
       <Helmet>
         <title>About | Louis Gustavo</title>
+        <meta
+          name="description"
+          content="Louis Gustavo is a Software Engineer with 3+ years of experience of developing web and software development using Spring Boot, Vue.js, React, Laravel, and more."
+        />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <PageWrapper>
