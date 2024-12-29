@@ -18,6 +18,7 @@ Here are some technologies that I am familiar with:
 - TypeScript
 - Vue.js
 - React
+- Next.js
 - ESLint
 - jQuery
 - Tailwind CSS
