@@ -26,6 +26,7 @@ const getLinks = (githubRepo: string, url?: string): LinkProps[] => {
 
 const filters: string[] = [
   'React',
+  'Next.js',
   'Vue.js',
   'Laravel',
   'TypeScript',
@@ -40,12 +41,13 @@ const filters: string[] = [
   'ASP.NET',
   'Android SDK',
   'Firebase',
-  'Axios Mock'
+  'Axios Mock',
+  'Spotify API'
 ]
 
 const projects: ProjectProps[] = [
   {
-    id: 'louisite',
+    slug: 'louisite',
     featured: true,
     title: 'LOUISITE',
     description:
@@ -56,7 +58,17 @@ const projects: ProjectProps[] = [
     links: getLinks('louisite', 'https://louisite.netfliy.app')
   },
   {
-    id: 'vue-member-management',
+    slug: 'spotify-top5',
+    featured: true,
+    title: 'Spotify Top 5',
+    description: 'Your Top 5 Spotify songs & artists in one place built with Next.js.',
+    techStacks: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    otherTechStacks: ['HTML/CSS', 'JavaScript', 'React', 'Spotify API'],
+    category: 'Front-end development',
+    links: getLinks('spotify-top5', 'https://spotifytop5.netlify.app')
+  },
+  {
+    slug: 'vue-member-management',
     featured: true,
     title: 'Member Management App',
     description: (
@@ -71,7 +83,7 @@ const projects: ProjectProps[] = [
     links: getLinks('vue-member-management', 'https://leejhlouis.github.io/vue-member-management/')
   },
   {
-    id: 'find-a-coach',
+    slug: 'find-a-coach',
     featured: true,
     title: 'Find a Coach',
     description: (
@@ -90,7 +102,7 @@ const projects: ProjectProps[] = [
     links: getLinks('find-a-coach', 'https://find-a-coach-355c2.web.app/')
   },
   {
-    id: 'e-grocery',
+    slug: 'e-grocery',
     title: 'e-grocery',
     description: "An e-grocery web app built with Laravel. Built for Web Programming's final exam.",
     techStacks: ['Laravel', 'Bootstrap'],
@@ -99,7 +111,7 @@ const projects: ProjectProps[] = [
     links: getLinks('e-grocery')
   },
   {
-    id: 'movielist',
+    slug: 'movielist',
     featured: true,
     title: 'MovieList',
     description: "A movie list web app built with Laravel. Built for Web Programming's project.",
@@ -109,7 +121,7 @@ const projects: ProjectProps[] = [
     links: getLinks('movielist')
   },
   {
-    id: 'election-2022',
+    slug: 'election-2022',
     featured: true,
     title: 'HIMTI Election 2022',
     description:
@@ -120,7 +132,7 @@ const projects: ProjectProps[] = [
     links: getLinks('himti-election-2022', 'https://election.himtibinus.or.id/')
   },
   {
-    id: 'giant-book-supplier',
+    slug: 'giant-book-supplier',
     featured: true,
     title: 'Giant Book Supplier',
     description:
@@ -131,7 +143,7 @@ const projects: ProjectProps[] = [
     links: getLinks('giant-book-supplier')
   },
   {
-    id: 'balaitani',
+    slug: 'balaitani',
     featured: true,
     title: 'BalaiTani',
     description:
@@ -142,7 +154,7 @@ const projects: ProjectProps[] = [
     links: getLinks('balaitani', 'http://balaitani.herokuapp.com')
   },
   {
-    id: 'balaitani-asp',
+    slug: 'balaitani-asp',
     title: 'BalaiTani, built with ASP.NET',
     description:
       'Another rendition of BalaiTani built with ASP.NET and domain-driven design implementation.',
@@ -152,8 +164,8 @@ const projects: ProjectProps[] = [
     links: getLinks('balaitani-asp')
   },
   {
-    id: 'got-wordle',
-    featured: true,
+    slug: 'got-wordle',
+    featured: false,
     title: 'GOT Wordle',
     description: (
       <span>
@@ -167,7 +179,7 @@ const projects: ProjectProps[] = [
     links: getLinks('got-wordle', `https://${constants.social.github}.github.io/got-wordle/`)
   },
   {
-    id: 'unified-registration',
+    slug: 'unified-registration',
     featured: true,
     title: 'HIMTI unified registration',
     description:
@@ -178,7 +190,7 @@ const projects: ProjectProps[] = [
     links: getLinks('unified-registration', 'https://registration.himtibinus.or.id')
   },
   {
-    id: 'himti.or.id',
+    slug: 'himti.or.id',
     title: 'himti.or.id',
     description:
       'The official website of HIMTI BINUS University. Managed this project during my time as Manager of Web Development Division.',
@@ -188,7 +200,7 @@ const projects: ProjectProps[] = [
     links: getLinks('himti.or.id', 'https://himti.or.id/')
   },
   {
-    id: 'javascript30',
+    slug: 'javascript30',
     title: '30 Days of JavaScript',
     description:
       'A 30-day vanilla JavaScript coding challenge with some modifications and add-ons to advance my JavaScript fundamentals.',
@@ -197,7 +209,7 @@ const projects: ProjectProps[] = [
     links: getLinks('javascript30', 'https://leejhlouis.github.io/javascript30')
   },
   {
-    id: 'tukang-travel',
+    slug: 'tukang-travel',
     title: 'TukangTravel',
     description:
       'The landing page of TukangTravel—a lifestyle traveling app designed for travelers who love adventure and hidden gems.',
@@ -207,7 +219,7 @@ const projects: ProjectProps[] = [
     links: getLinks('tukang-travel', 'https://tukang-travel.web.app/')
   },
   {
-    id: 'louisite-v1',
+    slug: 'louisite-v1',
     title: 'LOUISITE v1',
     description: 'First iteration of my personal website.',
     category: 'Front-end development',
@@ -215,7 +227,7 @@ const projects: ProjectProps[] = [
     links: getLinks('louisite-v1', `https://${constants.social.github}.github.io/louisite-v1/`)
   },
   {
-    id: 'hci-danbam',
+    slug: 'hci-danbam',
     title: 'DanBam',
     description: (
       <span>
@@ -228,7 +240,7 @@ const projects: ProjectProps[] = [
     links: getLinks('hci-danbam', `https://${constants.social.github}.github.io/hci-danbam`)
   },
   {
-    id: 'fame',
+    slug: 'fame',
     title: 'FAME',
     description:
       'The landing page of FAME Workshop—a game development workshop held by HIMTI BINUS University’s programming class division.',
@@ -237,7 +249,7 @@ const projects: ProjectProps[] = [
     links: getLinks('fame', `https://${constants.social.github}.github.io/fame`)
   },
   {
-    id: 'cinema-cgp',
+    slug: 'cinema-cgp',
     title: 'Cinema CGP',
     description: "A movie ticket-booking Android app. Built for Mobile Programming's final exam.",
     category: 'Android app development',
@@ -245,7 +257,7 @@ const projects: ProjectProps[] = [
     links: getLinks('cinema-cgp')
   },
   {
-    id: 'tokoku',
+    slug: 'tokoku',
     title: 'Tokoku',
     description:
       "An Android app showing list of available items on a shop in which the users can add them to their own list. Built for Mobile Programming's group project.",
@@ -254,7 +266,7 @@ const projects: ProjectProps[] = [
     links: getLinks('tokoku')
   },
   {
-    id: 'final-fla',
+    slug: 'final-fla',
     title: 'Hotel Reservation System',
     description:
       "A hotel reservation console app built with Java. Built for Framework Layer Architecture's final exam.",
@@ -263,7 +275,7 @@ const projects: ProjectProps[] = [
     links: getLinks('final-fla')
   },
   {
-    id: 'transactease',
+    slug: 'transactease',
     title: 'POS Console App',
     description:
       "A POS console app built with Java. Built for Framework Layer Architecture's group project.",
@@ -272,7 +284,7 @@ const projects: ProjectProps[] = [
     links: getLinks('transactease')
   },
   {
-    id: 'binus-board',
+    slug: 'binus-board',
     title: 'BINUS Board',
     description:
       "A bulletin board console application built with Java. Built for Framework Layer Architecture's mid exam.",
@@ -281,7 +293,7 @@ const projects: ProjectProps[] = [
     links: getLinks('binus-board')
   },
   {
-    id: 'atm-python',
+    slug: 'atm-python',
     title: 'ATM Console App',
     description:
       'An ATM console app built using Python. Built as a project for the bootcamp held by HIMTI BINUS University x Progate.',
