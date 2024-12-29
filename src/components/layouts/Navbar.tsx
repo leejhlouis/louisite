@@ -2,11 +2,11 @@ import { lazy, useState } from 'react'
 import useEventListener from '@/hooks/useEventListener'
 import Dropdown from '@/components/common/Dropdown'
 import Title from '@/components/common/Title'
+import IconButton from '@/components/common/reusable/button/IconButton'
+import NavLinks from '@/components/common/NavLinks'
+import Menu3FillIcon from 'remixicon-react/Menu3FillIcon'
 
-const IconButton = lazy(() => import('@/components/common/reusable/button/IconButton'))
-const NavLinks = lazy(() => import('@/components/common/NavLinks'))
 const ThemeSwitcher = lazy(() => import('@/components/common/ThemeSwitcher'))
-const Menu3FillIcon = lazy(() => import('remixicon-react/Menu3FillIcon'))
 
 export default function Navbar(): JSX.Element {
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 640)
