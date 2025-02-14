@@ -2,3 +2,5 @@ https://louisite.netlify.app https://louisite.com 301
 https://louisite.netlify.app/* https://louisite.com/:splat 301
 
 /blog/rss  https://medium.com/@leejhlouis/feed  200
+
+/* /index.html 200
