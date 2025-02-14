@@ -2,7 +2,7 @@
   "name": "louisite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://louisite.netlify.app",
+  "homepage": "https://louisite.com",
   "type": "module",
   "scripts": {
     "dev": "vite",

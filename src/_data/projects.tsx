@@ -55,7 +55,7 @@ const projects: ProjectProps[] = [
     techStacks: ['React', 'TypeScript', 'Tailwind CSS'],
     otherTechStacks: ['HTML/CSS', 'JavaScript'],
     category: 'Front-end development',
-    links: getLinks('louisite', 'https://louisite.netfliy.app')
+    links: getLinks('louisite', 'https://louisite.com')
   },
   {
     slug: 'spotify-top5',
@@ -65,7 +65,7 @@ const projects: ProjectProps[] = [
     techStacks: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     otherTechStacks: ['HTML/CSS', 'JavaScript', 'React', 'Spotify API'],
     category: 'Front-end development',
-    links: getLinks('spotify-top5', 'https://spotifytop5.netlify.app')
+    links: getLinks('spotify-top5', 'https://spotifytop5.louisite.com')
   },
   {
     slug: 'vue-member-management',
