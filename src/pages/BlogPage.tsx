@@ -63,7 +63,7 @@ export default function BlogPage(): JSX.Element {
         <title>Blog | Louis Gustavo</title>
         <meta
           name="description"
-          content="Read Louis Gustavo's blog for insights on software engineering!"
+          content="Read Louis Gustavo's blog for software engineering insights. Learn how I built my portfolio with React, TypeScript, and Tailwind CSS."
         />
       </Helmet>
       <Suspense fallback={<Preloader />}>
