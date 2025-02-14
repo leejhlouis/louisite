@@ -1,4 +1,4 @@
-https://louisite.netlify.app https://louisite.com 301
+http://louisite.netlify.app/* http://louisite.com/:splat 301
 https://louisite.netlify.app/* https://louisite.com/:splat 301
 
 /blog/rss  https://medium.com/@leejhlouis/feed  200
