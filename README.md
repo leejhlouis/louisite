@@ -4,7 +4,7 @@
 
 **LOUISITE** (stylized as LOUI**SITE**, a portmanteau of _Louis_ and _site_) is my personal website—this is the second iteration—showcasing my accomplishments. This website was built with [Tailwind CSS](https://tailwindcss.com/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/).
 
-[Visit the website here](https://louisite.netlify.app/)
+[Visit the website here](https://louisite.com/)
 
 ![Preview](src/assets/images/preview.png)
 
@@ -16,7 +16,7 @@ As an undergraduate looking for opportunities, I realized that I needed to build
 
 ### The problem
 
-[The first iteration](https://github.com/itslouisgs/louisite-v1) failed to highlight my featured projects, the most important aspect of this website, due to other sections—to name a few, my experience, educational background, and my skills—taking precedence over the works section. In addition, I was personally not satisfied with the first iteration’s appearance. This prompted me to develop the second iteration with an all-new and refreshed layout and appearance.
+[The first iteration](https://github.com/leejhlouis/louisite-v1) failed to highlight my featured projects, the most important aspect of this website, due to other sections—to name a few, my experience, educational background, and my skills—taking precedence over the works section. In addition, I was personally not satisfied with the first iteration’s appearance. This prompted me to develop the second iteration with an all-new and refreshed layout and appearance.
 
 ### A solution
 
@@ -28,7 +28,7 @@ On top of that, I implemented glassmorphism—a frosted glass effect popularized
 
 ### Technologies
 
-The website was initially bootstrapped with [Create React App](https://create-react-app.dev/) (CRA) and built with Tailwind CSS, React, and TypeScript. Tailwind CSS was used as the CSS framework for its practical utility classes to build the interface. Meanwhile, React was chosen due to its beautifully curated JavaScript library for UI components and TypeScript was chosen due to its type-checking feature. Furthermore, I use `.markdown` for managing the content of the [about me](https://louisite.netlify.app/about) page.
+The website was initially bootstrapped with [Create React App](https://create-react-app.dev/) (CRA) and built with Tailwind CSS, React, and TypeScript. Tailwind CSS was used as the CSS framework for its practical utility classes to build the interface. Meanwhile, React was chosen due to its beautifully curated JavaScript library for UI components and TypeScript was chosen due to its type-checking feature. Furthermore, I use `.markdown` for managing the content of the [about me](https://louisite.com/about) page.
 
 In 2023, I [migrated](https://github.com/leejhlouis/louisite/pull/9) CRA to [Vite](https://vitejs.dev/), a simpler and faster build tool alternative to CRA.
 
@@ -37,7 +37,7 @@ In 2023, I [migrated](https://github.com/leejhlouis/louisite/pull/9) CRA to [Vit
 1. Clone this repository to your local machine
 
 ```
-git clone https://github.com/itslouisgs/louisite.git
+git clone https://github.com/leejhlouis/louisite.git
 ```
 
 2. Change directory to `/louisite`, the project directory
