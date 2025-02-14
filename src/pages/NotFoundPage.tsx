@@ -9,6 +9,7 @@ export default function NotFoundPage(): JSX.Element {
     <>
       <Helmet>
         <title>Page Not Found | Louis Gustavo</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Suspense fallback={<Preloader />}>
         <NotFound />

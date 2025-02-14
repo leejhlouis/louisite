@@ -27,7 +27,7 @@ export default function AboutPage(): JSX.Element {
         <title>About | Louis Gustavo</title>
         <meta
           name="description"
-          content="Louis Gustavo is a Software Engineer with 3+ years of experience of developing web and software development using Spring Boot, Vue.js, React, Laravel, and more."
+          content="Louis Gustavo is a Software Engineer with 3+ years of experience of developing web and backend systems using Spring Boot, Next.js, Vue.js, React, Laravel, and more."
         />
       </Helmet>
       <Suspense fallback={<Preloader />}>

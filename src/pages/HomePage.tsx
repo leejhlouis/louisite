@@ -15,7 +15,7 @@ export default function HomePage(): JSX.Element {
         <title>Louis Gustavo | Software Engineer</title>
         <meta
           name="description"
-          content="Software Engineer at Traveloka specializing in building web interfaces and backend systems using Spring Boot, Vue.js, React, Laravel, and more."
+          content="Louis Gustavo is a Software Engineer at Traveloka specializing in building web interfaces and backend systems using Spring Boot, Next.js, Vue.js, React, Laravel, and more."
         />
       </Helmet>
       <Suspense fallback={<Preloader />}>
