@@ -1,8 +1,8 @@
-# LOUISITE
+# [louisite.com](https://louisite.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b5ed574c-98f0-4d7e-bec5-ebcf23f65039/deploy-status)](https://app.netlify.com/sites/louisite/deploys)
 
-**LOUISITE** (stylized as LOUI**SITE**, a portmanteau of _Louis_ and _site_) is my personal website—this is the second iteration—showcasing my accomplishments. This website was built with [Tailwind CSS](https://tailwindcss.com/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/).
+**louisite.com** (stylized as LOUI**SITE**, a portmanteau of _Louis_ and _site_) is my personal website—this is the second iteration—showcasing my accomplishments. This website was built with [Tailwind CSS](https://tailwindcss.com/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/).
 
 [Visit the website here](https://louisite.com/)
 
